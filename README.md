@@ -1,4 +1,4 @@
-# Projekt1_HCI_TeamCMTO
+# Projekt1_HCI_TeamCMTTO
 
 Im Wiki findet ihr unsere ersten Artefakte!
 
