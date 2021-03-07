@@ -9,6 +9,6 @@ assignees: ''
 
 ---
 
-Als <Benutzer>
-möchte ich <...>
-damit <...>
+**Als** <Benutzer>
+**möchte ich** <...>
+**damit ** <...>
