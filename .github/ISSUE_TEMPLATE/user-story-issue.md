@@ -4,6 +4,7 @@ about: 'Vorlage für User Story Issues. '
 title: ''
 labels: ''
 assignees: ''
+project: 'Backlog'
 
 ---
 
