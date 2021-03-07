@@ -11,4 +11,4 @@ assignees: ''
 
 **Als** <Benutzer>
 **möchte ich** <...>
-**damit ** <...>
+**damit** <...>
