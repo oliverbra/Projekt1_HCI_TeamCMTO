@@ -12,3 +12,15 @@ assignees: ''
 **Als** <Benutzer>
 **möchte ich** <...>
 **damit** <...>
+  
+Scenario:
+**Given** <...>
+**when** <...>
+**then** <...>
+
+***
+Condition: Class <...> is created
+
+Class: <...>
+Function: <...>
+
