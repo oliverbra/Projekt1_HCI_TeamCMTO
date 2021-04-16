@@ -6,6 +6,7 @@ about: Vorlage für User Story Issues. Labels und zugehöriges Projekt müssen m
 title: ''
 labels: ''
 assignees: ''
+projects: 'Backlog'
 
 ---
 
