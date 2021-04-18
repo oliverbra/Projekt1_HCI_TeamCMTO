@@ -11,6 +11,20 @@ Ziel dieses Projekts ist die Konzeption einer digitalen Lösung mit der über **
 
 In einem MVP soll die Frage, ob wir unsere Nutzenden dazu motivieren können sich gegenseitig bei der **natur- und insektenbewussten Gestaltung** eines Gartens, Balkons oder Terrasse zu unterstützen, beantwortet werden. Dazu sollen durch Gamification Anreize zur gegenseitigen Unterstützung unter den Nutzenden mittels Anregungen, Hilfestellungen und Tipps zur insektenfreundlichen Gestaltung ihrer Grünflächen geschaffen werden. Die Grünflächen der Nutzenden, egal ob Garten, Balkon oder Terrasse, werden als **_GrowSpace_** bezeichnet. Indem Nutzende die _GrowSpaces_ von anderen Nutzenden betrachten, können sie deren insektenfreundliche Gestaltung einschätzen und virtuelle Währung, _**GrowPoints**_, an die Besitzer der _GrowSpaces_ verteilen. Die Menge der erhaltenen _GrowPoints_ soll dabei ausdrücken wie hoch der **Wissensstand** eines Nutzendens zur Thematik ist. Verteilen Nutzende nützliche Tipps oder wissenswerte Informationen werden sie ebenfalls mit _GrowPoints_ belohnt.
 
+## Unser Konzept
+Der Lebensraum von Insekten wird täglich durch Urbanisierung und intensive Landwirtschaft zerstört. Unser Ziel ist es, Nachhaltigkeit und Biodiversität durch unser System in den städtischen Gebieten zu fördern.
+
+Unser System soll Experten, Hobbygärtner oder auch nur Neulinge zusammen bringen und lässt sie miteinander interagieren, um gärtnerisches Wissen und Fähigkeiten auszutauschen. Dies würde ihnen nicht nur helfen, ihre Grünflächen zu verbessern, sondern auch, ihre Grünflächen insektenfreundlicher zu gestalten. Zusätzlich glauben wir, dass sich die Benutzer durch das Teilen und Betrachten von Bildern von Grünflächen gegenseitig motivieren können. Zur Motivation unserer Benutzer verwenden wir Gamification-Elemente.
+
+In unserem System verwenden wir zwei wichtige Konzepte: _GrowSpaces_ und _GrowPoints_.
+
+_GrowSpaces_ sind virtuelle Räume, in denen die Nutzer ihre Gärten, Balkone oder andere Grünflächen präsentieren können. Sie können von anderen Nutzern betrachtet und bewertet werden, um Tipps, Hilfestellungen und Anregungen zur insektenfreundlichen Gestaltung eines _GrowSpace_ zu geben. Falls ein _GrowSpace_ besonders inspirierend für die Nutzer sein sollte, so kann dieser auch zu ihren Favoriten hinzufügt und dadurch nach Belieben betrachtet werden, um Inspiration für den eigenen _GrowSpace_ zu sammeln.
+
+Für jeden Nutzer besteht die Option den Rang eines Experten einzunehmen, sobald genug Wissen durch Bewertung und Inspiration erlangt wurde. Dieser Wissensstand wird durch die _GrowPoints_ abgebildet. Diese Punkte können durch verschiedene Aktionen erlangt werden und ermöglichen es neue Funktionen im System freizuschalten. Je mehr Funktionen man freischaltet, desto mehr kann das erlangte Wissen mit anderen Nutzern geteilt werden.
+
+Wird der Experten-Rang erreicht, so kann ein Nutzer auch außerhalb einer Bewertung durch gezielte Kommentare in einem _GrowSpace_ Hilfestellungen zu der Gestaltung dieser geben. Des Weiteren können Experten Kommentare, die durch die Bewertung von Nutzern, entstanden sind, validieren und somit dazu beitragen, dass der Inhalt qualitativ bleibt.
+
+
 ***
 <sup>1</sup> Vgl. Suhling, F.: Libellen ziehen in die Stadt, 2020, URL: https://magazin.tu-braunschweig.de/pi-post/libellen-ziehen-in-die-stadt/ [Letzter Aufruf: 30.03.21]
 
