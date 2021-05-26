@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HCI_Project_2.iml" filepath="$PROJECT_DIR$/HCI_Project_2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.mvn/wrapper/wrapper.iml" filepath="$PROJECT_DIR$/.mvn/wrapper/wrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HCT_Project_2_Backend.iml" filepath="$PROJECT_DIR$/HCT_Project_2_Backend.iml" />
     </modules>
   </component>
 </project>

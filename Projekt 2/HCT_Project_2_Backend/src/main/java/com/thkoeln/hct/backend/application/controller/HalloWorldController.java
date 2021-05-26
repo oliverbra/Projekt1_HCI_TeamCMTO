@@ -1,6 +1,6 @@
-package com.thkoeln.hci_project_2.controller;
+package com.thkoeln.hct.backend.application.controller;
 
-import com.thkoeln.hci_project_2.domain.model.Person;
+import com.thkoeln.hct.backend.domain.model.Person;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -1,10 +1,10 @@
-package com.thkoeln.hci_project_2;
+package com.thkoeln.hct.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HciProject2ApplicationTests {
+class HctProject2BackendApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,4 +1,4 @@
-package com.thkoeln.hci_project_2.domain.model;
+package com.thkoeln.hct.backend.domain.model;
 
 import lombok.Getter;
 import lombok.Setter;
