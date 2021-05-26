@@ -1,9 +1,6 @@
 
 7
 HELP.md,1\a\1a273f73b7a477b0745593641bd708a6182c7ad5
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 |
 Lsrc/main/java/com/thkoeln/hci_project_2/controller/HalloWorldController.java,0\e\0e7d0767a26fd248a2cac6539896c997ae8baa2f
 s
