@@ -20,11 +20,9 @@ import com.example.resrclient.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import android.widget.EditText;
+
+import android.content.Intent;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
@@ -66,15 +64,13 @@ public class MainActivity extends AppCompatActivity {
         // Ende
 
 
-        // OBA  192.168.0.135
-        public void sendMessage(View view) {
-            final String url = URL+"/personAli";
-             new RESTTask().execute(url);
-        }
-        // Ende
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
-        @Override
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
+
+
             super.onCreate(savedInstanceState);
 
             binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -95,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+    // OBA  192.168.0.135
+    public void chanceActivity(View view) {
+        //Intent intent = new Intent(this, Login2.class);
+        //startActivity(intent);
+
+    }
+    // Ende
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             // Inflate the menu; this adds items to the action bar if it is present.
