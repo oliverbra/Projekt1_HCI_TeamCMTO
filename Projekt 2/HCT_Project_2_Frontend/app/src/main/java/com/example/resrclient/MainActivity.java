@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-    private static final String URL = "http://192.168.0.135:8080";
+    private static final String URL = "http://192.168.178.26:8080";
 
     // OBA
     class RESTTask extends AsyncTask<String, Void, Person> {
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
             Person result = restTemplate.getForObject(url,Person.class);
+
+            Log.v("Result", "Gefunden" + result.getName());
+
 
             return result;
             }
