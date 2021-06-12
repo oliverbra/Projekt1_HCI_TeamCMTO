@@ -1,16 +1,19 @@
 package com.example.resrclient;
 
+import android.media.Image;
+
 public class Progress {
 
     private String levelName;
     private int level;
-    //private Image levelIcon;
+    private Image levelIcon;
     private int growpoints;
     private int levelRequirement;
 
-    public Progress(String pLevelName, int pLevel, int pGrowPoints, int pLevelRequirement){
+    public Progress(String pLevelName, int pLevel, Image pLevelIcon, int pGrowPoints, int pLevelRequirement){
         levelName = pLevelName;
         level = pLevel;
+        levelIcon = pLevelIcon;
         growpoints = pGrowPoints;
         levelRequirement = pLevelRequirement;
     }

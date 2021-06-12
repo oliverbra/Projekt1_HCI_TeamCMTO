@@ -7,15 +7,15 @@ public class User {
     private String id;
     private String name;
     private Progress progress;
-    //private ArrayList<GrowSpace> ownGS;
+    private ArrayList<GrowSpace> ownGS;
     private ArrayList<GrowSpace> favouriteGS;
-    //private ArrayList<Review> sentReviews;
+    private ArrayList<Review> sentReviews;
 
 
-    public User(String pId, String pName, Progress pProgress){
+    public User(String pId, String pName){
             id = pId;
             name = pName;
-            progress = pProgress; //how to implement a composition?
+            //progress = new Progress("Beginner", 1,...);
     }
 
     //adds GD to ownGS
