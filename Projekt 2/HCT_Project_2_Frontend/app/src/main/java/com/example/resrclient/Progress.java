@@ -20,8 +20,8 @@ public class Progress {
     }
 
     public void increaseGS(int amount){
-        //achieve an specific amount of GrowPoints
-        //add amount to attribute growpoints
+        //achieves an specific amount of GrowPoints
+        //adds amount to attribute growpoints
     }
 
 }

@@ -1,12 +1,14 @@
 package com.example.resrclient;
 
+import java.util.ArrayList;
+
 public class User {
 
     private String id;
     private String name;
     private Progress progress;
     //private ArrayList<GrowSpace> ownGS;
-    //private ArrayList<GrowSpace> favouriteGS;
+    private ArrayList<GrowSpace> favouriteGS;
     //private ArrayList<Review> sentReviews;
 
 
@@ -16,19 +18,19 @@ public class User {
             progress = pProgress; //how to implement a composition?
     }
 
-    //add GD to ownGS
+    //adds GD to ownGS
     //public GrowSpace createGS(){}
 
-    //delete GS from ownGS
+    //deletes GS from ownGS
     //public void deleteGS(){}
 
-    //edit a GS in ownGS
+    //edits a GS in ownGS
     //public void editGS(){}
 
-    //favor a GS
+    //favors a GS
     //public void favorGS(){}
 
-    //review a GS
+    //reviews a GS
     //public Review reviewGS(){}
 
     //generate getter and setter automatically?
