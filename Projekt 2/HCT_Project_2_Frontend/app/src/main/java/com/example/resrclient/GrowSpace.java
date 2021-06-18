@@ -18,8 +18,8 @@ public class GrowSpace {
 
     //private ArrayList<PlantSpecies> plants;
 
-    //private ArrayList<Review> receivedReviews;
-    //private ArrayList<Comment> comments;
+    private ArrayList<Review> receivedReviews;
+    private ArrayList<Comment> comments;
     private ArrayList<User> adorers;
 
     //private ArrayList<Mark> marks;

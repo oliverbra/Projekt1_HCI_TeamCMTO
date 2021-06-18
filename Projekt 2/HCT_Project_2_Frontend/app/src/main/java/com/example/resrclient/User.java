@@ -1,5 +1,6 @@
 package com.example.resrclient;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class User {
@@ -7,7 +8,7 @@ public class User {
     private int id;
     private String name;
     private Progress progress;
-    private ArrayList<GrowSpace> ownGS;
+    private GrowSpace[] ownGS;
     private ArrayList<GrowSpace> favouriteGS;
     private ArrayList<Review> sentReviews;
 
@@ -16,7 +17,7 @@ public class User {
         id = pId;
         name = pName;
         //progress = new Progress("Beginner", 1,...);
-        ownGS = new ArrayList<>();
+        ownGS = new GrowSpace[3];
         favouriteGS = new ArrayList<>();
         sentReviews = new ArrayList<>();
     }
@@ -31,6 +32,7 @@ public class User {
     //public void editGS(){}
 
     //favors a GS
+    //add User in GrowSpace.adorers
     //public void favorGS(){}
 
     //reviews a GS
