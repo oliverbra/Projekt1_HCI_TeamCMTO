@@ -6,4 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".activity_review">
 
+    <SeekBar
+        android:id="@+id/review_slider_seekBar"
+        android:layout_width="151dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/review_slider_seekBar3"
+        android:layout_width="151dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView3"
+        app:layout_constraintTop_toBottomOf="@+id/review_slider_seekBar2" />
+
+    <SeekBar
+        android:id="@+id/review_slider_seekBar4"
+        android:layout_width="152dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView4"
+        app:layout_constraintTop_toBottomOf="@+id/review_slider_seekBar3" />
+
+    <SeekBar
+        android:id="@+id/review_slider_seekBar2"
+        android:layout_width="151dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView2"
+        app:layout_constraintTop_toBottomOf="@+id/review_slider_seekBar" />
+
+    <ImageButton
+        android:id="@+id/review_backTOOStartseiteimageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="9dp"
+        android:onClick="chanceActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="18dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_backTOOStartseiteimageButton" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_Kategorie_textView" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="13dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_Kategorie_textView2" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_Kategorie_textView3" />
+
+    <EditText
+        android:id="@+id/review_Tipp_editTextTextMultiLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_slider_seekBar4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

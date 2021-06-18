@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+  //  private ActivityMainBinding binding;
     private static final String URL = "http://192.168.0.135:8080";
 
     // OBA
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
-
+/*
     @Override
         protected void onCreate(Bundle savedInstanceState) {
 
@@ -76,26 +76,13 @@ public class MainActivity extends AppCompatActivity {
             binding = ActivityMainBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
 
-            setSupportActionBar(binding.toolbar);
 
-            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-            appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-            binding.fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
         }
-
+*/
     // OBA  192.168.0.135
     public void chanceActivity(View view) {
-        //Intent intent = new Intent(this, Login2.class);
-        //startActivity(intent);
-
+        Intent intent = new Intent(this, activity_logIn.class);
+        startActivity(intent);
     }
     // Ende
         @Override
@@ -120,11 +107,6 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
 
-        @Override
-        public boolean onSupportNavigateUp() {
-            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-            return NavigationUI.navigateUp(navController, appBarConfiguration)
-                    || super.onSupportNavigateUp();
-        }
+
 
 }

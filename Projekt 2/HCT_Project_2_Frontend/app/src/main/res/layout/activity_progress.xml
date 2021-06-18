@@ -6,4 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".activity_progress">
 
+    <ProgressBar
+        android:id="@+id/progress_level_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="231dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_Level_textView" />
+
+    <TextView
+        android:id="@+id/progress_Level_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="89dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/progress_LevelIcon_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toEndOf="@+id/progress_Level_textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+    <EditText
+        android:id="@+id/progress_unlocked_editTextTextMultiLine"
+        android:layout_width="135dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_level_progressBar" />
+
+    <EditText
+        android:id="@+id/progress_locked_editTextTextMultiLine2"
+        android:layout_width="135dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toEndOf="@+id/progress_unlocked_editTextTextMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/progress_level_progressBar" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:onClick="chanceActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
 </androidx.constraintlayout.widget.ConstraintLayout>
