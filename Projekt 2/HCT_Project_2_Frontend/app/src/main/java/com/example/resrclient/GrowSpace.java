@@ -33,13 +33,13 @@ public class GrowSpace {
         size = pSize;
         location = pLocation;
 
-        problems = new ArrayList<>(); //how to add problems while creating the GrowSpace?
+        problems = new ArrayList<String>(); //how to add problems while creating the GrowSpace?
 
-        receivedReviews = new ArrayList<>();
-        comments = new ArrayList<>();
-        adorers = new ArrayList<>();
+        receivedReviews = new ArrayList<Review>();
+        comments = new ArrayList<Comment>();
+        adorers = new ArrayList<User>();
 
-        marks = new ArrayList<>();
+        marks = new ArrayList<Mark>();
     }
 
     /*public double calculateAverageRating(){
@@ -50,4 +50,53 @@ public class GrowSpace {
         //...
     }*/
 
+    //Getter
+    public User getOwner() {
+        return owner;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGoal() {
+        return goal;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public double getSize() {
+        return size;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    //Setter
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGoal(String goal) {
+        this.goal = goal;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setSize(double size) {
+        this.size = size;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }

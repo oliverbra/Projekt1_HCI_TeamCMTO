@@ -27,4 +27,45 @@ public class Progress {
         //adds amount to attribute growpoints
     }
 
+    //Getter
+    public String getLevelName() {
+        return levelName;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public Image getLevelIcon() {
+        return levelIcon;
+    }
+
+    public int getGrowpoints() {
+        return growpoints;
+    }
+
+    public int getLevelRequirement() {
+        return levelRequirement;
+    }
+
+    //Setter
+    public void setLevelName(String levelName) {
+        this.levelName = levelName;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setLevelIcon(Image levelIcon) {
+        this.levelIcon = levelIcon;
+    }
+
+    public void setGrowpoints(int growpoints) {
+        this.growpoints = growpoints;
+    }
+
+    public void setLevelRequirement(int levelRequirement) {
+        this.levelRequirement = levelRequirement;
+    }
 }

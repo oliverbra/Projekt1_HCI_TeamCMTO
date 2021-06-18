@@ -13,6 +13,24 @@ public class  Comment {
         content = pContent;
         date = pDate;
 
-        marks = new ArrayList<>();
+        marks = new ArrayList<Mark>();
+    }
+
+    //Getter
+    public String getContent() {
+        return content;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    //Setter
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

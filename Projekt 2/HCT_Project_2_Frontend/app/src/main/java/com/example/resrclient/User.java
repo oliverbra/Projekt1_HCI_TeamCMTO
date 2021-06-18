@@ -18,8 +18,8 @@ public class User {
         name = pName;
         //progress = new Progress("Beginner", 1,...);
         ownGS = new GrowSpace[3];
-        favouriteGS = new ArrayList<>();
-        sentReviews = new ArrayList<>();
+        favouriteGS = new ArrayList<GrowSpace>();
+        sentReviews = new ArrayList<Review>();
     }
 
     //adds GD to ownGS
@@ -39,6 +39,29 @@ public class User {
     //Composition: new Review...
     //public Review reviewGS(){}
 
-    //generate getter and setter automatically?
+    //Getter
+    public int getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public Progress getProgress() {
+        return progress;
+    }
+
+    //Setter
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setProgress(Progress progress) {
+        this.progress = progress;
+    }
 }

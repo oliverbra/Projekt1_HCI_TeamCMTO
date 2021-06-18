@@ -16,4 +16,8 @@ public class Expert extends User{
     public void recommendGS(GrowSpace gs){
         //recommended gs gets marked
     }
+
+    //Getter
+
+    //Setter
 }
