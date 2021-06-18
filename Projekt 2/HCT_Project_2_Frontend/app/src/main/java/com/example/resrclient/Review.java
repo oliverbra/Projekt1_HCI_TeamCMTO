@@ -7,13 +7,14 @@ public class Review {
 
     private double rating;
     private Date date;
-    //private Comment comment;
+    private Comment comment;
     private User author;
     //private double ArrayList<ReviewCriteria>;
 
-    public Review(double pRating, Date pDate, User pAuthor){
+    public Review(double pRating, Date pDate, User pAuthor, String pCommentContent){
         rating = pRating;
         date = pDate;
         author = pAuthor;
+        comment = new Comment(pCommentContent,pDate);
     }
 }

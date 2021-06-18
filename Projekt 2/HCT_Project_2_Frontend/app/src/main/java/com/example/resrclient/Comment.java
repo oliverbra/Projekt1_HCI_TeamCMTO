@@ -3,7 +3,7 @@ package com.example.resrclient;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Comment {
+public class  Comment {
 
     private String content;
     private Date date;

@@ -25,18 +25,17 @@ public class GrowSpace {
     //private ArrayList<Mark> marks;
 
 
-    public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation, double pAverageRating) {
+    public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation) {
         owner = pOwner;
         name = pName;
         goal = pGoal;
         category = pCategory;
         size = pSize;
         location = pLocation;
-        averageRating = pAverageRating; //must be calculated
     }
 
     /*public double calculateAverageRating(){
-        //initializes attribute averageRating acording to the list receivedReviews
+        //initializes attribute averageRating according to the list receivedReviews
     }*/
 
     /*public void sendUpdateNotice(){
