@@ -14,8 +14,8 @@ public class ReviewCriteria {
         scope = pScope;
     }
 
-    public boolean checkScope(){
+    /*public boolean checkScope(){
         //checks User level to define criteria
-    }
+    }*/
 
 }

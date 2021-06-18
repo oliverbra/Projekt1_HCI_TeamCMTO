@@ -8,8 +8,8 @@ public class Expert extends User{
     private ArrayList<GrowSpace> recommendGS;
     private ArrayList<Comment> sentComments;
 
-    public Expert(String pId, String pName, Progress pProgress, Mark pExpertMark){
-        super(pId, pName, pProgress);
+    public Expert(int pId, String pName, Progress pProgress, Mark pExpertMark){
+        super(pId, pName);
         expertMark = pExpertMark;
     }
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class User {
 
-    private String id;
+    private int id;
     private String name;
     private Progress progress;
     private ArrayList<GrowSpace> ownGS;
@@ -12,10 +12,13 @@ public class User {
     private ArrayList<Review> sentReviews;
 
 
-    public User(String pId, String pName){
-            id = pId;
-            name = pName;
-            //progress = new Progress("Beginner", 1,...);
+    public User(int pId, String pName){
+        id = pId;
+        name = pName;
+        //progress = new Progress("Beginner", 1,...);
+        ownGS = new ArrayList<>();
+        favouriteGS = new ArrayList<>();
+        sentReviews = new ArrayList<>();
     }
 
     //adds GD to ownGS
@@ -31,7 +34,9 @@ public class User {
     //public void favorGS(){}
 
     //reviews a GS
+    //Composition: new Review...
     //public Review reviewGS(){}
 
     //generate getter and setter automatically?
+
 }

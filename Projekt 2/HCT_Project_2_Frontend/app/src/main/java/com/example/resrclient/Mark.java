@@ -14,7 +14,7 @@ public class Mark {
         scope = pScope;
     }
 
-    public checkScope(){
+    public void checkScope(){
         //checks what kind of object should be marked to assign the correct mark
     }
 }
