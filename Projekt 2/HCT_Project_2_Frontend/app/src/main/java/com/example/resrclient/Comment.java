@@ -7,10 +7,12 @@ public class  Comment {
 
     private String content;
     private Date date;
-    //private ArrayList<Mark> marks;
+    private ArrayList<Mark> marks;
 
     public Comment(String pContent, Date pDate){
         content = pContent;
         date = pDate;
+
+        marks = new ArrayList<>();
     }
 }

@@ -22,7 +22,7 @@ public class GrowSpace {
     private ArrayList<Comment> comments;
     private ArrayList<User> adorers;
 
-    //private ArrayList<Mark> marks;
+    private ArrayList<Mark> marks;
 
 
     public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation) {
@@ -32,6 +32,14 @@ public class GrowSpace {
         category = pCategory;
         size = pSize;
         location = pLocation;
+
+        problems = new ArrayList<>(); //how to add problems while creating the GrowSpace?
+
+        receivedReviews = new ArrayList<>();
+        comments = new ArrayList<>();
+        adorers = new ArrayList<>();
+
+        marks = new ArrayList<>();
     }
 
     /*public double calculateAverageRating(){
