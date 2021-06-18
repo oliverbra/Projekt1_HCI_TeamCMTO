@@ -18,4 +18,37 @@ public class ReviewCriteria {
         //checks User level to define criteria
     }*/
 
+    //Getter
+    public String getName() {
+        return name;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public int getRatingScale() {
+        return ratingScale;
+    }
+
+    public String getScope() {
+        return scope;
+    }
+
+    //Setter
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
+    }
+
+    public void setRatingScale(int ratingScale) {
+        this.ratingScale = ratingScale;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
 }
