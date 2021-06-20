@@ -1,57 +1,77 @@
 package com.example.resrclient;
 
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.Html;
+import android.util.Log;
 import android.view.View;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.CompositePageTransformer;
+import androidx.viewpager2.widget.MarginPageTransformer;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.resrclient.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import android.widget.EditText;
-
-import android.content.Intent;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final String URL = "http://localhost:8080";
 
+    private Button button;
+    private ViewPager2 carousel;
+    private LinearLayout dotsLayout;
+    private ImageView[] dots;
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
-    private static final String URL = "http://192.168.0.135:8080";
 
     // OBA
     class RESTTask extends AsyncTask<String, Void, Person> {
         protected Person doInBackground(String... params) {
-          //  String apiUrl = "http://localhost:8080/personAli";
+            //  String apiUrl = "http://localhost:8080/personAli";
             final String url = params[0];
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
             Person result = restTemplate.getForObject(url,Person.class);
 
+            Log.v("Result","Gefunden: " + result.getName());
             return result;
-            }
+        }
 
 
 
         @Override
         protected void onPostExecute(Person person) {
             super.onPostExecute(person);
-           Person personReturned = person;
+            Person personReturned = person;
 
         }
 
@@ -61,70 +81,97 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-        // Ende
+    // Ende
 
 
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
-
-
-    @Override
-        protected void onCreate(Bundle savedInstanceState) {
-
-
-            super.onCreate(savedInstanceState);
-
-            binding = ActivityMainBinding.inflate(getLayoutInflater());
-            setContentView(binding.getRoot());
-
-            setSupportActionBar(binding.toolbar);
-
-            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-            appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-            binding.fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
-        }
-
-    // OBA  192.168.0.135
-    public void chanceActivity(View view) {
-        //Intent intent = new Intent(this, Login2.class);
-        //startActivity(intent);
-
+    // OBA  192.168.0.135 - (Oli: url set to local host; not vm)
+    public void sendMessage(View view) {
+        final String url = "http://10.0.2.2:8080/personAli";
+        new RESTTask().execute(url);
     }
     // Ende
+
+    // Oli - Dots Indicator Bar
+    public void addDotsIndicator(List<CarouselItem> carouselItems) {
+        dots = new ImageView[carouselItems.size()];
+        dotsLayout.removeAllViews();
+
+        for(int i = 0; i < carouselItems.size(); i++) {
+
+            dots[i] = new ImageView(this);
+            dots[i].setImageResource(R.drawable.dot_inactive);
+            dots[i].setPadding(3,0,3,0);
+
+            dotsLayout.addView(dots[i]);
+            Log.v("dots", "Dot " + i + " added");
+        }
+    }
+
+    ViewPager2.OnPageChangeCallback carouselListener = new ViewPager2.OnPageChangeCallback() {
         @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-            // Inflate the menu; this adds items to the action bar if it is present.
-            getMenuInflater().inflate(R.menu.menu_main, menu);
-            return true;
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            super.onPageScrolled(position, positionOffset, positionOffsetPixels);
         }
 
         @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            // Handle action bar item clicks here. The action bar will
-            // automatically handle clicks on the Home/Up button, so long
-            // as you specify a parent activity in AndroidManifest.xml.
-            int id = item.getItemId();
-
-            //noinspection SimplifiableIfStatement
-            if (id == R.id.action_settings) {
-                return true;
+        public void onPageSelected(int position) {
+            super.onPageSelected(position);
+            for(int i = 0; i < dots.length; i++) {
+                if(i == position) {
+                    dots[i].setImageResource(R.drawable.dot_active);
+                } else dots[i].setImageResource(R.drawable.dot_inactive);
             }
-
-            return super.onOptionsItemSelected(item);
         }
 
         @Override
-        public boolean onSupportNavigateUp() {
-            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-            return NavigationUI.navigateUp(navController, appBarConfiguration)
-                    || super.onSupportNavigateUp();
+        public void onPageScrollStateChanged(int state) {
+            super.onPageScrollStateChanged(state);
         }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        button = (Button) findViewById(R.id.buttonREST_GET); // PoC Server Communication
+
+        carousel = (ViewPager2) findViewById(R.id.carousel); // Carousel
+        dotsLayout = (LinearLayout) findViewById(R.id.dotsLayout); // Carousel
+
+        // Carousel
+        List<CarouselItem> carouselItems = new ArrayList<>();
+        carouselItems.add(new CarouselItem(R.drawable.one));
+        carouselItems.add(new CarouselItem(R.drawable.two));
+        carouselItems.add(new CarouselItem(R.drawable.three));
+        carouselItems.add(new CarouselItem(R.drawable.four));
+        carouselItems.add(new CarouselItem(R.drawable.five));
+
+        carousel.setAdapter(new CarouselAdapter(carouselItems, carousel));
+
+            /*/ Extra: Nachbar-Images am Rand erkennbar
+            carousel.setClipToPadding(false);
+            carousel.setClipChildren(false);
+            carousel.setOffscreenPageLimit(3);
+            carousel.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+
+            CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
+            compositePageTransformer.addTransformer(new MarginPageTransformer(40));
+            compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
+                @Override
+                public void transformPage(@NonNull View page, float position) {
+                    float r = 1 - Math.abs(position);
+                    page.setScaleY(0.85f + r * 0.15f);
+                }
+            });
+
+            carousel.setPageTransformer(compositePageTransformer); */
+
+        // Dots Indicator hinzufügen
+        addDotsIndicator(carouselItems);
+        carousel.registerOnPageChangeCallback(carouselListener);
+    }
+
+
 
 }
