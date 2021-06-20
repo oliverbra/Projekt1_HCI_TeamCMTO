@@ -32,9 +32,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import android.widget.EditText;
-
-import android.content.Intent;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
@@ -53,9 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
     // OBA
     class RESTTask extends AsyncTask<String, Void, Person> {
-
         protected Person doInBackground(String... params) {
-          //  String apiUrl = "http://localhost:8080/personAli";
+            //  String apiUrl = "http://localhost:8080/personAli";
             final String url = params[0];
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
@@ -63,14 +64,14 @@ public class MainActivity extends AppCompatActivity {
 
             Log.v("Result","Gefunden: " + result.getName());
             return result;
-            }
+        }
 
 
 
         @Override
         protected void onPostExecute(Person person) {
             super.onPostExecute(person);
-           Person personReturned = person;
+            Person personReturned = person;
 
         }
 
@@ -80,70 +81,73 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-        // Ende
+    // Ende
 
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
+    // OBA  192.168.0.135 - (Oli: url set to local host; not vm)
+    public void sendMessage(View view) {
+        final String url = "http://10.0.2.2:8080/personAli";
+        new RESTTask().execute(url);
+    }
+    // Ende
+
+    // Oli - Dots Indicator Bar
+    public void addDotsIndicator(List<CarouselItem> carouselItems) {
+        dots = new ImageView[carouselItems.size()];
+        dotsLayout.removeAllViews();
+
+        for(int i = 0; i < carouselItems.size(); i++) {
+
+            dots[i] = new ImageView(this);
+            dots[i].setImageResource(R.drawable.dot_inactive);
+            dots[i].setPadding(3,0,3,0);
+
+            dotsLayout.addView(dots[i]);
+            Log.v("dots", "Dot " + i + " added");
+        }
+    }
+
+    ViewPager2.OnPageChangeCallback carouselListener = new ViewPager2.OnPageChangeCallback() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            super.onPageSelected(position);
+            for(int i = 0; i < dots.length; i++) {
+                if(i == position) {
+                    dots[i].setImageResource(R.drawable.dot_active);
+                } else dots[i].setImageResource(R.drawable.dot_inactive);
+            }
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+            super.onPageScrollStateChanged(state);
+        }
+    };
 
     @Override
-        // OBA  192.168.0.135 - (Oli: url set to local host; not vm)
-        public void sendMessage(View view) {
-            final String url = "http://10.0.2.2:8080/personAli";
-            new RESTTask().execute(url);
-        }
-        // Ende
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        // Oli - Dots Indicator Bar
-        public void addDotsIndicator(List<CarouselItem> carouselItems) {
-         dots = new ImageView[carouselItems.size()];
-         dotsLayout.removeAllViews();
+        button = (Button) findViewById(R.id.buttonREST_GET); // PoC Server Communication
 
-         for(int i = 0; i < carouselItems.size(); i++) {
+        carousel = (ViewPager2) findViewById(R.id.carousel); // Carousel
+        dotsLayout = (LinearLayout) findViewById(R.id.dotsLayout); // Carousel
 
-             dots[i] = new ImageView(this);
-             dots[i].setImageResource(R.drawable.dot_inactive);
-             dots[i].setPadding(3,0,3,0);
+        // Carousel
+        List<CarouselItem> carouselItems = new ArrayList<>();
+        carouselItems.add(new CarouselItem(R.drawable.one));
+        carouselItems.add(new CarouselItem(R.drawable.two));
+        carouselItems.add(new CarouselItem(R.drawable.three));
+        carouselItems.add(new CarouselItem(R.drawable.four));
+        carouselItems.add(new CarouselItem(R.drawable.five));
 
-             dotsLayout.addView(dots[i]);
-             Log.v("dots", "Dot " + i + " added");
-         }
-        }
-
-        ViewPager2.OnPageChangeCallback carouselListener = new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                for(int i = 0; i < dots.length; i++) {
-                    if(i == position) {
-                        dots[i].setImageResource(R.drawable.dot_active);
-                    } else dots[i].setImageResource(R.drawable.dot_inactive);
-                }
-            }
-
-        protected void onCreate(Bundle savedInstanceState) {
-
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-
-            button = (Button) findViewById(R.id.buttonREST_GET); // PoC Server Communication
-
-            carousel = (ViewPager2) findViewById(R.id.carousel); // Carousel
-            dotsLayout = (LinearLayout) findViewById(R.id.dotsLayout); // Carousel
-
-            // Carousel
-            List<CarouselItem> carouselItems = new ArrayList<>();
-            carouselItems.add(new CarouselItem(R.drawable.one));
-            carouselItems.add(new CarouselItem(R.drawable.two));
-            carouselItems.add(new CarouselItem(R.drawable.three));
-            carouselItems.add(new CarouselItem(R.drawable.four));
-            carouselItems.add(new CarouselItem(R.drawable.five));
-
-            carousel.setAdapter(new CarouselAdapter(carouselItems, carousel));
+        carousel.setAdapter(new CarouselAdapter(carouselItems, carousel));
 
             /*/ Extra: Nachbar-Images am Rand erkennbar
             carousel.setClipToPadding(false);
@@ -163,11 +167,11 @@ public class MainActivity extends AppCompatActivity {
 
             carousel.setPageTransformer(compositePageTransformer); */
 
-            // Dots Indicator hinzufügen
-            addDotsIndicator(carouselItems);
-            carousel.registerOnPageChangeCallback(carouselListener);
-        }
-        };
+        // Dots Indicator hinzufügen
+        addDotsIndicator(carouselItems);
+        carousel.registerOnPageChangeCallback(carouselListener);
+    }
+
 
 
 }
