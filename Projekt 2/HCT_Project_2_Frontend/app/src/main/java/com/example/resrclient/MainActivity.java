@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     // OBA
     class RESTTask extends AsyncTask<String, Void, Person> {
+
         protected Person doInBackground(String... params) {
           //  String apiUrl = "http://localhost:8080/personAli";
             final String url = params[0];
@@ -124,9 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-        @Override
         protected void onCreate(Bundle savedInstanceState) {
-
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
@@ -168,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
             addDotsIndicator(carouselItems);
             carousel.registerOnPageChangeCallback(carouselListener);
         }
-
+        };
 
 
 }
