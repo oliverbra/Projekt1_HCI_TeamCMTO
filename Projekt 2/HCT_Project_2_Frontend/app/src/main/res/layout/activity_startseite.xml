@@ -6,4 +6,142 @@
     android:layout_height="match_parent"
     tools:context=".activity_startseite">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="99dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginLeft="296dp"
+        android:layout_marginTop="6dp"
+        android:onClick="chanceProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_LevelIcon_imageView" />
+
+    <ImageView
+        android:id="@+id/startseite_LevelIcon_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="363dp"
+        android:layout_marginLeft="363dp"
+        android:layout_marginTop="7dp"
+        android:onClick="chanceProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+    <ImageButton
+        android:id="@+id/startseite_GS1_imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginTop="112dp"
+        android:onClick="chanceGS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageButton
+        android:id="@+id/startseite_Bewertunge_imageButton"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS1_imageButton2"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageButton
+        android:id="@+id/startseite_Bewertunge_imageButton2"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS2_imageButton2imageButton3"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageButton
+        android:id="@+id/startseite_Bewertunge_imageButton3"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS3_imageButton2imageButton4"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageButton
+        android:id="@+id/startseite_GS2_imageButton2imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="49dp"
+        android:onClick="chanceGS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS1_imageButton2"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageButton
+        android:id="@+id/startseite_GS3_imageButton2imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="51dp"
+        android:onClick="chanceGS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS2_imageButton2imageButton3"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/startseite_Zufall_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="32dp"
+        android:onClick="chanceGS"
+        android:text="Zufall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_Bewertunge_imageButton3" />
+
+    <EditText
+        android:id="@+id/startseite_Rating_editTextNumber"
+        android:layout_width="37dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/startseite_Bewertunge_imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS1_imageButton2" />
+
+    <EditText
+        android:id="@+id/startseite_Rating_editTextNumber2"
+        android:layout_width="37dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="176dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/startseite_Bewertunge_imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS1_imageButton2" />
+
+    <EditText
+        android:id="@+id/startseite_Rating_editTextNumber3"
+        android:layout_width="37dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="360dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/startseite_Bewertunge_imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_GS1_imageButton2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
