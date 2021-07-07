@@ -1,5 +1,6 @@
 package com.example.resrclient;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -172,6 +173,9 @@ public class MainActivity extends AppCompatActivity {
         carousel.registerOnPageChangeCallback(carouselListener);
     }
 
-
+    public void chanceActivity(View view) {
+        Intent intent = new Intent(this, activity_logIn.class);
+        startActivity(intent);
+    }
 
 }

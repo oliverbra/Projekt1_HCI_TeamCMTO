@@ -10,6 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ResrClient">
+        <activity android:name=".activity_logIn">
+        </activity>
+        <activity android:name=".activity_growspace"></activity>
+        <activity android:name=".activity_progress"></activity>
+        <activity android:name=".activity_startseite"></activity>
+        <activity android:name=".activity_review"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
