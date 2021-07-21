@@ -1,7 +1,7 @@
 package com.thkoeln.hct.backend.application.controller;
 
-import com.thkoeln.hct.backend.domain.model.Nutzer;
 import com.thkoeln.hct.backend.domain.model.Person;
+import com.thkoeln.hct.backend.domain.model.User;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -32,8 +32,8 @@ public class HalloWorldController {
     @RequestMapping(method = RequestMethod.GET,
             path="userTest",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public Nutzer getNutzer(){
-        return new Nutzer();
+    public User getUser(){
+        return new User();
     }
 
 

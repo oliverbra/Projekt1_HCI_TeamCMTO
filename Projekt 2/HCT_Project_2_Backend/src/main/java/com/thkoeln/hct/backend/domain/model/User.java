@@ -11,7 +11,7 @@ import javax.swing.*;
 @Table (name = "nutzer")
 @Data
 
-public class Nutzer {
+public class User {
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     @Id
     @NonNull
@@ -29,7 +29,7 @@ public class Nutzer {
     @NonNull
     private JPasswordField password;
 
-    public Nutzer() {
+    public User() {
         setUserId(1);
         setEmail("test@test.test");
         setName("TestUser");
