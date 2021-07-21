@@ -17,19 +17,24 @@ public class Nutzer {
     @NonNull
     private Integer userId;
     @NonNull
-    private String Email;
+    private String email;
     @NonNull
-    private String Name;
+    private String name;
     @NonNull
-    private String Alte;
+    private String age;
     @NonNull
-    private String Fortschritt;
+    private String progress;
     @NonNull
     private Integer level;
     @NonNull
-    private JPasswordField passwort;
+    private JPasswordField password;
 
     public Nutzer() {
-
+        setUserId(1);
+        setEmail("test@test.test");
+        setName("TestUser");
+        setAge("25");
+        setProgress("Blümchen");
+        setLevel(1);
     }
 }

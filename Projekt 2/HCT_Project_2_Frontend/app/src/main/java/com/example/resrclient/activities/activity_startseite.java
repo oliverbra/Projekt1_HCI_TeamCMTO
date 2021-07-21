@@ -1,10 +1,12 @@
-package com.example.resrclient;
+package com.example.resrclient.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.resrclient.R;
 
 public class activity_startseite extends AppCompatActivity {
 
