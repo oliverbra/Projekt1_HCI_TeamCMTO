@@ -1,35 +1,32 @@
 package com.thkoeln.hct.backend.domain.model;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import javax.swing.*;
 
 @Entity
-@Table (name = "nutzer")
+@Table (name = "user")
 @Data
 
-public class Nutzer {
+public class User {
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     @Id
     @NonNull
     private Integer userId;
     @NonNull
-    private String Email;
+    private String email;
     @NonNull
-    private String Name;
+    private String name;
     @NonNull
-    private String Alte;
+    private String age;
     @NonNull
-    private String Fortschritt;
+    private String progress;
     @NonNull
     private Integer level;
     @NonNull
-    private JPasswordField passwort;
+    private JPasswordField password;
 
-    public Nutzer() {
-
+    public User() {
     }
 }
