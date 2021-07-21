@@ -1,15 +1,17 @@
 package com.thkoeln.hct.backend.domain.model;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import javax.swing.*;
 
 @Entity
-@Table (name = "user")
+@Table (name = "nutzer")
 @Data
 
-public class User {
+public class Nutzer {
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     @Id
     @NonNull
@@ -27,6 +29,12 @@ public class User {
     @NonNull
     private JPasswordField password;
 
-    public User() {
+    public Nutzer() {
+        setUserId(1);
+        setEmail("test@test.test");
+        setName("TestUser");
+        setAge("25");
+        setProgress("Blümchen");
+        setLevel(1);
     }
 }

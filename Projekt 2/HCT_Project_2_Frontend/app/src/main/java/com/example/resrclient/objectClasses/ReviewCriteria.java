@@ -1,4 +1,4 @@
-package com.example.resrclient;
+package com.example.resrclient.objectClasses;
 
 public class ReviewCriteria {
 
