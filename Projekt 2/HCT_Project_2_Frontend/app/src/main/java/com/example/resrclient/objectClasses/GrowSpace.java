@@ -19,7 +19,6 @@ public class GrowSpace {
     //private ArrayList<PlantSpecies> plants;
 
     private ArrayList<Review> receivedReviews;
-    private ArrayList<Comment> comments;
     private ArrayList<User> adorers;
 
     private ArrayList<Mark> marks;
@@ -36,7 +35,6 @@ public class GrowSpace {
         problems = new ArrayList<String>(); //how to add problems while creating the GrowSpace?
 
         receivedReviews = new ArrayList<Review>();
-        comments = new ArrayList<Comment>();
         adorers = new ArrayList<User>();
 
         marks = new ArrayList<Mark>();
