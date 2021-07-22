@@ -35,16 +35,16 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @OneToMany(cascade  = CascadeType.ALL)
+   // @OneToMany(cascade  = CascadeType.ALL)
   //  @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(cascade  = CascadeType.ALL)
     @JoinColumn(name = "levelId" , referencedColumnName = "levelId")
-    //private Level level;
-     private Set<Level> level;
+     private Level level;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    //  @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "gsId" , referencedColumnName = "gsId")
-    //private Level level;
     private Set<GrowSpace> growSpace;
+
+
 
 }
