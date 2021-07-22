@@ -1,6 +1,5 @@
 package com.thkoeln.hct.backend.domain.model;
 import lombok.Data;
-import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -12,26 +11,6 @@ import java.util.Set;
 
 public class User {
 
-    @GeneratedValue (strategy =  GenerationType.IDENTITY)
-    @Id
-    @NonNull
-    private Integer userId;
-    @NonNull
-    private String email;
-    @NonNull
-    private String name;
-    @NonNull
-    private String age;
-    @NonNull
-    private String progress;
-    @NonNull
-    private String password;
-
-    @OneToMany(cascade  = CascadeType.ALL)
-  //  @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "levelId" , referencedColumnName = "levelId")
-    //private Level level;
-     private Set<Level> level;
     public User() {
         setUserId(1);
         setEmail("test@test.test");
@@ -40,4 +19,32 @@ public class User {
         setProgress("Blümchen");
         setLevel(null);
     }
+
+    @GeneratedValue (strategy =  GenerationType.IDENTITY)
+    @Id
+    @Column(nullable = false)
+    private Integer userId;
+    @Column(nullable = false)
+    private String email;
+    @Column(nullable = false)
+    private String name;
+    @Column(nullable = false)
+    private String age;
+    @Column(nullable = false)
+    private String progress;
+    @Column(nullable = false)
+    private String password;
+
+    @OneToMany(cascade  = CascadeType.ALL)
+  //  @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "levelId" , referencedColumnName = "levelId")
+    //private Level level;
+     private Set<Level> level;
+
+    @OneToMany(cascade  = CascadeType.ALL)
+    //  @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "gsId" , referencedColumnName = "gsId")
+    //private Level level;
+    private Set<GrowSpace> growSpace;
+
 }
