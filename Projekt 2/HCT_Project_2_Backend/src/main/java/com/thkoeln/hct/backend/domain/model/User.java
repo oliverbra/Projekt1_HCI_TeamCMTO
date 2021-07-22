@@ -1,17 +1,17 @@
 package com.thkoeln.hct.backend.domain.model;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
-import javax.swing.*;
+import java.util.Set;
+
 
 @Entity
-@Table (name = "nutzer")
+@Table (name = "user")
 @Data
 
 public class User {
+
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     @Id
     @NonNull
@@ -25,16 +25,19 @@ public class User {
     @NonNull
     private String progress;
     @NonNull
-    private Integer level;
-    @NonNull
-    private JPasswordField password;
+    private String password;
 
+    @OneToMany(cascade  = CascadeType.ALL)
+  //  @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "levelId" , referencedColumnName = "levelId")
+    //private Level level;
+     private Set<Level> level;
     public User() {
         setUserId(1);
         setEmail("test@test.test");
         setName("TestUser");
         setAge("25");
         setProgress("Blümchen");
-        setLevel(1);
+        setLevel(null);
     }
 }
