@@ -7,14 +7,12 @@ public class Progress {
     private String levelName;
     private int level;
     private Image levelIcon;
-    private int growpoints;
     private int levelRequirement;
 
-    public Progress(String pLevelName, int pLevel, Image pLevelIcon, int pGrowPoints, int pLevelRequirement){
+    public Progress(String pLevelName, int pLevel, Image pLevelIcon, int pLevelRequirement){
         levelName = pLevelName;
         level = pLevel;
         levelIcon = pLevelIcon;
-        growpoints = pGrowPoints;
         levelRequirement = pLevelRequirement;
     }
 
@@ -40,10 +38,6 @@ public class Progress {
         return levelIcon;
     }
 
-    public int getGrowpoints() {
-        return growpoints;
-    }
-
     public int getLevelRequirement() {
         return levelRequirement;
     }
@@ -59,10 +53,6 @@ public class Progress {
 
     public void setLevelIcon(Image levelIcon) {
         this.levelIcon = levelIcon;
-    }
-
-    public void setGrowpoints(int growpoints) {
-        this.growpoints = growpoints;
     }
 
     public void setLevelRequirement(int levelRequirement) {
