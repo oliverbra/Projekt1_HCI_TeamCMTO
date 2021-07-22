@@ -2,16 +2,16 @@ package com.thkoeln.hct.backend.domain.model;
 
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@NoArgsConstructor
 @Table(name = "mark")
 @Data
 public class Mark {
-
-    public Mark(){}
 
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
@@ -19,8 +19,10 @@ public class Mark {
     private Integer markId;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "gsId" , referencedColumnName = "gsId")
+    @JoinColumn(name = "gsId" ,nullable = false)//referencedColumnName = "growSpace"
     private Set<GrowSpace> growSpace;
+
+
 
 
 
