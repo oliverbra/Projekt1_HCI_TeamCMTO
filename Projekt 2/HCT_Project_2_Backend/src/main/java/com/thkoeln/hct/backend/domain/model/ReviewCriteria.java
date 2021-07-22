@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
+
 
 @Entity
 @NoArgsConstructor
@@ -19,11 +21,13 @@ public class ReviewCriteria {
     private Integer critId;
     @Column(nullable = false)
     private Integer faktor;
-    private String name;
-    private String explanation;
-    private String scope;
 
-    @ManyToOne(cascade  = CascadeType.ALL)
+
+    @OneToMany(cascade  = CascadeType.ALL)
     @JoinColumn(name = "reviewId" , nullable = false)
-    private Review review;
+    private Set<Review> review;
+
+    @OneToMany(cascade  = CascadeType.ALL)
+    @JoinColumn(name = "critId" , nullable = false)
+    private Set<Criteria> criteria;
 }

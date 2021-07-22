@@ -2,10 +2,12 @@ package com.thkoeln.hct.backend.domain.model;
 
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
+@NoArgsConstructor
 @Table(name = "review")
 @Data
 
