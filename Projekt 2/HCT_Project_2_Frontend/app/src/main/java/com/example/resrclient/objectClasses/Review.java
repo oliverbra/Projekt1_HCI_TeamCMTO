@@ -7,15 +7,15 @@ public class Review {
 
     private double rating;
     private Date date;
-    private Comment comment;
+    private String comment;
     private User author;
     private GrowSpace gs;
     private ArrayList<ReviewCriteria> criteria;
 
-    public Review(double pRating, Date pDate, String pCommentContent, User pAuthor, GrowSpace pGs){
+    public Review(double pRating, Date pDate, String pComment, User pAuthor, GrowSpace pGs){
         rating = pRating;
         date = pDate;
-        comment = new Comment(pCommentContent,pDate);
+        comment = pComment;
         // how to initialize author and gs automatically?
         author = pAuthor;
         gs = pGs;
@@ -31,7 +31,7 @@ public class Review {
         return date;
     }
 
-    public Comment getComment() {
+    public String getComment() {
         return comment;
     }
 
@@ -52,7 +52,7 @@ public class Review {
         this.date = date;
     }
 
-    public void setComment(Comment comment) {
+    public void setComment(String comment) {
         this.comment = comment;
     }
 
