@@ -17,6 +17,7 @@ public class User {
     private String name;
     private String age;
     private String progress;
+    private int growpoints;
     private Integer level;
     private JPasswordField password;
 
@@ -28,6 +29,7 @@ public class User {
    /* public User(int pId, String pName){
         id = pId;
         name = pName;
+        growpoints = 0;
         //progress = new Progress("Beginner", 1,...);
         ownGS = new GrowSpace[3];
         favouriteGS = new ArrayList<GrowSpace>();
