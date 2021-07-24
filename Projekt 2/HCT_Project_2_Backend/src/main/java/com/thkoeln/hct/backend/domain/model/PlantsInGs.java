@@ -15,14 +15,14 @@ public class PlantsInGs {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer plantsInGsId;
+    private Integer id;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "gsId" ,nullable = false)//referencedColumnName = "growSpace"
+    //   @JoinColumn(name = "gsId" ,nullable = false)//referencedColumnName = "growSpace"
     private Set<GrowSpace> growSpace;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "plantId" ,nullable = false)//referencedColumnName = "growSpace"
+  //  @JoinColumn(name = "plantId" ,nullable = false)//referencedColumnName = "growSpace"
     private Set<Plants> plants;
 
 }

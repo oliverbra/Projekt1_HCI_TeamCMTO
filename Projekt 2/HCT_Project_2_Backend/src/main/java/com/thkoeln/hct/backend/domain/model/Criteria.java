@@ -14,7 +14,7 @@ public class Criteria {
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer critId;
+    private Integer id;
     @Column(nullable = false)
     private String name;
     private String explanation;

@@ -12,7 +12,7 @@ import java.util.Set;
 public class User {
 
     public User() {
-        setUserId(1);
+        setId(1);
         setEmail("test@test.test");
         setName("TestUser");
         setAge("25");
@@ -23,7 +23,7 @@ public class User {
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer userId;
+    private Integer id;
     @Column(nullable = false)
     private String email;
     @Column(nullable = false)
@@ -38,11 +38,11 @@ public class User {
    // @OneToMany(cascade  = CascadeType.ALL)
   //  @OneToMany(fetch = FetchType.LAZY)
     @ManyToOne(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "levelId" , referencedColumnName = "levelId")
+  //  @JoinColumn(name = "levelId" , referencedColumnName = "levelId")
      private Level level;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "gsId" , referencedColumnName = "gsId")
+   // @JoinColumn(name = "gsId" , referencedColumnName = "gsId")
     private Set<GrowSpace> growSpace;
 
 

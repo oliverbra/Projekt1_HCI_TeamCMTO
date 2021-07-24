@@ -17,9 +17,9 @@ public class Expert {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer expertId;
+    private Integer id;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "userId" ,nullable = false )//referencedColumnName = "gsId"
+   // @JoinColumn(name = "userId" ,nullable = false )//referencedColumnName = "gsId"
     private Set<User> user;
 }

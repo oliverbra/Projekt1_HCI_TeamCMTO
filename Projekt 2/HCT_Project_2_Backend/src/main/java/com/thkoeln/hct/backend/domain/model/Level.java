@@ -20,7 +20,7 @@ public class Level {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer levelId;
+    private Integer id;
     private Integer level;
     private String progressTier;
     private String progressTierequirement;

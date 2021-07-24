@@ -16,10 +16,10 @@ public class Mark {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer markId;
+    private Integer id;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "gsId" ,nullable = false)//referencedColumnName = "growSpace"
+   // @JoinColumn(name = "gsId" ,nullable = false)//referencedColumnName = "growSpace"
     private Set<GrowSpace> growSpace;
 
 

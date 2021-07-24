@@ -19,7 +19,7 @@ public class GrowSpace {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer gsId;
+    private Integer id;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)

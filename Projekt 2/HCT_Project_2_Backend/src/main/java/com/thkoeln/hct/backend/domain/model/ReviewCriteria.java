@@ -18,16 +18,16 @@ public class ReviewCriteria {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer critId;
+    private Integer id;
     @Column(nullable = false)
     private Integer faktor;
 
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "reviewId" , nullable = false)
+  //  @JoinColumn(name = "reviewId" , nullable = false)
     private Set<Review> review;
 
     @OneToMany(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "critId" , nullable = false)
+  //  @JoinColumn(name = "critId" , nullable = false)
     private Set<Criteria> criteria;
 }

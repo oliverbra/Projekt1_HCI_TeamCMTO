@@ -15,18 +15,18 @@ public class Review {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer reviewId;
+    private Integer id;
     private String text;
     private String comment;
 
 
 
     @ManyToOne(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "userId" , nullable = false)
+ //   @JoinColumn(name = "userId" , nullable = false)
     private User user;
 
     @ManyToOne(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "gsId" , nullable = false)
+//    @JoinColumn(name = "gsId" , nullable = false)
     private GrowSpace growSpace;
 
 }
