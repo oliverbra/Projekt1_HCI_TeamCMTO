@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HalloWorldController {
 
-    @RequestMapping(method = RequestMethod.GET,
-    path="sayHallo",produces = MediaType.APPLICATION_JSON_VALUE)
-    public String sayHallo(){
-        return "Hallo Ali";
-    }
 
     @RequestMapping(method = RequestMethod.GET,
             path="person")
