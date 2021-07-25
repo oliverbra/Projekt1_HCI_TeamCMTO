@@ -15,6 +15,7 @@ public class Plants {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
-    private Integer plantId;
+    private Integer id;
     private String botanicalName;
 }
+
