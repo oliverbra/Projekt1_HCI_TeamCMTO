@@ -1,5 +1,6 @@
 package com.thkoeln.hct.backend.application.service;
 
+import com.thkoeln.hct.backend.application.exceptions.UserAlreadyExistException;
 import com.thkoeln.hct.backend.domain.model.User;
 import com.thkoeln.hct.backend.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User create(@NonNull User user){
+    public User create(@NonNull User user) throws UserAlreadyExistException {
+        if(checkIfUserExists(user.getEmail())){
+            throw new UserAlreadyExistException("User already exists for this email");
+        }
         return userRepository.save(user);
     }
 
@@ -34,4 +38,7 @@ public class UserService {
     public void delete(@NonNull Integer id){
         userRepository.delete(userRepository.findUserByid(id));
     }
+
+    public boolean checkIfUserExists(String email) {return userRepository.findByEmail(email) !=null ? true : false;}
+
 }

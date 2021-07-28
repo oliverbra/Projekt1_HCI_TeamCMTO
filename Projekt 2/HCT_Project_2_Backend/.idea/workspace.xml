@@ -5,43 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddcff19-83ac-4a55-84ec-45e6608a8fc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/CriteriaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/LevelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/MarkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/PlantsInGsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/ReviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/ReviewCriteriaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/CriteriaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/ExpertService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/GrowSpaceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/LevelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/MarkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/PlantsInGsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/ReviewCriteriaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/ReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/CriteriaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/ExpertRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/GrowSpaceRepositry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/LevelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/MarkRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/PlantsInGsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/ReviewCriteriaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/ReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/GrowSpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/GrowSpaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/HalloWorldController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/HalloWorldController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +31,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javadevjournal-master/javadevjournal-master/spring-security" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -87,4 +56,18 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
 </project>

@@ -12,19 +12,13 @@ import java.util.Set;
 public class User {
 
     public User() {
-        setId(1);
-        setEmail("test@test.test");
-        setName("TestUser");
-        setAge("25");
-        setProgress("Blümchen");
-        setLevel(null);
     }
 
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     @Id
     @Column(nullable = false)
     private Integer id;
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
     @Column(nullable = false)
     private String name;
