@@ -1,5 +1,6 @@
 package com.thkoeln.hct.backend.application.controller;
 
+import com.thkoeln.hct.backend.application.exceptions.UserAlreadyExistException;
 import com.thkoeln.hct.backend.application.service.UserService;
 import com.thkoeln.hct.backend.domain.model.User;
 import org.slf4j.Logger;
@@ -33,7 +34,7 @@ public class UserController {
     }
 
     @PostMapping("/user")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@RequestBody User user) throws UserAlreadyExistException {
         logger.debug("POST: createUser");
         return new ResponseEntity(userService.create(user), HttpStatus.CREATED);
     }
