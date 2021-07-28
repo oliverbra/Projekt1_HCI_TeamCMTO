@@ -38,7 +38,7 @@ public class PlantsController {
         return new ResponseEntity(plantsService.create(plants), HttpStatus.CREATED);
     }
 
-    @PutMapping(name = "/plants", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping("/plants")
     public ResponseEntity<Plants> updatePlant(@RequestBody Plants plants) {
         logger.debug("PUT: updatePlant");
         return new ResponseEntity(plantsService.update(plants), HttpStatus.OK);
