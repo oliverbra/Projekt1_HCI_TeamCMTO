@@ -1,0 +1,30 @@
+package com.thkoeln.hct.backend.application.service;
+
+import com.thkoeln.hct.backend.domain.model.GrowSpace;
+import com.thkoeln.hct.backend.domain.repository.GrowSpaceRepositry;
+import lombok.NonNull;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.List;
+@Service
+public class GrowSpaceService {
+    @Autowired
+    private GrowSpaceRepositry growSpaceRepositry;
+
+    public List<GrowSpace> findAll(){return growSpaceRepositry.findAll();}
+
+    public  GrowSpace create (@NonNull GrowSpace growSpace) {return growSpaceRepositry.save(growSpace);}
+
+    public GrowSpace findByid(@NonNull Integer id) {return growSpaceRepositry.findGrowSpaceById(id);}
+
+    public GrowSpace update(@NonNull GrowSpace growSpace){
+        GrowSpace growSpaceToUpdate = growSpaceRepositry.findGrowSpaceById(growSpace.getId());
+        growSpaceToUpdate.setDescription(growSpace.getDescription());
+        return growSpaceRepositry.save(growSpaceToUpdate);
+    }
+
+    public void delete(@NonNull Integer id) {growSpaceRepositry.delete(growSpaceRepositry.findGrowSpaceById(id));}
+}
