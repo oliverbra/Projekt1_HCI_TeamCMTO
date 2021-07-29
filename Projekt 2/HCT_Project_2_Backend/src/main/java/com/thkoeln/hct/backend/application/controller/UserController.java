@@ -1,6 +1,6 @@
 package com.thkoeln.hct.backend.application.controller;
 
-import com.thkoeln.hct.backend.application.exceptions.UserAlreadyExistException;
+import com.thkoeln.hct.backend.common.exceptions.UserAlreadyExistException;
 import com.thkoeln.hct.backend.application.service.UserService;
 import com.thkoeln.hct.backend.domain.model.User;
 import org.slf4j.Logger;
@@ -21,31 +21,31 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/user")
+    @GetMapping("/users")
     public ResponseEntity<List<User>> getAllUser() {
         logger.debug("GET: getAlluser");
         return new ResponseEntity(userService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/users/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Integer id) {
         logger.debug("GET: getuserById");
         return new ResponseEntity(userService.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping("/user")
+    @PostMapping("/users")
     public ResponseEntity<User> createUser(@RequestBody User user) throws UserAlreadyExistException {
         logger.debug("POST: createUser");
         return new ResponseEntity(userService.create(user), HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/user", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> updateUser(@RequestBody User user) {
         logger.debug("PUT: updateUser");
         return new ResponseEntity(userService.update(user), HttpStatus.OK);
     }
 
-    @DeleteMapping  ("/user/{id}")
+    @DeleteMapping  ("/users/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Integer id) {
         logger.debug("DELETE: deleteUser");
         userService.delete(id);

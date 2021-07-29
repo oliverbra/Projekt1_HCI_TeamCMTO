@@ -1,6 +1,6 @@
 package com.thkoeln.hct.backend.application.service;
 
-import com.thkoeln.hct.backend.application.exceptions.UserAlreadyExistException;
+import com.thkoeln.hct.backend.common.exceptions.UserAlreadyExistException;
 import com.thkoeln.hct.backend.domain.model.User;
 import com.thkoeln.hct.backend.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

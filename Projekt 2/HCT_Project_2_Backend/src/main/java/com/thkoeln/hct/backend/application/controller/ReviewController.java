@@ -20,31 +20,31 @@ public class ReviewController {
     @Autowired
     private ReviewService reviewService;
 
-    @GetMapping("/review")
+    @GetMapping("/reviews")
     public ResponseEntity<List<Review>> getAllReview() {
         logger.debug("GET: getAllReview");
         return new ResponseEntity(reviewService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/review/{id}")
+    @GetMapping("/reviews/{id}")
     public ResponseEntity<Review> getReviewById(@PathVariable Integer id) {
         logger.debug("GET: getReviewById");
         return new ResponseEntity(reviewService.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping("/review")
+    @PostMapping("/reviews")
     public ResponseEntity<Review> createReview(@RequestBody Review review) {
         logger.debug("POST: createReview");
         return new ResponseEntity(reviewService.create(review), HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/review", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/reviews", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Review> updateReview(@RequestBody Review review) {
         logger.debug("PUT: updateReview");
         return new ResponseEntity(reviewService.update(review), HttpStatus.OK);
     }
 
-    @DeleteMapping  ("/review/{id}")
+    @DeleteMapping  ("/reviews/{id}")
     public ResponseEntity<Void> deleteReview(@PathVariable Integer id) {
         logger.debug("DELETE: deleteReview");
         reviewService.delete(id);

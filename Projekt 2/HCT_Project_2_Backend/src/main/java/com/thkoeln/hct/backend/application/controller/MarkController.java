@@ -19,31 +19,31 @@ public class MarkController {
     @Autowired
     private MarkService markService;
 
-    @GetMapping("/mark")
+    @GetMapping("/marks")
     public ResponseEntity<List<Mark>> getAllMark() {
         logger.debug("GET: getAllMark");
         return new ResponseEntity(markService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/mark/{id}")
+    @GetMapping("/marks/{id}")
     public ResponseEntity<Mark> getMarkById(@PathVariable Integer id) {
         logger.debug("GET: getMarkById");
         return new ResponseEntity(markService.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping("/mark")
+    @PostMapping("/marks")
     public ResponseEntity<Mark> createLevel(@RequestBody Mark mark) {
         logger.debug("POST: createLevel");
         return new ResponseEntity(markService.create(mark), HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/mark", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/marks", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Mark> updateLevel(@RequestBody Mark mark) {
         logger.debug("PUT: updateLevel");
         return new ResponseEntity(markService.update(mark), HttpStatus.OK);
     }
 
-    @DeleteMapping  ("/mark/{id}")
+    @DeleteMapping  ("/marks/{id}")
     public ResponseEntity<Void> deleteLevel(@PathVariable Integer id) {
         logger.debug("DELETE: deleteLevel");
         markService.delete(id);

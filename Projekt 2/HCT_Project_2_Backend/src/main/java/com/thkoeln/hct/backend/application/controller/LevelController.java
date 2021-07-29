@@ -19,31 +19,31 @@ public class LevelController {
     @Autowired
     private LevelService levelService;
 
-    @GetMapping("/level")
+    @GetMapping("/levels")
     public ResponseEntity<List<Level>> getAllLevel() {
         logger.debug("GET: getAllLevel");
         return new ResponseEntity(levelService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/level/{id}")
+    @GetMapping("/levels/{id}")
     public ResponseEntity<Level> getLevelById(@PathVariable Integer id) {
         logger.debug("GET: getLevelById");
         return new ResponseEntity(levelService.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping("/level")
+    @PostMapping("/levels")
     public ResponseEntity<Level> createLevel(@RequestBody Level level) {
         logger.debug("POST: createLevel");
         return new ResponseEntity(levelService.create(level), HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/level", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/levels", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Level> updateLevel(@RequestBody Level level) {
         logger.debug("PUT: updateLevel");
         return new ResponseEntity(levelService.update(level), HttpStatus.OK);
     }
 
-    @DeleteMapping  ("/level/{id}")
+    @DeleteMapping  ("/levels/{id}")
     public ResponseEntity<Void> deleteLevel(@PathVariable Integer id) {
         logger.debug("DELETE: deleteLevel");
         levelService.delete(id);

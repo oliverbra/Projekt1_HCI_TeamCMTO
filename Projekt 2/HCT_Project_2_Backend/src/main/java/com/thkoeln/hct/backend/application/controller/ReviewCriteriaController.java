@@ -20,31 +20,31 @@ public class ReviewCriteriaController {
     @Autowired
     private ReviewCriteriaService reviewCriteriaService;
 
-    @GetMapping("/reviewCriteria")
+    @GetMapping("/reviewCriterias")
     public ResponseEntity<List<ReviewCriteria>> getAllReviewCriteria() {
         logger.debug("GET: getAllReviewCriteria");
         return new ResponseEntity(reviewCriteriaService.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/reviewCriteria/{id}")
+    @GetMapping("/reviewCriterias/{id}")
     public ResponseEntity<ReviewCriteria> getReviewCriteriaById(@PathVariable Integer id) {
         logger.debug("GET: getReviewCriteriaById");
         return new ResponseEntity(reviewCriteriaService.findById(id), HttpStatus.OK);
     }
 
-    @PostMapping("/reviewCriteria")
+    @PostMapping("/reviewCriterias")
     public ResponseEntity<ReviewCriteria> createReviewCriteria(@RequestBody ReviewCriteria reviewCriteria) {
         logger.debug("POST: createReviewCriteria");
         return new ResponseEntity(reviewCriteriaService.create(reviewCriteria), HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/reviewCriteria", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/reviewCriterias", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ReviewCriteria> updateReviewCriteria(@RequestBody ReviewCriteria reviewCriteria) {
         logger.debug("PUT: updateReviewCriteria");
         return new ResponseEntity(reviewCriteriaService.update(reviewCriteria), HttpStatus.OK);
     }
 
-    @DeleteMapping  ("/reviewCriteria/{id}")
+    @DeleteMapping  ("/reviewCriterias/{id}")
     public ResponseEntity<Void> deleteReviewCriteria(@PathVariable Integer id) {
         logger.debug("DELETE: deleteReviewCriteria");
         reviewCriteriaService.delete(id);
