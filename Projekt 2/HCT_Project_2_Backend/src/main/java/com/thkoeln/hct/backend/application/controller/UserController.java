@@ -1,6 +1,9 @@
 package com.thkoeln.hct.backend.application.controller;
 
+
 import com.thkoeln.hct.backend.common.exceptions.UserAlreadyExistException;
+import com.thkoeln.hct.backend.common.exceptions.WrongCredentialsException;
+
 import com.thkoeln.hct.backend.application.service.UserService;
 import com.thkoeln.hct.backend.domain.model.User;
 import org.slf4j.Logger;
@@ -38,6 +41,11 @@ public class UserController {
         logger.debug("POST: createUser");
         return new ResponseEntity(userService.create(user), HttpStatus.CREATED);
     }
+    @PostMapping("/login")
+        public ResponseEntity<User> login(@RequestBody User user) throws WrongCredentialsException {
+        return new ResponseEntity(userService.userLogin(user), HttpStatus.OK);
+    }
+
 
     @PutMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> updateUser(@RequestBody User user) {
