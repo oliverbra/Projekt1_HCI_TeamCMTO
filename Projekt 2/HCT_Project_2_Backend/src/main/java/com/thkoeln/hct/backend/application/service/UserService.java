@@ -25,9 +25,10 @@ public class UserService {
 
     public User userLogin(User user) throws WrongCredentialsException{
         if(checkIfCredentialsWrong(user.getEmail(), user.getPassword())){
+            return userRepository.findByEmail(user.getEmail());
+        } else {
             throw new WrongCredentialsException("username and/or password do not match");
         }
-        return user;
     }
 
     // TODO: Encrypt user password
