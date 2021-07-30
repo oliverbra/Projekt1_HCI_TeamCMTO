@@ -24,7 +24,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/users")
+    @GetMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<User>> getAllUser() {
         logger.debug("GET: getAlluser");
         return new ResponseEntity(userService.findAll(), HttpStatus.OK);

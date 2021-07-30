@@ -1,41 +1,31 @@
 package com.example.resrclient.objectClasses;
 
-import java.util.ArrayList;
+import java.util.Set;
 
 public class User {
 
-    /*
-    private int id;
-    private String name;
-    private Progress progress;
-    private GrowSpace[] ownGS;
-    private ArrayList<GrowSpace> favouriteGS;
-    private ArrayList<Review> sentReviews; */
-
-    private Integer userId;
+    private Integer id;
     private String email;
     private String name;
     private String age;
     private String progress;
     private int growpoints;
     private Integer level;
-    private JPasswordField password;
+    private String password;
+    private Set<GrowSpace> growSpace;
 
 
     public User() {
-
     }
 
-   /* public User(int pId, String pName){
-        id = pId;
-        name = pName;
-        growpoints = 0;
-        //progress = new Progress("Beginner", 1,...);
-        ownGS = new GrowSpace[3];
-        favouriteGS = new ArrayList<GrowSpace>();
-        sentReviews = new ArrayList<Review>();
+    // Dieser constructor existiert für LoginTask
+    public User(String email, String password){
+      //
+        this.email  = email ;
+        this.password = password;
     }
 
+/*
     //adds GD to ownGS
     //public GrowSpace createGS(){}
 
@@ -79,12 +69,28 @@ public class User {
         this.progress = progress;
     } */
 
-    public Integer getUserId() {
-        return userId;
+    public int getGrowpoints() {
+        return growpoints;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setGrowpoints(int growpoints) {
+        this.growpoints = growpoints;
+    }
+
+    public Set<GrowSpace> getGrowSpace() {
+        return growSpace;
+    }
+
+    public void setGrowSpace(Set<GrowSpace> growSpace) {
+        this.growSpace = growSpace;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getEmail() {
@@ -127,11 +133,11 @@ public class User {
         this.level = level;
     }
 
-    public JPasswordField getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(JPasswordField password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 }
