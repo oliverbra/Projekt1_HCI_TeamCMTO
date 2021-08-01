@@ -28,6 +28,24 @@ public class PlantsService {
 
     public Plants update(@NonNull Plants plants){
         Plants plantToUpdate = plantsRepository.findPlantsById(plants.getId());
+        plantToUpdate.setBlossomColour(plants.getBlossomColour());
+        plantToUpdate.setBlossomingTime(plants.getBlossomingTime());
+        plantToUpdate.setCommonName(plants.getCommonName());
+        plantToUpdate.setCareText(plants.getCareText());
+        plantToUpdate.setDescriptionText(plants.getDescriptionText());
+        plantToUpdate.setGrowthCharacteristics(plants.getGrowthCharacteristics());
+        plantToUpdate.setLight(plants.getLight());
+        plantToUpdate.setNativty(plants.getNativty());
+        plantToUpdate.setNectarPollen(plants.getNectarPollen());
+        plantToUpdate.setNutrientRequirements(plants.getNutrientRequirements());
+        plantToUpdate.setOrnamentalValue(plants.getOrnamentalValue());
+        plantToUpdate.setPhValue(plants.getPhValue());
+        plantToUpdate.setPlantCategory(plants.getPlantCategory());
+        plantToUpdate.setPoisonous(plants.getPoisonous());
+        plantToUpdate.setSoil(plants.getSoil());
+        plantToUpdate.setSoilMoisture(plants.getSoilMoisture());
+        plantToUpdate.setUrl(plants.getUrl());
+        plantToUpdate.setUtilityValue(plants.getUtilityValue());
         plantToUpdate.setBotanicalName(plants.getBotanicalName());
         return plantsRepository.save(plantToUpdate);
     }
