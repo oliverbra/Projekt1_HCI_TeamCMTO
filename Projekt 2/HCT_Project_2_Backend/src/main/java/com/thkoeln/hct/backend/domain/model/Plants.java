@@ -17,29 +17,29 @@ public class Plants {
     @Column(nullable = false)
     private Integer id;
     @Column(nullable = false)
-    private String common_name;
+    private String commonName;
     @Column(nullable = false)
     private String botanicalName;
     @Column(nullable = false,columnDefinition = "TEXT")
-    private String description_text;
+    private String descriptionText;
     @Column(nullable = false)
-    private String plant_category;
-    private String growth_characteristics;
-    private String blossoming_time;
-    private String blossom_colour;
+    private String plantCategory;
+    private String growthCharacteristics;
+    private String blossomingTime;
+    private String blossomColour;
     private String poisonous;
-    private String nectar_pollen;
-    private String _native;
-    private String ornamental_value;
-    private String utility_value;
+    private String nectarPollen;
+    private String nativty;
+    private String ornamentalValue;
+    private String utilityValue;
     @Column(nullable = false)
     private String light;
     private String soil;
-    private String soil_moisture;
-    private String pH_value;
-    private String nutrient_requirements;
+    private String soilMoisture;
+    private String phValue;
+    private String nutrientRequirements;
     @Column(nullable = false, columnDefinition = "TEXT")
-    private String care_text;
+    private String careText;
     @Column(nullable = false)
     private String url;
 }
