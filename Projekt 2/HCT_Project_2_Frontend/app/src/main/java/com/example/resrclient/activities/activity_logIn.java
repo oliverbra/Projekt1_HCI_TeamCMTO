@@ -27,8 +27,13 @@ public class activity_logIn extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void changeToregiestrierung(View view) {
+        Intent intent = new Intent(this, activity_regiestrierung.class);
+        startActivity(intent);
+    }
+
     public void loginAction(View view){
-        final String url = "http://192.168.2.101:8081/login";
+        final String url = "http://192.168.0.242:8081/login";
         new LoginTask(this).execute(url, email.getText().toString(), password.getText().toString());
     }
 }

@@ -24,7 +24,13 @@ public class User {
         this.email  = email ;
         this.password = password;
     }
-
+    //Dieser Constructor existiert für RegiesterTask
+    public User (String name,String email,String password,String age){
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.age = age;
+    }
 /*
     //adds GD to ownGS
     //public GrowSpace createGS(){}

@@ -18,6 +18,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logIN_pw_editTextTextPassword" />
 
+    <Button
+        android:id="@+id/regiestrieren_einloggen_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="184dp"
+        android:onClick="changeToregiestrierung"
+        android:text="Registrieren"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logIN_pw_editTextTextPassword" />
+
     <EditText
         android:id="@+id/logIN_pw_editTextTextPassword"
         android:layout_width="wrap_content"
