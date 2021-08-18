@@ -18,20 +18,20 @@ public class GrowSpace {
 
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private Integer id;
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private String name;
-    @Column(nullable = false)
-    private String description;
-    @Column(nullable = false)
+    //@Column(nullable = false)
+    private String problems;
+    //@Column(nullable = false)
     private String goal;
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private Double size;
     private String picture;
     private String category;
     private String location;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Double averageRating;
 
     //@ManyToOne(cascade  = CascadeType.ALL)
