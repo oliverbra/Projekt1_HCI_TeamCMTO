@@ -12,19 +12,20 @@ public class GrowSpace {
     private String category; //as list?
     private double size;
     private String location;
-    private ArrayList<String> problems;
+    //private ArrayList<String> problems;
+    private String problems;
     private double averageRating;
-    private ArrayList<Image> picture;
+   // private ArrayList<Image> picture;
 
     //private ArrayList<PlantSpecies> plants;
 
-    private ArrayList<Review> receivedReviews;
-    private ArrayList<User> adorers;
+   // private ArrayList<Review> receivedReviews;
+  //  private ArrayList<User> adorers;
 
-    private ArrayList<Mark> marks;
+ //   private ArrayList<Mark> marks;
 
 
-    public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation) {
+   /* public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation) {
         owner = pOwner;
         name = pName;
         goal = pGoal;
@@ -32,12 +33,26 @@ public class GrowSpace {
         size = pSize;
         location = pLocation;
 
-        problems = new ArrayList<String>(); //how to add problems while creating the GrowSpace?
+       // problems = new ArrayList<String>(); //how to add problems while creating the GrowSpace?
 
         receivedReviews = new ArrayList<Review>();
         adorers = new ArrayList<User>();
 
         marks = new ArrayList<Mark>();
+    } */
+
+    public GrowSpace(String pName, String pGoal, String pCategory, double pSize, String pLocation, String pProblems, Double pAverageRating) {
+        name = pName;
+        goal = pGoal;
+        category = pCategory;
+        size = pSize;
+        location = pLocation;
+        problems = pProblems;
+        averageRating = pAverageRating;
+
+        //receivedReviews = new ArrayList<Review>();
+       // adorers = new ArrayList<User>();
+        //marks = new ArrayList<Mark>();
     }
 
     /*public double calculateAverageRating(){
@@ -47,6 +62,10 @@ public class GrowSpace {
     /*public void sendUpdateNotice(){
         //...
     }*/
+
+    public String toString() {
+        return name + " " + goal + " " + category + " " + size + " " + location + " " + problems + ".";
+    };
 
     //Getter
     public User getOwner() {
@@ -72,6 +91,10 @@ public class GrowSpace {
     public String getLocation() {
         return location;
     }
+
+    public String getProblems() {return problems;}
+
+    public double getAverageRating() {return averageRating;}
 
     //Setter
     public void setOwner(User owner) {

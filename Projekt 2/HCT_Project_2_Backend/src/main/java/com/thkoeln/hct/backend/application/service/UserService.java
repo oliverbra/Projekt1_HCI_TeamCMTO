@@ -6,7 +6,7 @@ import com.thkoeln.hct.backend.domain.model.User;
 import com.thkoeln.hct.backend.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class UserService {
     private UserRepository userRepository;
 
     @Autowired
-    BCryptPasswordEncoder passwordEncoder;
+   // BCryptPasswordEncoder passwordEncoder;
 
     public List<User> findAll(){
         return userRepository.findAll();
@@ -57,8 +57,8 @@ public class UserService {
 
     public boolean checkIfCredentialsWrong(String email, String password) {return userRepository.findByEmailAndPassword(email, password) !=null ? true : false;}
 
-    private void encodePassword(User user){
+   /* private void encodePassword(User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-    }
+    } */
 
 }

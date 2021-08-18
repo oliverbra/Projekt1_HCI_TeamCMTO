@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.example.resrclient.activities.activity_editGS;
 import com.example.resrclient.activities.activity_logIn;
+import com.example.resrclient.activities.activity_createGS;
 import com.example.resrclient.carousel.CarouselAdapter;
 import com.example.resrclient.carousel.CarouselItem;
 import com.example.resrclient.objectClasses.Person;
@@ -132,6 +134,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void chanceActivity(View view) {
         Intent intent = new Intent(this, activity_logIn.class);
+        startActivity(intent);
+    }
+
+    public void chanceActivity2(View view) {
+        Intent intent = new Intent(this, activity_createGS.class);
+        startActivity(intent);
+    }
+
+    public void chanceActivity3(View view) {
+        Intent intent = new Intent(this, activity_editGS.class);
         startActivity(intent);
     }
 

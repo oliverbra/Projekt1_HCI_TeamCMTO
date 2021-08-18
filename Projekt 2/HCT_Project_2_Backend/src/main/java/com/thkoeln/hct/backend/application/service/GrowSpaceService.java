@@ -22,7 +22,7 @@ public class GrowSpaceService {
 
     public GrowSpace update(@NonNull GrowSpace growSpace){
         GrowSpace growSpaceToUpdate = growSpaceRepositry.findGrowSpaceById(growSpace.getId());
-        growSpaceToUpdate.setDescription(growSpace.getDescription());
+      //  growSpaceToUpdate.setDescription(growSpace.getDescription());
         return growSpaceRepositry.save(growSpaceToUpdate);
     }
 

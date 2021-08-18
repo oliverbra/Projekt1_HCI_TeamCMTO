@@ -19,7 +19,7 @@ public class LoginTask extends AsyncTask<String, Void, User> {
 
 
     Context ctx;
-     public LoginTask(Context ctx)
+    public LoginTask(Context ctx)
     {
         this.ctx = ctx;
     }
