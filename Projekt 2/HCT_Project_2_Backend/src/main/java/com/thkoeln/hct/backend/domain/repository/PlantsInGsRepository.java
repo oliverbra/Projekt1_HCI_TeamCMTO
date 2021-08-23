@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PlantsInGsRepository extends JpaRepository<PlantsInGs, Integer> {
-
-    PlantsInGs findPlantsInGsById(Integer id); }
+    PlantsInGs findPlantsInGsById(Integer id);
+}

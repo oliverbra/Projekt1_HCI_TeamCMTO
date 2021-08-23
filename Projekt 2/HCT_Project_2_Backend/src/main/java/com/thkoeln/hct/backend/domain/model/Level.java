@@ -22,10 +22,8 @@ public class Level {
     @Column(nullable = false)
     private Integer id;
     private Integer level;
-    private String progressTier;
-    private String progressTierequirement;
-    private String comment;
-    private String reviews;
+    private String levelName;
+    private Integer levelThreshold;
    // @ManyToOne(cascade  = CascadeType.ALL)
     //List<User> users;
 }

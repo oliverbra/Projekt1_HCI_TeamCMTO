@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -16,9 +17,12 @@ public class Review {
     @Id
     @Column(nullable = false)
     private Integer id;
-    private String text;
     private String comment;
-
+    private Date date;
+    private Integer localCriteria;
+    private Integer shelterCriteria;
+    private Integer naturalCriteria;
+    private Integer dangerCriteria;
 
 
     @ManyToOne(cascade  = CascadeType.ALL)

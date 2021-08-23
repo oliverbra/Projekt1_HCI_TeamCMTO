@@ -28,14 +28,35 @@ public class GrowSpace {
     private String goal;
     //@Column(nullable = false)
     private Double size;
+
+    /*
+    TODO pictures in db? datatype? hosted where?
+     */
     private String picture;
     private String category;
     private String location;
+    /*
+       Zusammengesetzt aus den 4 ratings aus Review()
+     */
     @Column(nullable = true)
     private Double averageRating;
+    private boolean highlighted;
 
-    //@ManyToOne(cascade  = CascadeType.ALL)
-   // @JoinColumn(name = "userId" , referencedColumnName = "userId")
-   // private Set<User> user;
-   // private  User user;
+    /*
+    @ManyToOne(cascade  = CascadeType.ALL)
+    @JoinColumn(name = "userId" , referencedColumnName = "userId")
+    private Set<User> user;
+    private User user;
+     */
+
+    /*
+    TODO implement plants relationship (manytomany)
+     */
+
+     /*
+    TODO implement reviews relationship (onetomany)
+     */
+
+
+
 }

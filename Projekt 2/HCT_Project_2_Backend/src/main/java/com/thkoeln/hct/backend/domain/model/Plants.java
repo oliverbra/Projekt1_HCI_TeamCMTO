@@ -42,5 +42,11 @@ public class Plants {
     private String careText;
     @Column(nullable = false)
     private String url;
+
+    /*
+    TODO relationship zu PlantsInGs()
+     */
+
+
 }
 
