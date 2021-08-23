@@ -1,7 +1,6 @@
 package com.example.resrclient;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.example.resrclient.activities.activity_editGS;
@@ -9,8 +8,6 @@ import com.example.resrclient.activities.activity_logIn;
 import com.example.resrclient.activities.activity_createGS;
 import com.example.resrclient.carousel.CarouselAdapter;
 import com.example.resrclient.carousel.CarouselItem;
-import com.example.resrclient.objectClasses.Person;
-import com.example.resrclient.restClasses.RestTaskExample;
 import com.example.resrclient.restClasses.RestTaskUser;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,9 +20,6 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;

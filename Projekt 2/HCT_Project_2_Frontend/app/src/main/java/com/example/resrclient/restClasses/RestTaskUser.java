@@ -16,7 +16,7 @@ public class RestTaskUser extends AsyncTask<String, Void, User> {
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
         User result = restTemplate.getForObject(url,User.class);
 
-        Log.v("Result","Gefunden: " + result.getName());
+        Log.v("Result","Gefunden: " + result.getUserName());
         return result;
     }
 

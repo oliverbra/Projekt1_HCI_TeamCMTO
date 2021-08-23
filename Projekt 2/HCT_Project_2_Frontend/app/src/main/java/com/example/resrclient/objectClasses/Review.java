@@ -1,23 +1,26 @@
 package com.example.resrclient.objectClasses;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Review {
 
+    private Integer id;
     private double rating;
     private Date date;
     private String comment;
-    private User author;
+    private Integer localCriteria;
+    private Integer shelterCriteria;
+    private Integer naturalCriteria;
+    private Integer dangerCriteria;
+    private User user;
     private GrowSpace gs;
-    private ArrayList<ReviewCriteria> criteria;
 
     public Review(double pRating, Date pDate, String pComment, User pAuthor, GrowSpace pGs){
         rating = pRating;
         date = pDate;
         comment = pComment;
         // how to initialize author and gs automatically?
-        author = pAuthor;
+        user = pAuthor;
         gs = pGs;
         // criteria are initialized according to the level of the user; maybe multiple constructors?
     }
@@ -35,8 +38,8 @@ public class Review {
         return comment;
     }
 
-    public User getAuthor() {
-        return author;
+    public User getUser() {
+        return user;
     }
 
     public GrowSpace getGs() {
@@ -56,12 +59,45 @@ public class Review {
         this.comment = comment;
     }
 
-    public void setAuthor(User author) {
-        this.author = author;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setGs(GrowSpace gs) {
         this.gs = gs;
     }
+
+    public Integer getLocalCriteria() {
+        return localCriteria;
+    }
+
+    public void setLocalCriteria(Integer localCriteria) {
+        this.localCriteria = localCriteria;
+    }
+
+    public Integer getShelterCriteria() {
+        return shelterCriteria;
+    }
+
+    public void setShelterCriteria(Integer shelterCriteria) {
+        this.shelterCriteria = shelterCriteria;
+    }
+
+    public Integer getNaturalCriteria() {
+        return naturalCriteria;
+    }
+
+    public void setNaturalCriteria(Integer naturalCriteria) {
+        this.naturalCriteria = naturalCriteria;
+    }
+
+    public Integer getDangerCriteria() {
+        return dangerCriteria;
+    }
+
+    public void setDangerCriteria(Integer dangerCriteria) {
+        this.dangerCriteria = dangerCriteria;
+    }
+
 
 }

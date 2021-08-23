@@ -1,18 +1,20 @@
 package com.example.resrclient.objectClasses;
 
+import java.util.List;
 import java.util.Set;
 
 public class User {
 
     private Integer id;
     private String email;
-    private String name;
-    private String age;
+    private String userName;
     private String progress;
     private int growpoints;
-    private Integer level;
+    private Level level;
     private String password;
     private Set<GrowSpace> growSpace;
+    private List<Review> reviews;
+    private List<GrowSpace> bookmarkedGrowspaces;
 
 
     public User() {
@@ -25,11 +27,10 @@ public class User {
         this.password = password;
     }
     //Dieser Constructor existiert für RegiesterTask
-    public User (String name,String email,String password,String age){
-        this.name = name;
+    public User (String userName, String email, String password, String age){
+        this.userName = userName;
         this.email = email;
         this.password = password;
-        this.age = age;
     }
 /*
     //adds GD to ownGS
@@ -107,20 +108,12 @@ public class User {
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getProgress() {
@@ -131,11 +124,11 @@ public class User {
         this.progress = progress;
     }
 
-    public Integer getLevel() {
+    public Level getLevel() {
         return level;
     }
 
-    public void setLevel(Integer level) {
+    public void setLevel(Level level) {
         this.level = level;
     }
 

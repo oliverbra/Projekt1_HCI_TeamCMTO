@@ -1,8 +1,6 @@
 package com.example.resrclient.objectClasses;
 
-import java.util.ArrayList;
-
-public class PlantSpecies {
+public class Plants {
 
     private String commonName;
     private String botanicalName;
@@ -11,9 +9,9 @@ public class PlantSpecies {
     private String growthCharacteristics;
     private String blossomingTime;
     private String blossomColour;
-    private String poisonousness;
-    private boolean nectar;
-    private boolean local;
+    private String poisonous;
+    private String nectarPollen;
+    private String nativty;
     private String ornamentalValue;
     private String utilityValue;
     private String light;
@@ -24,9 +22,8 @@ public class PlantSpecies {
     private String careText;
     private String url;
 
-    private ArrayList<Mark> marks;
 
-    public PlantSpecies(String pCommonName, String pBotanicalName, String pDescriptionText, String pPlantCategory, String pGrowthCharacteristics, String pBlossomingTime, String pBlossomColour, String pPoisonousness, boolean pNectar, boolean pLocal, String pOrnamentalValue, String pUtilityValue, String pLight, String pSoil, String pSoilMoisture, String pPHValue, String pNutrientRequirements, String pCareText, String pUrl) {
+    public Plants(String pCommonName, String pBotanicalName, String pDescriptionText, String pPlantCategory, String pGrowthCharacteristics, String pBlossomingTime, String pBlossomColour, String pPoisonousness, String pNectar, String pLocal, String pOrnamentalValue, String pUtilityValue, String pLight, String pSoil, String pSoilMoisture, String pPHValue, String pNutrientRequirements, String pCareText, String pUrl) {
         pCommonName = commonName;
         pBotanicalName = botanicalName;
         pDescriptionText = descriptionText;
@@ -34,9 +31,9 @@ public class PlantSpecies {
         pGrowthCharacteristics = growthCharacteristics;
         pBlossomingTime = blossomingTime;
         pBlossomColour = blossomColour;
-        pPoisonousness = poisonousness;
-        pNectar = nectar;
-        pLocal = local;
+        pPoisonousness = poisonous;
+        pNectar = nectarPollen;
+        pLocal = nativty;
         pOrnamentalValue = ornamentalValue;
         pUtilityValue = utilityValue;
         pLight = light;
@@ -46,8 +43,6 @@ public class PlantSpecies {
         pNutrientRequirements = nutrientRequirements;
         pCareText = careText;
         pUrl = url;
-
-        marks = new ArrayList<Mark>();
     }
 
     //Getter
@@ -79,16 +74,16 @@ public class PlantSpecies {
         return blossomColour;
     }
 
-    public String getPoisonousness() {
-        return poisonousness;
+    public String getPoisonous() {
+        return poisonous;
     }
 
-    public boolean isNectar() {
-        return nectar;
+    public String getNectarPollen() {
+        return nectarPollen;
     }
 
-    public boolean isLocal() {
-        return local;
+    public String getNativty() {
+        return nativty;
     }
 
     public String getOrnamentalValue() {
@@ -156,16 +151,16 @@ public class PlantSpecies {
         this.blossomColour = blossomColour;
     }
 
-    public void setPoisonousness(String poisonousness) {
-        this.poisonousness = poisonousness;
+    public void setPoisonous(String poisonous) {
+        this.poisonous = poisonous;
     }
 
-    public void setNectar(boolean nectar) {
-        this.nectar = nectar;
+    public void setNectarPollen(String nectarPollen) {
+        this.nectarPollen = nectarPollen;
     }
 
-    public void setLocal(boolean local) {
-        this.local = local;
+    public void setNativty(String nativty) {
+        this.nativty = nativty;
     }
 
     public void setOrnamentalValue(String ornamentalValue) {

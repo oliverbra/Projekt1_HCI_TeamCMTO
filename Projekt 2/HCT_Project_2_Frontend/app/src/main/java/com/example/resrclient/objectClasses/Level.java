@@ -2,18 +2,18 @@ package com.example.resrclient.objectClasses;
 
 import android.media.Image;
 
-public class Progress {
+public class Level {
 
     private String levelName;
     private int level;
     private Image levelIcon;
-    private int levelRequirement;
+    private int levelThreshold;
 
-    public Progress(String pLevelName, int pLevel, Image pLevelIcon, int pLevelRequirement){
+    public Level(String pLevelName, int pLevel, Image pLevelIcon, int pLevelRequirement){
         levelName = pLevelName;
         level = pLevel;
         levelIcon = pLevelIcon;
-        levelRequirement = pLevelRequirement;
+        levelThreshold = pLevelRequirement;
     }
 
     public void levelUp(){
@@ -38,8 +38,8 @@ public class Progress {
         return levelIcon;
     }
 
-    public int getLevelRequirement() {
-        return levelRequirement;
+    public int getLevelThreshold() {
+        return levelThreshold;
     }
 
     //Setter
@@ -55,8 +55,8 @@ public class Progress {
         this.levelIcon = levelIcon;
     }
 
-    public void setLevelRequirement(int levelRequirement) {
-        this.levelRequirement = levelRequirement;
+    public void setLevelThreshold(int levelThreshold) {
+        this.levelThreshold = levelThreshold;
     }
 
 }

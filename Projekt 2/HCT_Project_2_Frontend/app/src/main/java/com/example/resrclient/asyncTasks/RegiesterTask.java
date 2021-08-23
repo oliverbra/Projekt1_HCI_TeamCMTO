@@ -35,7 +35,7 @@ public class RegiesterTask extends AsyncTask<String,Void, User> {
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
             Log.v("Resultbsdsd", "nicht Regiestriert");
             User result = restTemplate.postForObject(url, newUser, User.class);
-            Log.v("Resulta", "Erstellt" + result.getEmail() + result.getAge() + result.getName() + result.getPassword());
+            Log.v("Resulta", "Erstellt" + result.getEmail() + result.getAge() + result.getUserName() + result.getPassword());
         } catch (HttpServerErrorException e) {
             Log.v("Resultb", "nicht Regiestriert");
         }

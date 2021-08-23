@@ -15,14 +15,11 @@ public class GrowSpace {
     //private ArrayList<String> problems;
     private String problems;
     private double averageRating;
-   // private ArrayList<Image> picture;
+    private boolean highlighted;
+    private ArrayList<Plants> plants;
+    private ArrayList<Review> receivedReviews;
+    // private ArrayList<Image> picture;
 
-    //private ArrayList<PlantSpecies> plants;
-
-   // private ArrayList<Review> receivedReviews;
-  //  private ArrayList<User> adorers;
-
- //   private ArrayList<Mark> marks;
 
 
    /* public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation) {
@@ -120,5 +117,10 @@ public class GrowSpace {
     public void setLocation(String location) {
         this.location = location;
     }
+
+    public boolean isHighlighted() {return highlighted;}
+
+    public void setHighlighted(boolean highlighted) {this.highlighted = highlighted;}
+
 
 }
