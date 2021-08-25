@@ -27,7 +27,7 @@ public class User {
         this.password = password;
     }
     //Dieser Constructor existiert für RegiesterTask
-    public User (String userName, String email, String password, String age){
+    public User (String userName, String email, String password){
         this.userName = userName;
         this.email = email;
         this.password = password;
