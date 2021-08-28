@@ -25,11 +25,11 @@ public class Review {
     private Integer dangerCriteria;
 
 
-    @ManyToOne(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "user_Id")
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "user_id" )
     private User user;
 
-    @ManyToOne(cascade  = CascadeType.ALL)
+    @ManyToOne(fetch =  FetchType.LAZY)
     @JoinColumn(name = "gs_Id")
     private GrowSpace growSpace;
 

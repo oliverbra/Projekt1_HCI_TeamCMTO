@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface ReviewRepository extends JpaRepository<Review, Integer> {
 
     Review findReviewByGrowSpaceId(Integer id);
+    Review findReviewById(Integer id);
+    //
 }

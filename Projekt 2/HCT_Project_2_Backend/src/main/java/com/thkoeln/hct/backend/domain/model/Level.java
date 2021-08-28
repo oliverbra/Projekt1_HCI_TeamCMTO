@@ -24,7 +24,10 @@ public class Level {
     private Integer level;
     private String levelName;
     private Integer levelThreshold;
-   // @ManyToOne(cascade  = CascadeType.ALL)
-    //List<User> users;
+
+
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "user_id" )
+    private User user;
 }
 

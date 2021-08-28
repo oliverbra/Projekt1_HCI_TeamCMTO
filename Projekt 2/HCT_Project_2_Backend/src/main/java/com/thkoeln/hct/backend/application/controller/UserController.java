@@ -49,6 +49,7 @@ public class UserController {
 
     @PutMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> updateUser(@RequestBody User user) {
+
         logger.debug("PUT: updateUser");
         return new ResponseEntity(userService.update(user), HttpStatus.OK);
     }

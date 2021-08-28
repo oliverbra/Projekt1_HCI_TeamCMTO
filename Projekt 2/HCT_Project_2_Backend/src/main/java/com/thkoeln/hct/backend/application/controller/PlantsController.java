@@ -44,6 +44,7 @@ public class PlantsController {
         return new ResponseEntity(plantsService.update(plants), HttpStatus.OK);
     }
 
+
     @DeleteMapping  ("/plants/{id}")
     public ResponseEntity<Void> deletePlant(@PathVariable Integer id) {
         logger.debug("DELETE: deletePlant");

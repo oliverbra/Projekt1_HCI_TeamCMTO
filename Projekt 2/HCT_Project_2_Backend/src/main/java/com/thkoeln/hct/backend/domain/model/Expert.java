@@ -4,6 +4,7 @@ package com.thkoeln.hct.backend.domain.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -19,7 +20,8 @@ public class Expert {
     @Column(nullable = false)
     private Integer id;
 
-    @OneToMany(cascade  = CascadeType.ALL)
-   // @JoinColumn(name = "userId" ,nullable = false )//referencedColumnName = "gsId"
-    private Set<User> user;
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "user_Id")
+    private User user;
+
 }

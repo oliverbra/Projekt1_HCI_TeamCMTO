@@ -42,15 +42,17 @@ public class GrowSpace {
     private Double averageRating;
     private boolean highlighted;
 
-    /*
-    @ManyToOne(cascade  = CascadeType.ALL)
-    @JoinColumn(name = "userId" , referencedColumnName = "userId")
-    private Set<User> user;
+
+   @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "user_id" )
     private User user;
-     */
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable
+    private Set<Plants> plants = new HashSet<>();
 
     /*
-    TODO implement plants relationship (manytomany)
+    TODO implement plants relationship (manytomany) ??
      */
 
 
