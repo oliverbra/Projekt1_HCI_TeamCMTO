@@ -4,7 +4,7 @@ package com.thkoeln.hct.backend.domain.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.awt.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
