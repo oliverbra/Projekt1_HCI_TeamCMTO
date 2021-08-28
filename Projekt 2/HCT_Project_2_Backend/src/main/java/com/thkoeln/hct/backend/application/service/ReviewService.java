@@ -23,16 +23,15 @@ public class ReviewService {
     }
 
     public Review findById(@NonNull Integer id){
-        return reviewRepository.findReviewById(id);
+        return reviewRepository.findReviewByGrowSpaceId(id);
     }
 
     public Review update(@NonNull Review review){
-        Review reviewToUpdate = reviewRepository.findReviewById(review.getId());
-        reviewToUpdate.setText(review.getText());
+        Review reviewToUpdate = reviewRepository.findReviewByGrowSpaceId(review.getId());
         return reviewRepository.save(reviewToUpdate);
     }
 
     public void delete(@NonNull Integer id){
-        reviewRepository.delete(reviewRepository.findReviewById(id));
+        reviewRepository.delete(reviewRepository.findReviewByGrowSpaceId(id));
     }
 }

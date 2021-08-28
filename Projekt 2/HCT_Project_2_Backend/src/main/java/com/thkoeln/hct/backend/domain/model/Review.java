@@ -26,11 +26,11 @@ public class Review {
 
 
     @ManyToOne(cascade  = CascadeType.ALL)
- //   @JoinColumn(name = "userId" , nullable = false)
+    @JoinColumn(name = "user_Id")
     private User user;
 
     @ManyToOne(cascade  = CascadeType.ALL)
-//    @JoinColumn(name = "gsId" , nullable = false)
+    @JoinColumn(name = "gs_Id")
     private GrowSpace growSpace;
 
 }

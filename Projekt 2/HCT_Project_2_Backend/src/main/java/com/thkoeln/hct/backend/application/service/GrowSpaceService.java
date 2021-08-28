@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
+import java.util.Random;
+
 @Service
 public class GrowSpaceService {
     @Autowired
@@ -27,4 +29,11 @@ public class GrowSpaceService {
     }
 
     public void delete(@NonNull Integer id) {growSpaceRepositry.delete(growSpaceRepositry.findGrowSpaceById(id));}
+
+    public GrowSpace findRandom(){
+        List<GrowSpace> growSpaceList = growSpaceRepositry.findAll();
+        Random rand = new Random();
+        GrowSpace randomGrowSpace = growSpaceList.get(rand.nextInt(growSpaceList.size()));
+        return growSpaceRepositry.findGrowSpaceById(randomGrowSpace.getId());
+    }
 }
