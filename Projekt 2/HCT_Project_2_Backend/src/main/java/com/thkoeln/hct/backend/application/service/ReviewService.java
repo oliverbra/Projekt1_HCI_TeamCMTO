@@ -23,12 +23,19 @@ public class ReviewService {
     }
 
     public Review findById(@NonNull Integer id){
-        return reviewRepository.findReviewById(id);
+   return reviewRepository.findReviewById(id);
+
     }
 
     public Review update(@NonNull Review review){
         Review reviewToUpdate = reviewRepository.findReviewById(review.getId());
-        reviewToUpdate.setText(review.getText());
+        reviewToUpdate.setComment(review.getComment());
+        reviewToUpdate.setDate(review.getDate());
+        reviewToUpdate.setGrowSpace(review.getGrowSpace());
+        reviewToUpdate.setUser(review.getUser());
+        reviewToUpdate.setDangerCriteria(review.getDangerCriteria());
+        reviewToUpdate.setLocalCriteria(review.getLocalCriteria());
+       // reviewToUpdate.setText(review.getText());
         return reviewRepository.save(reviewToUpdate);
     }
 

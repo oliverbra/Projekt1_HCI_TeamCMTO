@@ -4,7 +4,7 @@ package com.thkoeln.hct.backend.domain.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.awt.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -28,14 +28,35 @@ public class GrowSpace {
     private String goal;
     //@Column(nullable = false)
     private Double size;
+
+    /*
+    TODO pictures in db? datatype? hosted where?
+     */
     private String picture;
     private String category;
     private String location;
+    /*
+       Zusammengesetzt aus den 4 ratings aus Review()
+     */
     @Column(nullable = true)
     private Double averageRating;
+    private boolean highlighted;
 
-    //@ManyToOne(cascade  = CascadeType.ALL)
-   // @JoinColumn(name = "userId" , referencedColumnName = "userId")
-   // private Set<User> user;
-   // private  User user;
+
+   @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "user_id" )
+    private User user;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable
+    private Set<Plants> plants = new HashSet<>();
+
+    /*
+    TODO implement plants relationship (manytomany) ??
+     */
+
+
+
+
+
 }

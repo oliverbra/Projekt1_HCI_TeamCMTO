@@ -1,5 +1,6 @@
 package com.thkoeln.hct.backend.application.service;
 
+import com.thkoeln.hct.backend.domain.model.GrowSpace;
 import com.thkoeln.hct.backend.domain.model.Plants;
 import com.thkoeln.hct.backend.domain.repository.PlantsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,12 +8,15 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PlantsService {
 
     @Autowired
     private PlantsRepository plantsRepository;
+    @Autowired
+    private GrowSpaceService growSpaceService;
 
     public List<Plants> findAll(){
         return plantsRepository.findAll();
@@ -27,6 +31,14 @@ public class PlantsService {
     }
 
     public Plants update(@NonNull Plants plants){
+        Plants plantToUpdate = plantsRepository.findPlantsById(plants.getId());
+        plantsRepository.save(plants);
+        return  plants;
+    }
+
+    /*public Plants update(@NonNull Plants plants){
+
+
         Plants plantToUpdate = plantsRepository.findPlantsById(plants.getId());
         plantToUpdate.setBlossomColour(plants.getBlossomColour());
         plantToUpdate.setBlossomingTime(plants.getBlossomingTime());
@@ -47,8 +59,13 @@ public class PlantsService {
         plantToUpdate.setUrl(plants.getUrl());
         plantToUpdate.setUtilityValue(plants.getUtilityValue());
         plantToUpdate.setBotanicalName(plants.getBotanicalName());
+
+        plantToUpdate.setGrowSpace(plants.getGrowSpace());
+
         return plantsRepository.save(plantToUpdate);
-    }
+    }*/
+
+
 
     public void delete(@NonNull Integer id){
         plantsRepository.delete(plantsRepository.findPlantsById(id));

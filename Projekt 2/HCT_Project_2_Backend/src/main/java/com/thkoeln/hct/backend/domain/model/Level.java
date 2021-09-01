@@ -22,11 +22,12 @@ public class Level {
     @Column(nullable = false)
     private Integer id;
     private Integer level;
-    private String progressTier;
-    private String progressTierequirement;
-    private String comment;
-    private String reviews;
-   // @ManyToOne(cascade  = CascadeType.ALL)
-    //List<User> users;
+    private String levelName;
+    private Integer levelThreshold;
+
+
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "user_id" )
+    private User user;
 }
 

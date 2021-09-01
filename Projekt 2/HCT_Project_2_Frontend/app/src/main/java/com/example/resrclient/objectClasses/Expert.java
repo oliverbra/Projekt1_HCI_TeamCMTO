@@ -4,20 +4,21 @@ import java.util.ArrayList;
 
 public class Expert extends User{
 
-    private Mark expertMark;
-    private ArrayList<GrowSpace> recommendGS;
+    private ArrayList<User> user;
 
-    public Expert(int pId, String pName, Progress pProgress, Mark pExpertMark){
+    public Expert(int pId, String pName, Level pLevel){
         //super(pId, pName);
         //expertMark = pExpertMark;
     }
-
-    public void recommendGS(GrowSpace gs){
-        //recommended gs gets marked
+    
+    public ArrayList<User> getUser() {
+        return user;
     }
 
-    //Getter
+    public void setUser(ArrayList<User> user) {
+        this.user = user;
+    }
 
-    //Setter
+
 
 }

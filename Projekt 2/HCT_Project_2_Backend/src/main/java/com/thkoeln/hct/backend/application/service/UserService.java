@@ -44,9 +44,8 @@ public class UserService {
     }
 
     public User update(@NonNull User user){
-        User userToUpdate = userRepository.findUserByid(user.getId());
-        userToUpdate.setEmail(user.getEmail());
-        return userRepository.save(userToUpdate);
+
+        return userRepository.save(user);
     }
 
     public void delete(@NonNull Integer id){
