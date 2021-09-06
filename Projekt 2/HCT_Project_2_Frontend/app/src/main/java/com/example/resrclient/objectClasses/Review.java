@@ -14,6 +14,7 @@ public class Review {
     private Integer dangerCriteria;
     private User user;
     private GrowSpace gs;
+    private boolean open;
 
     public Review(double pRating, Date pDate, String pComment, User pAuthor, GrowSpace pGs){
         rating = pRating;
@@ -22,8 +23,11 @@ public class Review {
         // how to initialize author and gs automatically?
         user = pAuthor;
         gs = pGs;
+        open = false;
         // criteria are initialized according to the level of the user; maybe multiple constructors?
     }
+
+    public void open() {open = true;}
 
     //Getter
     public double getRating() {
@@ -45,6 +49,8 @@ public class Review {
     public GrowSpace getGs() {
         return gs;
     }
+
+    public boolean getOpen() {return open;}
 
     //Setter
     public void setRating(double rating) {
@@ -98,6 +104,5 @@ public class Review {
     public void setDangerCriteria(Integer dangerCriteria) {
         this.dangerCriteria = dangerCriteria;
     }
-
 
 }

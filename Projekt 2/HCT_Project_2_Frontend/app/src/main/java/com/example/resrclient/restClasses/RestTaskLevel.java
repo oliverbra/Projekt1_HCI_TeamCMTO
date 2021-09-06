@@ -7,7 +7,7 @@ import com.example.resrclient.objectClasses.Level;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-public class RestTaskProgress extends AsyncTask<String, Void, Level> {
+public class RestTaskLevel extends AsyncTask<String, Void, Level> {
 
     protected Level doInBackground(String... params) {
         final String url = params[0];

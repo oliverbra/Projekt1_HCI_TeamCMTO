@@ -5,25 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddcff19-83ac-4a55-84ec-45e6608a8fc5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_regiestrierung.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/asyncTasks/RegiesterTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_regiestrierung.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/asyncTasks/UpdateUserGP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/GrowSpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/GrowSpaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/LevelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/LevelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/LevelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/LevelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/MarkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/MarkController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/PlantsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/PlantsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/PlantsInGsController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/ReviewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/ReviewCriteriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/ReviewCriteriaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/exceptions/UserAlreadyExistException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/ExpertService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/ExpertService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/PlantsInGsService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/PlantsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/PlantsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/application/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Expert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Expert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/GrowSpace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/GrowSpace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Mark.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Plants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Plants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/PlantsInGs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/repository/PlantsInGsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/repository/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/repository/ReviewRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -34,59 +49,14 @@
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_annotation_annotation_experimental_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_annotation_annotation_experimental_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_core_core_1_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_core_core_1_3_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_customview_customview_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_customview_customview_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_databinding_viewbinding_4_2_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_databinding_viewbinding_4_2_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_common_2_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_common_2_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_core_1_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_core_1_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_monitor_1_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_monitor_1_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_runner_1_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_test_runner_1_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_transition_transition_1_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_transition_transition_1_3_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__com_google_android_material_material_1_2_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__com_google_android_material_material_1_2_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/modules/app/ResrClient.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/modules/app/ResrClient.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_logIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_logIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_log_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_log_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/restClasses/RestTaskProgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/restClasses/RestTaskLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/restClasses/RestTaskUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/restClasses/RestTaskUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +112,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javadevjournal-master/javadevjournal-master/spring-security" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -172,7 +144,20 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eddcff19-83ac-4a55-84ec-45e6608a8fc5" name="Default Changelist" comment="" />
+      <created>1630488364010</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630488364010</updated>
+      <workItem from="1630488379218" duration="7280000" />
+      <workItem from="1630953181658" duration="646000" />
+      <workItem from="1630954551280" duration="1910000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

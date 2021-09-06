@@ -34,4 +34,9 @@ public class LevelService {
     public void delete(@NonNull Integer id){
         levelRepository.delete(levelRepository.findLevelById(id));
     }
+
+    public Level levelUp(Level level) {
+        int id = level.getId() + 1; // --> Level müssen nach ID sortiert sein
+        return  levelRepository.findLevelById(id);
+    }
 }

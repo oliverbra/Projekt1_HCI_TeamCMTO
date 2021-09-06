@@ -2,6 +2,7 @@ package com.example.resrclient.restClasses;
 
 import com.example.resrclient.objectClasses.User;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 

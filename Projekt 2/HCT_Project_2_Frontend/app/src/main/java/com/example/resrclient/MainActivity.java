@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private ImageView[] dots;
 
-
     // OBA  192.168.0.135 - (Oli: url set to local host; not vm)
     public void sendMessage(View view) {
         //final String url = "http://10.0.2.2:8080/personAli";

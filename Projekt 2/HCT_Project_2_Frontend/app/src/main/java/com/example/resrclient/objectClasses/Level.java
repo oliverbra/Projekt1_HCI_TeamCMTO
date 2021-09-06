@@ -16,13 +16,12 @@ public class Level {
         levelThreshold = pLevelRequirement;
     }
 
-    public void levelUp(){
-        //level up when enough growpoints have been achieved according to the levelrequirement
+    public Level(int pLevel){
+        level = pLevel;
     }
 
-    public void increaseGS(int amount){
-        //achieves an specific amount of GrowPoints
-        //adds amount to attribute growpoints
+    public void levelUp(){
+        //level up when enough growpoints have been achieved according to the levelrequirement
     }
 
     //Getter

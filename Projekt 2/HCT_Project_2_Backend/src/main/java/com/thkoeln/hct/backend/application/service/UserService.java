@@ -8,13 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import com.thkoeln.hct.backend.domain.model.Level;
+import com.thkoeln.hct.backend.domain.repository.LevelRepository;
 
 import java.util.List;
+import java.util.Set;
+
 @Service
 public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+    private LevelRepository levelRepository;
+
+    private LevelService levelService;
 
     @Autowired
    // BCryptPasswordEncoder passwordEncoder;
@@ -40,16 +47,28 @@ public class UserService {
     }
 
     public User findById(@NonNull Integer id){
-        return userRepository.findUserByid(id);
+        return userRepository.findUserById(id);
     }
 
     public User update(@NonNull User user){
+        User userToUpdate = userRepository.findUserById(user.getId());
+        Level levelToLevelUp = (Level) user.getLevel();
+
+        userToUpdate.setGrowpoints(user.getGrowpoints());
+
+        // Check Level Up
+        if(userToUpdate.getGrowpoints() >= levelToLevelUp.getLevelThreshold()) {
+            // Reduce User GP after Level Up
+            userToUpdate.setGrowpoints(userToUpdate.getGrowpoints() - levelToLevelUp.getLevelThreshold());
+            // Perform Level Up
+            userToUpdate.setLevel((Set<Level>) levelService.levelUp(levelToLevelUp));
+        }
 
         return userRepository.save(user);
     }
 
     public void delete(@NonNull Integer id){
-        userRepository.delete(userRepository.findUserByid(id));
+        userRepository.delete(userRepository.findUserById(id));
     }
 
     public boolean checkIfUserExists(String email) {return userRepository.findByEmail(email) !=null ? true : false;}

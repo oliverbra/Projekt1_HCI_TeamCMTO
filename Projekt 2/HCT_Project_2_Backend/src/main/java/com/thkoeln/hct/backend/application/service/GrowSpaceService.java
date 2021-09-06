@@ -24,7 +24,13 @@ public class GrowSpaceService {
 
     public GrowSpace update(@NonNull GrowSpace growSpace){
         GrowSpace growSpaceToUpdate = growSpaceRepositry.findGrowSpaceById(growSpace.getId());
-      //  growSpaceToUpdate.setDescription(growSpace.getDescription());
+        growSpaceToUpdate.setName(growSpace.getName());
+        growSpaceToUpdate.setProblems(growSpace.getProblems());
+        growSpaceToUpdate.setGoal(growSpace.getGoal());
+        growSpaceToUpdate.setSize(growSpace.getSize());
+        growSpaceToUpdate.setCategory(growSpace.getCategory());
+        growSpaceToUpdate.setLocation(growSpace.getLocation());
+        growSpaceToUpdate.setAverageRating(growSpace.getAverageRating());
         return growSpaceRepositry.save(growSpaceToUpdate);
     }
 
