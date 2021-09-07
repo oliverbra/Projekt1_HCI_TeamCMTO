@@ -61,7 +61,7 @@ public class UserService {
             // Reduce User GP after Level Up
             userToUpdate.setGrowpoints(userToUpdate.getGrowpoints() - levelToLevelUp.getLevelThreshold());
             // Perform Level Up
-            userToUpdate.setLevel((Set<Level>) levelService.levelUp(levelToLevelUp));
+            userToUpdate.setLevel(levelService.levelUp(levelToLevelUp));
         }
 
         return userRepository.save(user);

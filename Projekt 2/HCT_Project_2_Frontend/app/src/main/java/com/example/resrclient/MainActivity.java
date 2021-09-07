@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.example.resrclient.activities.activity_editGS;
 import com.example.resrclient.activities.activity_logIn;
 import com.example.resrclient.activities.activity_createGS;
+import com.example.resrclient.activities.activity_review;
 import com.example.resrclient.carousel.CarouselAdapter;
 import com.example.resrclient.carousel.CarouselItem;
 import com.example.resrclient.restClasses.RestTaskUser;
@@ -137,6 +138,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void chanceActivity3(View view) {
         Intent intent = new Intent(this, activity_editGS.class);
+        startActivity(intent);
+    }
+
+    public void reviewActivity(View view) {
+        Intent intent = new Intent(this, activity_review.class);
         startActivity(intent);
     }
 

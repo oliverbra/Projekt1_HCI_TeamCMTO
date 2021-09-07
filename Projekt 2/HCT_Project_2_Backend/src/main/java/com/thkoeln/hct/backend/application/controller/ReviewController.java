@@ -13,8 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.awt.print.Pageable;
 import java.util.List;
 
 @RestController
@@ -47,7 +45,6 @@ public class ReviewController {
     @PostMapping("/growspaces/{growspaceId}/reviews")
     public ResponseEntity<Review> createReview(@RequestBody Review review, @PathVariable Integer growspaceId) {
         logger.debug("POST: createReview");
-        review.setUser(userService.findById(review.getUser().getId()));
         review.setGrowSpace(growSpaceService.findByid(growspaceId));
         return new ResponseEntity(reviewService.create(review), HttpStatus.CREATED);
     }

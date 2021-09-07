@@ -1,9 +1,9 @@
 package com.thkoeln.hct.backend.domain.model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 
@@ -33,16 +33,15 @@ public class User {
 
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonBackReference
     private Set<Review> reviews = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<GrowSpace> growSpaces = new HashSet<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-     private Set<Level> level = new HashSet<>();
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+     private Level level;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Expert> expert = new HashSet<>();
 
 
 

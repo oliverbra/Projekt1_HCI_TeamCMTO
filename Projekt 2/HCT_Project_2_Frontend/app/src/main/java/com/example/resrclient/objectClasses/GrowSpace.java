@@ -1,12 +1,12 @@
 package com.example.resrclient.objectClasses;
 
-import android.media.Image;
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class GrowSpace {
 
-    private User owner;
+    private Integer id;
+    private User user;
     private String name;
     private String goal;
     private String category; //as list?
@@ -17,9 +17,6 @@ public class GrowSpace {
     private double averageRating;
     private boolean highlighted;
     private ArrayList<Plants> plants;
-    private ArrayList<Review> receivedReviews;
-    // private ArrayList<Image> picture;
-
 
 
    /* public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation) {
@@ -37,6 +34,10 @@ public class GrowSpace {
 
         marks = new ArrayList<Mark>();
     } */
+
+    public GrowSpace() {
+    }
+
 
     public GrowSpace(String pName, String pGoal, String pCategory, double pSize, String pLocation, String pProblems, Double pAverageRating) {
         name = pName;
@@ -64,10 +65,19 @@ public class GrowSpace {
         return name + " " + goal + " " + category + " " + size + " " + location + " " + problems + ".";
     };
 
+    private List<Review> reviews;
+
+
     //Getter
-    public User getOwner() {
-        return owner;
+    public User getUser() {
+        return user;
     }
+
+    public List<Review> getReviews() {return reviews;}
+
+    public ArrayList<Plants> getPlants() {return plants;}
+
+    public Integer getId() {return id;}
 
     public String getName() {
         return name;
@@ -94,8 +104,15 @@ public class GrowSpace {
     public double getAverageRating() {return averageRating;}
 
     //Setter
-    public void setOwner(User owner) {
-        this.owner = owner;
+
+    public void setPlants(ArrayList<Plants> plants) {this.plants = plants;}
+
+    public void setReviews(List<Review> reviews) {this.reviews = reviews;}
+
+    public void setId(Integer id) {this.id = id;}
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setName(String name) {

@@ -1,40 +1,63 @@
 package com.example.resrclient.objectClasses;
 
-import java.util.Date;
-
 public class Review {
 
     private Integer id;
     private double rating;
-    private Date date;
+    private String date;
     private String comment;
-    private Integer localCriteria;
-    private Integer shelterCriteria;
-    private Integer naturalCriteria;
-    private Integer dangerCriteria;
+    private double localCriteria;
+    private double shelterCriteria;
+    private double naturalCriteria;
+    private double dangerCriteria;
     private User user;
-    private GrowSpace gs;
+    private GrowSpace growSpace;
     private boolean open;
 
-    public Review(double pRating, Date pDate, String pComment, User pAuthor, GrowSpace pGs){
+    public Review(){
+    }
+
+    public Review(double pRating, String pDate, String pComment, User pAuthor, GrowSpace pGs){
         rating = pRating;
         date = pDate;
         comment = pComment;
         // how to initialize author and gs automatically?
         user = pAuthor;
-        gs = pGs;
+        growSpace = pGs;
         open = false;
         // criteria are initialized according to the level of the user; maybe multiple constructors?
     }
 
+    public Review(double localCriteria, double shelterCriteria, double naturalCriteria, double dangerCriteria, String date, String comment, User user, GrowSpace growSpace){
+       this.localCriteria = localCriteria;
+       this.shelterCriteria = shelterCriteria;
+       this.naturalCriteria = naturalCriteria;
+       this.dangerCriteria = dangerCriteria;
+       this.date = date;
+       this.comment =  comment;
+       this.user = user;
+       this.growSpace = growSpace;
+    }
+
     public void open() {open = true;}
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     //Getter
     public double getRating() {
         return rating;
     }
 
-    public Date getDate() {
+    public GrowSpace getGrowSpace() {return growSpace;}
+
+    public String getDate() {
         return date;
     }
 
@@ -47,17 +70,27 @@ public class Review {
     }
 
     public GrowSpace getGs() {
-        return gs;
+        return growSpace;
     }
 
     public boolean getOpen() {return open;}
+
+    public double getNaturalCriteria() {
+        return naturalCriteria;
+    }
+
+    public double getDangerCriteria() {
+        return dangerCriteria;
+    }
 
     //Setter
     public void setRating(double rating) {
         this.rating = rating;
     }
 
-    public void setDate(Date date) {
+    public void setGrowSpace(GrowSpace growSpace) {this.growSpace = growSpace;}
+
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -70,10 +103,10 @@ public class Review {
     }
 
     public void setGs(GrowSpace gs) {
-        this.gs = gs;
+        this.growSpace = gs;
     }
 
-    public Integer getLocalCriteria() {
+    public double getLocalCriteria() {
         return localCriteria;
     }
 
@@ -81,25 +114,13 @@ public class Review {
         this.localCriteria = localCriteria;
     }
 
-    public Integer getShelterCriteria() {
+    public double getShelterCriteria() {
         return shelterCriteria;
     }
 
-    public void setShelterCriteria(Integer shelterCriteria) {
-        this.shelterCriteria = shelterCriteria;
-    }
+    public void setShelterCriteria(Integer shelterCriteria) {this.shelterCriteria = shelterCriteria;}
 
-    public Integer getNaturalCriteria() {
-        return naturalCriteria;
-    }
-
-    public void setNaturalCriteria(Integer naturalCriteria) {
-        this.naturalCriteria = naturalCriteria;
-    }
-
-    public Integer getDangerCriteria() {
-        return dangerCriteria;
-    }
+    public void setNaturalCriteria(Integer naturalCriteria) {this.naturalCriteria = naturalCriteria;}
 
     public void setDangerCriteria(Integer dangerCriteria) {
         this.dangerCriteria = dangerCriteria;

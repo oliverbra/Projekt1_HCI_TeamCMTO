@@ -19,12 +19,16 @@ public class User {
     private int growpoints;
     private Level level;
     private String password;
-    private Set<GrowSpace> growSpace;
+    private Set<GrowSpace> growSpaces;
     private List<Review> reviews;
     private List<GrowSpace> bookmarkedGrowspaces;
 
 
     public User() {
+    }
+
+    public User (Integer id){
+        this.id = id;
     }
 
     // Dieser constructor existiert für LoginTask
@@ -129,12 +133,12 @@ public class User {
         this.growpoints = growpoints;
     }
 
-    public Set<GrowSpace> getGrowSpace() {
-        return growSpace;
+    public Set<GrowSpace> getGrowSpaces() {
+        return growSpaces;
     }
 
-    public void setGrowSpace(Set<GrowSpace> growSpace) {
-        this.growSpace = growSpace;
+    public void setGrowSpaces(Set<GrowSpace> growSpaces) {
+        this.growSpaces = growSpaces;
     }
 
     public Integer getId() {
@@ -188,4 +192,13 @@ public class User {
     public String gpToString(int growpoints) {
         return "" + growpoints;
     }
+
+    public List<Review> getReviews() {return reviews; }
+
+    public void setReviews(List<Review> reviews) {this.reviews = reviews;}
+
+    public List<GrowSpace> getBookmarkedGrowspaces() {return bookmarkedGrowspaces;}
+
+    public void setBookmarkedGrowspaces(List<GrowSpace> bookmarkedGrowspaces) {this.bookmarkedGrowspaces = bookmarkedGrowspaces;}
+
 }

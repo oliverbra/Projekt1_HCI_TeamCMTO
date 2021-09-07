@@ -10,16 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ResrClient">
-        <activity android:name=".activities.activity_logIn">
-        </activity>
         <activity android:name=".activities.activity_growspace"></activity>
         <activity android:name=".activities.activity_progress"></activity>
         <activity android:name=".activities.activity_startseite"></activity>
         <activity android:name=".activities.activity_review"></activity>
         <activity android:name=".activities.activity_createGS"></activity>
         <activity android:name=".activities.activity_editGS"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.activity_logIn"
             android:label="@string/app_name"
             android:theme="@style/Theme.ResrClient.NoActionBar">
             <intent-filter>

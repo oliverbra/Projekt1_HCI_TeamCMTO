@@ -3,12 +3,12 @@ package com.example.resrclient.asyncTasks;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.Patterns;
-
-import com.example.resrclient.activities.activity_startseite;
-
+import com.example.resrclient.MainActivity;
 import com.example.resrclient.objectClasses.User;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -29,6 +29,8 @@ public class LoginTask extends AsyncTask<String, Void, User> {
         final String url = params[0];
         final String userEmail = params[1];
         final String userPassword = params[2];
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(ctx);
+        SharedPreferences.Editor edit = pref.edit();
 
             try {
                 if (validateInput(userEmail, userPassword)) {
@@ -40,6 +42,8 @@ public class LoginTask extends AsyncTask<String, Void, User> {
                     User result = restTemplate.postForObject(url, newUser, User.class);
                     Log.v("Result","Gefunden: " + result.getEmail() + result.getPassword());
 
+                    edit.putInt("userId", result.getId());
+                    edit.apply();
 
                     return result;
                 }
@@ -76,19 +80,10 @@ public class LoginTask extends AsyncTask<String, Void, User> {
     protected void onPostExecute(User user) {
         super.onPostExecute(user);
         if(user != null) {
-            Intent i = new Intent(ctx,activity_startseite.class);
+            Intent i = new Intent(ctx,MainActivity.class);
             ctx.startActivity(i);
         }
     }
 
-
-    //TODO: weiterleiten auf registrieren page
-    /*
-    public void goToSignup(View v) {
-        Intent intent = new Intent(this, SignupActivity.class);
-        startActivity(intent);
-    }
-
-     */
 
 }

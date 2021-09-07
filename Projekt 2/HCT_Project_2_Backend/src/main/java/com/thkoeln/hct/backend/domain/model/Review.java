@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -18,18 +17,18 @@ public class Review {
     @Column(nullable = false)
     private Integer id;
     private String comment;
-    private Date date;
-    private Integer localCriteria;
-    private Integer shelterCriteria;
-    private Integer naturalCriteria;
-    private Integer dangerCriteria;
+    private String date;
+    private double localCriteria;
+    private double shelterCriteria;
+    private double naturalCriteria;
+    private double dangerCriteria;
 
 
-    @ManyToOne(fetch =  FetchType.LAZY)
+    @ManyToOne(fetch =  FetchType.EAGER)
     @JoinColumn(name = "user_id" )
     private User user;
 
-    @ManyToOne(fetch =  FetchType.LAZY)
+    @ManyToOne(fetch =  FetchType.EAGER)
     @JoinColumn(name = "gs_Id")
     private GrowSpace growSpace;
 

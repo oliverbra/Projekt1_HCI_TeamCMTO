@@ -2,10 +2,8 @@ package com.thkoeln.hct.backend.domain.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-
 import javax.persistence.*;
-import java.util.List;
+
 
 @Data
 @Entity
@@ -26,7 +24,7 @@ public class Level {
     private Integer levelThreshold;
 
 
-    @ManyToOne(fetch =  FetchType.LAZY)
+    @OneToOne(fetch =  FetchType.LAZY)
     @JoinColumn(name = "user_id" )
     private User user;
 }

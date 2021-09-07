@@ -1,8 +1,8 @@
 package com.thkoeln.hct.backend.domain.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
-
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,7 +32,6 @@ public class GrowSpace {
     /*
     TODO pictures in db? datatype? hosted where?
      */
-    private String picture;
     private String category;
     private String location;
     /*
@@ -46,6 +45,10 @@ public class GrowSpace {
    @ManyToOne(fetch =  FetchType.LAZY)
     @JoinColumn(name = "user_id" )
     private User user;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonBackReference
+    private Set<Review> reviews = new HashSet<>();
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable
