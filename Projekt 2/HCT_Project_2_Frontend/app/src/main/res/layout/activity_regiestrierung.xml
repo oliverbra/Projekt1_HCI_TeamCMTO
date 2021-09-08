@@ -12,77 +12,50 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
         android:layout_marginLeft="124dp"
-        android:layout_marginTop="163dp"
         android:onClick="checkInfo"
         android:text="Regiestrierung"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regiestrierung_geburstag_editTextDate" />
-
-    <EditText
-        android:id="@+id/regiestrierung_Vorname_editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:hint="Vorname"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="507dp" />
 
     <EditText
         android:id="@+id/regiestrierung_email_editTextTextEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="68dp"
         android:editable="true"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regiestrierung_Vorname_editTextTextPersonName" />
-
-    <EditText
-        android:id="@+id/regiestrierung_geburstag_editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="20dp"
-        android:editable="true"
-        android:ems="10"
-        android:hint="Geburtsdatum"
-        android:inputType="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regiestrierung_passwort_editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/regiestrierung_Vorname_editTextTextPersonUsername" />
 
     <EditText
         android:id="@+id/regiestrierung_passwort_editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
         android:editable="true"
         android:ems="10"
-        android:hint="PAsswort"
+        android:hint="Passwort"
         android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/regiestrierung_abschließen_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regiestrierung_email_editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/regiestrierung_email_editTextTextEmailAddress"
+        app:layout_constraintVertical_bias="0.289" />
 
     <EditText
-        android:id="@+id/regiestrierung_Vorname_editTextTextPersonNachname"
+        android:id="@+id/regiestrierung_Vorname_editTextTextPersonUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
-        android:hint="Nachname"
+        android:hint="Username"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regiestrierung_Vorname_editTextTextPersonName" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

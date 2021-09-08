@@ -12,7 +12,6 @@ import com.thkoeln.hct.backend.domain.model.Level;
 import com.thkoeln.hct.backend.domain.repository.LevelRepository;
 
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class UserService {
@@ -40,8 +39,8 @@ public class UserService {
 
     // TODO: Encrypt user password
     public User create(@NonNull User user) throws UserAlreadyExistException {
-        if(checkIfUserExists(user.getEmail())){
-            throw new UserAlreadyExistException("User already exists for this email");
+        if(checkIfEmailExists(user.getEmail()) ||checkIfUsernameExists(user.getUserName())){
+            throw new UserAlreadyExistException("User already exists for this email OR username");
         }
         return userRepository.save(user);
     }
@@ -71,7 +70,9 @@ public class UserService {
         userRepository.delete(userRepository.findUserById(id));
     }
 
-    public boolean checkIfUserExists(String email) {return userRepository.findByEmail(email) !=null ? true : false;}
+    public boolean checkIfEmailExists(String email) {return userRepository.findByEmail(email) !=null ? true : false;}
+
+    public boolean checkIfUsernameExists(String userName) {return userRepository.findByuserName(userName) !=null ? true : false;}
 
     public boolean checkIfCredentialsWrong(String email, String password) {return userRepository.findByEmailAndPassword(email, password) !=null ? true : false;}
 
