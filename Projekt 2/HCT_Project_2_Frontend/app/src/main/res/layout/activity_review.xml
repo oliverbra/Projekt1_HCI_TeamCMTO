@@ -4,6 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_review">
+    tools:context=".activities.activity_review">
+
+    <RatingBar
+        android:id="@+id/localRatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:isIndicator="false"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <RatingBar
+        android:id="@+id/dangerRatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="8dp"
+        android:isIndicator="false"
+        app:layout_constraintBottom_toTopOf="@+id/commentField"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView4"
+        app:layout_constraintTop_toTopOf="@+id/naturalRatingBarr" />
+
+    <RatingBar
+        android:id="@+id/shelterRatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:isIndicator="false"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView2"
+        app:layout_constraintTop_toBottomOf="@+id/localRatingBar" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="16dp"
+        android:text="dangerCriteria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_Kategorie_textView3" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="132dp"
+        android:text="localCriteria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_backTOOStartseiteimageButton" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="20dp"
+        android:text="shelterCriteria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_Kategorie_textView" />
+
+    <TextView
+        android:id="@+id/review_Kategorie_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="16dp"
+        android:text="naturalCriteria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_Kategorie_textView2" />
+
+    <EditText
+        android:id="@+id/commentField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_Kategorie_textView4" />
+
+    <ImageButton
+        android:id="@+id/review_backTOOStartseiteimageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="9dp"
+        android:onClick="chanceActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <RatingBar
+        android:id="@+id/naturalRatingBarr"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:isIndicator="false"
+        app:layout_constraintStart_toEndOf="@+id/review_Kategorie_textView3"
+        app:layout_constraintTop_toBottomOf="@+id/shelterRatingBar" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="SEND REVIEW"
+        android:onClick="createReviewAction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentField"
+        app:layout_constraintVertical_bias="0.036" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

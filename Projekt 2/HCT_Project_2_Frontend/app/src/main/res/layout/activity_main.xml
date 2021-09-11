@@ -7,6 +7,18 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/buttonZuReviewGs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="404dp"
+        android:onClick="reviewActivity"
+        android:text="REVIEW GS"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/buttonREST_GET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,6 +33,43 @@
     notwendig für Ansicht der Nachbarn
         android:paddingStart="100dp"
         android:paddingEnd="100dp"-->
+
+    <Button
+        android:id="@+id/buttonZuLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:onClick="chanceActivity"
+        android:text="login"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonZuCreateGS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="612dp"
+        android:onClick="chanceActivity2"
+        android:text="Create GS"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonZuEditGS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="548dp"
+        android:onClick="chanceActivity3"
+        android:text="Edit GS"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/carousel"
         android:layout_width="match_parent"
@@ -37,7 +86,6 @@
         app:layout_constraintTop_toBottomOf="@+id/carousel"
         android:orientation="horizontal"
         android:gravity="center_horizontal"/>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

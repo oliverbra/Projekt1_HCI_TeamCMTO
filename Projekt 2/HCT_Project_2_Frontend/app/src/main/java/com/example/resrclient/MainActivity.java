@@ -1,44 +1,26 @@
 package com.example.resrclient;
 
-import android.graphics.Color;
-import android.os.AsyncTask;
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.fasterxml.jackson.databind.MappingIterator;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.resrclient.activities.activity_editGS;
+import com.example.resrclient.activities.activity_logIn;
+import com.example.resrclient.activities.activity_createGS;
+import com.example.resrclient.activities.activity_review;
+import com.example.resrclient.carousel.CarouselAdapter;
+import com.example.resrclient.carousel.CarouselItem;
+import com.example.resrclient.restClasses.RestTaskUser;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.Html;
 import android.util.Log;
 import android.view.View;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.widget.CompositePageTransformer;
-import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.resrclient.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,42 +34,12 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private ImageView[] dots;
 
-
-    // OBA
-    class RESTTask extends AsyncTask<String, Void, Person> {
-        protected Person doInBackground(String... params) {
-            //  String apiUrl = "http://localhost:8080/personAli";
-            final String url = params[0];
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-            Person result = restTemplate.getForObject(url,Person.class);
-
-            Log.v("Result","Gefunden: " + result.getName());
-            return result;
-        }
-
-
-
-        @Override
-        protected void onPostExecute(Person person) {
-            super.onPostExecute(person);
-            Person personReturned = person;
-
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-        }
-    }
-    // Ende
-
-
     // OBA  192.168.0.135 - (Oli: url set to local host; not vm)
     public void sendMessage(View view) {
-        final String url = "http://10.0.2.2:8080/personAli";
-        new RESTTask().execute(url);
+        //final String url = "http://10.0.2.2:8080/personAli";
+        //new RestTaskExample().execute(url);
+        final String url = "http://10.0.2.2:8080/userTest";
+        new RestTaskUser().execute(url);
     }
     // Ende
 
@@ -128,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             super.onPageScrollStateChanged(state);
         }
     };
+    // Ende
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -170,8 +123,27 @@ public class MainActivity extends AppCompatActivity {
         // Dots Indicator hinzufügen
         addDotsIndicator(carouselItems);
         carousel.registerOnPageChangeCallback(carouselListener);
+        // Ende
     }
 
+    public void chanceActivity(View view) {
+        Intent intent = new Intent(this, activity_logIn.class);
+        startActivity(intent);
+    }
 
+    public void chanceActivity2(View view) {
+        Intent intent = new Intent(this, activity_createGS.class);
+        startActivity(intent);
+    }
+
+    public void chanceActivity3(View view) {
+        Intent intent = new Intent(this, activity_editGS.class);
+        startActivity(intent);
+    }
+
+    public void reviewActivity(View view) {
+        Intent intent = new Intent(this, activity_review.class);
+        startActivity(intent);
+    }
 
 }

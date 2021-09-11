@@ -4,6 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_growspace">
+    tools:context=".activities.activity_growspace">
 
+    <ImageView
+        android:id="@+id/growSpace_teaser_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/growSpace_Kategorie_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/growSpace_teaser_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_name_textView" />
+
+    <TextView
+        android:id="@+id/growSpace_Ziel_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/growSpace_teaser_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_Kategorie_textView" />
+
+    <TextView
+        android:id="@+id/growSpace_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/growSpace_teaser_imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/growSpace_beschreibung_editTextTextMultiLine"
+        android:layout_width="386dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_teaser_imageView" />
+
+    <ImageView
+        android:id="@+id/growSpace_carousel_imageView"
+        android:layout_width="190dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="171dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_beschreibung_editTextTextMultiLine"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/growSpace_pflanze_imageView"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_beschreibung_editTextTextMultiLine"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/growSpace_pflanze_imageView2"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/growSpace_pflanze_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_beschreibung_editTextTextMultiLine"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/growSpace_pflanze_imageView3"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/growSpace_pflanze_imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_beschreibung_editTextTextMultiLine"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/growSpace_pflanze_imageView4"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/growSpace_pflanze_imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_beschreibung_editTextTextMultiLine"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/growSpace_pflanze_imageView5"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/growSpace_pflanze_imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_beschreibung_editTextTextMultiLine"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/growspace_backTooStartseite_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="chanceActivity"
+        app:srcCompat="@drawable/abc_vector_test"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="3dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
