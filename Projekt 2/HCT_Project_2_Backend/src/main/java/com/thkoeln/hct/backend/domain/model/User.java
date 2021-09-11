@@ -1,5 +1,6 @@
 package com.thkoeln.hct.backend.domain.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -37,6 +38,7 @@ public class User {
     private Set<Review> reviews = new HashSet<>();
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonManagedReference(value="growspace")
     private GrowSpace growSpace;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
