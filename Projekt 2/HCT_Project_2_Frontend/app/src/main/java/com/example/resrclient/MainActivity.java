@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         //final String url = "http://10.0.2.2:8080/personAli";
         //new RestTaskExample().execute(url);
-        final String url = "http://10.0.2.2:8080/userTest";
+        final String url = "http://192.168.2.101:8080/userTest";
         new RestTaskUser().execute(url);
     }
     // Ende

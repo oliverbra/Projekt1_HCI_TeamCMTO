@@ -35,7 +35,7 @@ public class activity_review extends AppCompatActivity {
 
      public void createReviewAction(View view){
          new ReviewTask(this).execute(Float.toString(localCriteria.getRating()), Float.toString(shelterCriteria.getRating()),
-                 Float.toString(naturalCriteria.getRating()), Float.toString(dangerCriteria.getRating()), comment.toString());
+                 Float.toString(naturalCriteria.getRating()), Float.toString(dangerCriteria.getRating()), comment.getText().toString());
      }
 
 }

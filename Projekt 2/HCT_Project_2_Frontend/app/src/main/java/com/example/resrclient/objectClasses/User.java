@@ -46,7 +46,7 @@ public class User {
         growpoints += amount;
 
         // Update user
-        String url = "http://10.0.2.2:8080/users";
+        String url = "http://192.168.2.101:8080/users";
         User updatedUser =  new UpdateUserGP().execute(url, gpToString(this.getGrowpoints())).get();
         if(updatedUser.getLevel() != this.getLevel()) {
             this.level = updatedUser.getLevel();

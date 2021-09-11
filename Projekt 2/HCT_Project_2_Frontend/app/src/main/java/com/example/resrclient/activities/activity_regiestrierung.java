@@ -37,7 +37,7 @@ public class activity_regiestrierung extends AppCompatActivity {
                 }
 
         public void createUser(){
-        final String url = "http://10.0.2.2:8080/users";
+        final String url = "http://192.168.2.101:8080/users";
         new RegiesterTask(this).execute(url,emailAdress.getText().toString(),passwort.getText().toString(), username.getText().toString());
         }
     public void chanceActivity() {
