@@ -1,5 +1,6 @@
 package com.example.resrclient.objectClasses;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class GrowSpace {
     private boolean highlighted;
     private ArrayList<Plants> plants;
     private List<Review> reviews;
+    private File file;
 
     public GrowSpace(User user, String name, String goal, String category, double size, String location, String problems, double averageRating, boolean highlighted, ArrayList<Plants> plants, List<Review> reviews) {
         this.user = user;
@@ -31,7 +33,6 @@ public class GrowSpace {
         this.plants = plants;
         this.reviews = reviews;
     }
-
     public GrowSpace() {
     }
 
@@ -81,6 +82,10 @@ public class GrowSpace {
         return goal;
     }
 
+    public File getFile() {
+        return file;
+    }
+
     public String getCategory() {
         return category;
     }
@@ -111,6 +116,10 @@ public class GrowSpace {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setFile(File file){
+        this.file = file;
     }
 
     public void setGoal(String goal) {
