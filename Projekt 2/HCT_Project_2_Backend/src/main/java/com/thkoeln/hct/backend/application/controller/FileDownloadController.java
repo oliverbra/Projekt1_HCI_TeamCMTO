@@ -1,10 +1,11 @@
 package com.thkoeln.hct.backend.application.controller;
 
-import com.thkoeln.hct.backend.application.service.DatabaseFileService;
-import com.thkoeln.hct.backend.domain.model.DatabaseFile;
+import com.thkoeln.hct.backend.application.service.FileService;
+import com.thkoeln.hct.backend.domain.model.File;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,16 +18,18 @@ import javax.servlet.http.HttpServletRequest;
 public class FileDownloadController {
 
     @Autowired
-    private DatabaseFileService fileStorageService;
+    private FileService fileService;
 
-    @GetMapping("/downloadFile/{fileName:.+}")
-    public ResponseEntity <Resource> downloadFile(@PathVariable Integer id, HttpServletRequest request) {
-        // Load file as Resource
-        DatabaseFile databaseFile = fileStorageService.getFile(id);
+    @GetMapping("/getFile/{fileName}")
+    public ResponseEntity <File> getFile(@PathVariable Integer id) {//byte[]
+        File file = fileService.getFile(id);
 
-        return ResponseEntity.ok()
-                .contentType(MediaType.parseMediaType(databaseFile.getFileType()))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + databaseFile.getFileName() + "\"")
-                .body(new ByteArrayResource(databaseFile.getData()));
+//        return ResponseEntity
+//                .ok()
+//                .contentType(MediaType.parseMediaType(databaseFile.getFileType()))
+//                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + databaseFile.getFileName() + "\"")
+//                .body(file.getData());
+
+          return new ResponseEntity(file, HttpStatus.OK);
     }
 }

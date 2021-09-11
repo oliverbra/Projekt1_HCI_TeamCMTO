@@ -56,9 +56,9 @@ public class GrowSpace {
     @JoinTable
     private Set<Plants> plants = new HashSet<>();
 
-    /*
-    TODO implement plants relationship (manytomany) ??
-     */
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "files_id" )
+    private File file;
 
 
 

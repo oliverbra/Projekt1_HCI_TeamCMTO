@@ -11,9 +11,9 @@ import java.util.Set;
 @Table (name = "files")
 @Data
 
-public class DatabaseFile {
+public class File {
 
-    public DatabaseFile() {
+    public File() {
     }
 
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
@@ -28,25 +28,21 @@ public class DatabaseFile {
 
 
 
-    public DatabaseFile(String fileName, String fileType, byte[] data) {
+    public File(String fileName, String fileType, byte[] data) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.data = data;
     }
 
 
-
-
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "flie", cascade = CascadeType.ALL)
     @JsonBackReference
-    private Set<Review> reviews = new HashSet<>();
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<GrowSpace> growSpaces = new HashSet<>();
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-     private Level level;
+
+
+    @OneToOne(mappedBy = "file", cascade = CascadeType.ALL)
+     private Plants plants;
 
 
 

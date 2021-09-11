@@ -51,6 +51,8 @@ public class Plants {
     @ManyToMany(mappedBy = "plants")
     private Set<GrowSpace> growSpace = new HashSet<>();
 
-
+    @OneToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "files_id",referencedColumnName = "id")
+    private File file;
 }
 

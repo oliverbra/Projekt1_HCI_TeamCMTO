@@ -2,27 +2,21 @@ package com.thkoeln.hct.backend.application.service;
 
 import com.thkoeln.hct.backend.common.exceptions.FileNotFoundException;
 import com.thkoeln.hct.backend.common.exceptions.FileStorageException;
-import com.thkoeln.hct.backend.domain.model.DatabaseFile;
-import com.thkoeln.hct.backend.domain.repository.DatabaseFileRepository;
+import com.thkoeln.hct.backend.domain.model.File;
+import com.thkoeln.hct.backend.domain.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
-import java.util.List;
-
-import org.springframework.lang.NonNull;
-
-
-
 
 
 @Service
-public class DatabaseFileService {
+public class FileService {
     @Autowired
-    private DatabaseFileRepository dbFileRepository;
+    private FileRepository fileRepository;
 
-    public DatabaseFile storeFile(MultipartFile file) {
+    public File storeFile(MultipartFile file) {
         // Normalize file name
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
 
@@ -32,25 +26,19 @@ public class DatabaseFileService {
                 throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
             }
 
-            DatabaseFile dbFile = new DatabaseFile(fileName, file.getContentType(), file.getBytes());
+            File dbFile = new File(fileName, file.getContentType(), file.getBytes());
 
-            return dbFileRepository.save(dbFile);
+            return fileRepository.save(dbFile);
         } catch (IOException ex) {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
         }
 
     }
 
-    public DatabaseFile getFile(Integer id) {
-        return dbFileRepository.findById(id)
+    public File getFile(Integer id) {
+        return fileRepository.findById(id)
                 .orElseThrow(() -> new FileNotFoundException("File not found with id " + id));
     }
 
 
-    public DatabaseFile create (@NonNull DatabaseFile databaseFile)
-    {return dbFileRepository.save(databaseFile);}
-
-    public List<DatabaseFile> findAll(){
-        return dbFileRepository.findAll();
-    }
 }
