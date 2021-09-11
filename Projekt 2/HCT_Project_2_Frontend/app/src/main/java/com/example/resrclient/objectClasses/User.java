@@ -4,10 +4,8 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.example.resrclient.asyncTasks.UpdateUserGP;
-import com.example.resrclient.restClasses.RestTaskUser;
 
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 public class User {
@@ -19,7 +17,7 @@ public class User {
     private int growpoints;
     private Level level;
     private String password;
-    private Set<GrowSpace> growSpaces;
+    private GrowSpace growSpace;
     private List<Review> reviews;
     private List<GrowSpace> bookmarkedGrowspaces;
 
@@ -49,10 +47,7 @@ public class User {
 
         // Update user
         String url = "http://10.0.2.2:8080/users";
-        new UpdateUserGP().execute(url, gpToString(this.getGrowpoints())).get();
-        //Get newUser
-        url = "http://10.0.2.2:8080/users/" + this.getId();
-        User updatedUser = new RestTaskUser().execute(url).get();
+        User updatedUser =  new UpdateUserGP().execute(url, gpToString(this.getGrowpoints())).get();
         if(updatedUser.getLevel() != this.getLevel()) {
             this.level = updatedUser.getLevel();
             this.growpoints = updatedUser.getGrowpoints();
@@ -133,12 +128,12 @@ public class User {
         this.growpoints = growpoints;
     }
 
-    public Set<GrowSpace> getGrowSpaces() {
-        return growSpaces;
+    public GrowSpace getGrowSpace() {
+        return growSpace;
     }
 
-    public void setGrowSpaces(Set<GrowSpace> growSpaces) {
-        this.growSpaces = growSpaces;
+    public void setGrowSpace(GrowSpace growSpace) {
+        this.growSpace = growSpace;
     }
 
     public Integer getId() {

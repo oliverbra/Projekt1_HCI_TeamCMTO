@@ -2,6 +2,7 @@ package com.example.resrclient.objectClasses;
 
 public class Plants {
 
+    private Integer plantId;
     private String commonName;
     private String botanicalName;
     private String descriptionText;
@@ -43,6 +44,10 @@ public class Plants {
         pNutrientRequirements = nutrientRequirements;
         pCareText = careText;
         pUrl = url;
+    }
+
+    public Plants(Integer plantId) {
+        this.plantId = plantId;
     }
 
     //Getter

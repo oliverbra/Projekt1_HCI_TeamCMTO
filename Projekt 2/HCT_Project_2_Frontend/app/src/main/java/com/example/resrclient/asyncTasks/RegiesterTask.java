@@ -2,7 +2,9 @@ package com.example.resrclient.asyncTasks;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -30,6 +32,9 @@ public class RegiesterTask extends AsyncTask<String,Void, User> {
         final String userEmail = params[1];
         final String userPassword = params[2];
         final String userName = params[3];
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(ctx);
+        SharedPreferences.Editor edit = pref.edit();
+
         try {
 
             User newUser = new User(userName, userEmail, userPassword);
@@ -38,9 +43,14 @@ public class RegiesterTask extends AsyncTask<String,Void, User> {
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
             User result = restTemplate.postForObject(url, newUser, User.class);
             Log.v("Result", "Erstellt" + result.getEmail() + result.getUserName() + result.getPassword());
+
+            edit.putInt("userId", result.getId());
+            edit.apply();
+
             return result;
-        } catch (HttpServerErrorException e) {
-            Log.v("Resultb", "nicht Regiestriert");
+        }
+        catch (HttpServerErrorException e) {
+            Log.v("Result", "Nicht regiestriert");
         }
         return null;
     }

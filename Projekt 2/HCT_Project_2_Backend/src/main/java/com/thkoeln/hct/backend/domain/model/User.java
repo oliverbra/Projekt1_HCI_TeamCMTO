@@ -36,8 +36,8 @@ public class User {
     @JsonBackReference
     private Set<Review> reviews = new HashSet<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<GrowSpace> growSpaces = new HashSet<>();
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private GrowSpace growSpace;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
      private Level level;

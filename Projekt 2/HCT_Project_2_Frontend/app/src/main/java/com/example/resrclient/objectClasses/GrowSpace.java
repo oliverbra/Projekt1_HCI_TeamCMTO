@@ -9,31 +9,28 @@ public class GrowSpace {
     private User user;
     private String name;
     private String goal;
-    private String category; //as list?
+    private String category;
     private double size;
     private String location;
-    //private ArrayList<String> problems;
     private String problems;
     private double averageRating;
     private boolean highlighted;
     private ArrayList<Plants> plants;
+    private List<Review> reviews;
 
-
-   /* public GrowSpace(User pOwner, String pName, String pGoal, String pCategory, double pSize, String pLocation) {
-        owner = pOwner;
-        name = pName;
-        goal = pGoal;
-        category = pCategory;
-        size = pSize;
-        location = pLocation;
-
-       // problems = new ArrayList<String>(); //how to add problems while creating the GrowSpace?
-
-        receivedReviews = new ArrayList<Review>();
-        adorers = new ArrayList<User>();
-
-        marks = new ArrayList<Mark>();
-    } */
+    public GrowSpace(User user, String name, String goal, String category, double size, String location, String problems, double averageRating, boolean highlighted, ArrayList<Plants> plants, List<Review> reviews) {
+        this.user = user;
+        this.name = name;
+        this.goal = goal;
+        this.category = category;
+        this.size = size;
+        this.location = location;
+        this.problems = problems;
+        this.averageRating = averageRating;
+        this.highlighted = highlighted;
+        this.plants = plants;
+        this.reviews = reviews;
+    }
 
     public GrowSpace() {
     }
@@ -64,9 +61,6 @@ public class GrowSpace {
     public String toString() {
         return name + " " + goal + " " + category + " " + size + " " + location + " " + problems + ".";
     };
-
-    private List<Review> reviews;
-
 
     //Getter
     public User getUser() {

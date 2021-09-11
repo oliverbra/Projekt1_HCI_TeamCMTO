@@ -33,7 +33,7 @@ public class activity_logIn extends AppCompatActivity {
     }
 
     public void loginAction(View view){
-        final String url = "http://192.168.2.101:8080/login";
+        final String url = "http://10.0.2.2:8080/login";
         new LoginTask(this).execute(url, email.getText().toString(), password.getText().toString());
     }
 }

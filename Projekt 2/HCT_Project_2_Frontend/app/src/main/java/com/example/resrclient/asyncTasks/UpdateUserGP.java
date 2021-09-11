@@ -23,10 +23,10 @@ public class UpdateUserGP extends AsyncTask<String, Void, User> {
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
             restTemplate.put(url, updatedUser, User.class);
-            System.out.println("Done. ");
+            System.out.println("Done.");
         } catch (Exception e) {
             System.out.println(e.toString());
-            System.out.println("Failed. ");
+            System.out.println("Failed.");
         }
         return updatedUser;
     }

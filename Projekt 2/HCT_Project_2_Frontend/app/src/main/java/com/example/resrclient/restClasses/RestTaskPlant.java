@@ -7,21 +7,25 @@ import com.example.resrclient.objectClasses.Plants;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-public class RestTaskPlantSpecies extends AsyncTask<String, Void, Plants> {
+import java.util.ArrayList;
+import java.util.List;
 
-    protected Plants doInBackground(String... params) {
+public class RestTaskPlant extends AsyncTask<String, Void, List<Plants>> {
+
+
+
+    protected List<Plants> doInBackground(String... params) {
         final String url = params[0];
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-        Plants result = restTemplate.getForObject(url, Plants.class);
+        List<Plants> result = (List<Plants>) restTemplate.getForObject(url, Plants.class);
 
         return result;
     }
 
     @Override
-    protected void onPostExecute(Plants plants) {
+    protected void onPostExecute(List<Plants> plants) {
         super.onPostExecute(plants);
-        Plants plantsReturned = plants;
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.thkoeln.hct.backend.domain.model;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.HashSet;
@@ -42,7 +43,8 @@ public class GrowSpace {
     private boolean highlighted;
 
 
-   @ManyToOne(fetch =  FetchType.LAZY)
+    @JsonIgnore
+   @OneToOne(fetch =  FetchType.LAZY)
     @JoinColumn(name = "user_id" )
     private User user;
 
