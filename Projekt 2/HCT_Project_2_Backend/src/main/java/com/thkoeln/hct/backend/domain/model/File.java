@@ -35,7 +35,7 @@ public class File {
     }
 
 
-    @OneToMany(mappedBy = "flie", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "file", cascade = CascadeType.ALL)
     @JsonBackReference
     private Set<GrowSpace> growSpaces = new HashSet<>();
 

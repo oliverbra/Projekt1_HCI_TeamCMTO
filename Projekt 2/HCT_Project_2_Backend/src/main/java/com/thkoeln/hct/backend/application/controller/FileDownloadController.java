@@ -20,7 +20,7 @@ public class FileDownloadController {
     @Autowired
     private FileService fileService;
 
-    @GetMapping("/getFile/{fileName}")
+    @GetMapping("/getFile/{id}")
     public ResponseEntity <File> getFile(@PathVariable Integer id) {//byte[]
         File file = fileService.getFile(id);
 
