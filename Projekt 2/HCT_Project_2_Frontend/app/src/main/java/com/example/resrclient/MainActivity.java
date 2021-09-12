@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.resrclient.activities.activity_editGS;
+import com.example.resrclient.activities.activity_growspace;
 import com.example.resrclient.activities.activity_logIn;
 import com.example.resrclient.activities.activity_createGS;
 import com.example.resrclient.activities.activity_review;
@@ -143,6 +144,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void reviewActivity(View view) {
         Intent intent = new Intent(this, activity_review.class);
+        startActivity(intent);
+    }
+
+    public void showGrowspaceActivity(View view) {
+        Intent intent = new Intent(this, activity_growspace.class);
         startActivity(intent);
     }
 
