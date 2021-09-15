@@ -45,12 +45,12 @@ public class ReviewTask extends AsyncTask<String, Void, Review> {
         User newUser = new User(userId);
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-        User currentUser = restTemplate.getForObject("http://192.168.2.101:8080/users/" + newUser.getId(), User.class);
-        GrowSpace randomGrowspace = restTemplate.getForObject("http://192.168.2.101:8080/growspaces/random" , GrowSpace.class);
+        User currentUser = restTemplate.getForObject("http://10.0.2.2:8080/users/" + newUser.getId(), User.class);
+        GrowSpace randomGrowspace = restTemplate.getForObject("http://110.0.2.2:8080/growspaces/random" , GrowSpace.class);
 
         Review newReview = new Review(localCriteria, shelterCriteria, naturalCriteria, dangerCriteria, formatter.format(date) , comment, currentUser, randomGrowspace);
 
-        Review result = restTemplate.postForObject("http://192.168.2.101:8080/growspaces/" + randomGrowspace.getId() + "/reviews", newReview, Review.class);
+        Review result = restTemplate.postForObject("http://10.0.2.2:8080/growspaces/" + randomGrowspace.getId() + "/reviews", newReview, Review.class);
         Log.v("Result","Review erstellt ");
 
         return result;

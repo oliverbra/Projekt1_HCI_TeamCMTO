@@ -86,8 +86,4 @@ public class Level {
         this.levelThreshold = levelThreshold;
     }
 
-    public int getNextId() {
-        return id++;
-    }
-
 }
