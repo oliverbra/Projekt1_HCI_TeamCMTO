@@ -40,7 +40,7 @@ public class activity_growspace extends AppCompatActivity {
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         Integer userId = preferences.getInt("userId", 0);
-        String url = "http://10.0.2.2:8080:8080/users/" + userId;
+        String url = "http://10.0.2.2:8080/users/" + userId;
         User currentUser = null;
         try {
             currentUser = new RestTaskUser().execute(url).get();
