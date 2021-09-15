@@ -54,7 +54,7 @@ public class CreateGSTask extends AsyncTask<String, Void, GrowSpace> {
         User newUser = new User(userId);
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-        User currentUser = restTemplate.getForObject("http://10.0.2.2:8080/users/" + newUser.getId(), User.class);
+        User currentUser = restTemplate.getForObject("http://192.168.2.101:8080/users/" + newUser.getId(), User.class);
 
         GrowSpace newGS = new GrowSpace(currentUser, name, goal, category, size, location, problems, 0.0, false, plants, reviews);
 

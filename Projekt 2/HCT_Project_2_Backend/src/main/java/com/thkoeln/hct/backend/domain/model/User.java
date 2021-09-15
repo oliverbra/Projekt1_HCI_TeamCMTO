@@ -1,8 +1,6 @@
 package com.thkoeln.hct.backend.domain.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -13,7 +11,6 @@ import java.util.Set;
 @Entity
 @Table (name = "user")
 @Data
-
 public class User {
 
     public User() {
@@ -41,7 +38,7 @@ public class User {
 
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonManagedReference(value = "growspace")
+    @JsonManagedReference(value="growspace")
     private GrowSpace growSpace;
 
     @ManyToOne(fetch =  FetchType.EAGER)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/nav_to_startseite"
+    android:title="startseite_nav"
+    android:icon="@drawable/ic_baseline_home_24"/>
+
+    <item android:id="@+id/nav_to_growSpace"
+        android:title="growSpace_nav"
+        android:icon="@drawable/ic_baseline_spa_24"/>
+
+    <item android:id="@+id/nav_to_login"
+        android:title="login_nav"
+        android:icon="@drawable/ic_baseline_login_24"/>
+</menu>

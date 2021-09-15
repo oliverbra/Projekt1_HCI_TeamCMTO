@@ -1,7 +1,8 @@
 package com.thkoeln.hct.backend.domain.model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
-import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.HashSet;
@@ -10,7 +11,7 @@ import java.util.Set;
 @Entity
 @Table(name = "grow_space")
 @Data
-
+@JsonIgnoreProperties("reviews")
 public class GrowSpace {
 
     public GrowSpace() {}
@@ -41,9 +42,10 @@ public class GrowSpace {
     private Double averageRating;
     private boolean highlighted;
 
-    @JsonBackReference(value = "growspace")
+
     @OneToOne(fetch =  FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id" )
+    @JsonBackReference(value="growspace")
     private User user;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
@@ -54,9 +56,9 @@ public class GrowSpace {
     @JoinTable
     private Set<Plants> plants = new HashSet<>();
 
-    /*
-    TODO implement plants relationship (manytomany) ??
-     */
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "files_id" )
+    private File file;
 
 
 

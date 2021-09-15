@@ -71,7 +71,7 @@ public class activity_createGS extends AppCompatActivity implements AdapterView.
     }
 
     public void createGSAction(View view){
-        final String url = "http://10.0.2.2:8080/growspaces";
+        final String url = "http://192.168.2.101:8080/growspaces";
         try {
             if ( validateInput(name.getText().toString(), category)) {
                 new CreateGSTask(this, name.getText().toString(), goal.getText().toString(), category, Double.parseDouble(size.getText().toString()), location.getText().toString(), problems.getText().toString(), selectedPlants, reviews).execute(url);

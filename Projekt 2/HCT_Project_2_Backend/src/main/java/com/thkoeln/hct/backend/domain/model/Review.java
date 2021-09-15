@@ -1,6 +1,7 @@
 package com.thkoeln.hct.backend.domain.model;
 
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

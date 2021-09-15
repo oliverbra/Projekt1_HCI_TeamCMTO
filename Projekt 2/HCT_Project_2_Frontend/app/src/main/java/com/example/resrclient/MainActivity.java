@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.example.resrclient.activities.activity_editGS;
+import com.example.resrclient.activities.activity_growspace;
 import com.example.resrclient.activities.activity_logIn;
 import com.example.resrclient.activities.activity_createGS;
 import com.example.resrclient.activities.activity_review;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         //final String url = "http://10.0.2.2:8080/personAli";
         //new RestTaskExample().execute(url);
-        final String url = "http://10.0.2.2:8080/userTest";
+        final String url = "http://192.168.2.101:8080/userTest";
         new RestTaskUser().execute(url);
     }
     // Ende
@@ -180,6 +181,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void reviewActivity(View view) {
         Intent intent = new Intent(this, activity_review.class);
+        startActivity(intent);
+    }
+
+    public void showGrowspaceActivity(View view) {
+        Intent intent = new Intent(this, activity_growspace.class);
         startActivity(intent);
     }
 
