@@ -1,8 +1,11 @@
 package com.thkoeln.hct.backend.domain.model;
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Data
@@ -24,8 +27,8 @@ public class Level {
     private Integer levelThreshold;
 
 
-    @OneToOne(fetch =  FetchType.LAZY)
-    @JoinColumn(name = "user_id" )
-    private User user;
+    @OneToMany(mappedBy = "level", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<User> user = new HashSet<>();
 }
 

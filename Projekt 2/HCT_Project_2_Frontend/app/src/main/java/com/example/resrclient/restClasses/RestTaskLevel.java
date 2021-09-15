@@ -21,7 +21,6 @@ public class RestTaskLevel extends AsyncTask<String, Void, Level> {
     @Override
     protected void onPostExecute(Level level) {
         super.onPostExecute(level);
-        Level levelReturned = level;
     }
 
     @Override

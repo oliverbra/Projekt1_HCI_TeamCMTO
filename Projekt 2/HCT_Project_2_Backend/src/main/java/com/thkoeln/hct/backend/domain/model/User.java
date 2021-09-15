@@ -1,5 +1,8 @@
 package com.thkoeln.hct.backend.domain.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -36,11 +39,14 @@ public class User {
     @JsonBackReference
     private Set<Review> reviews = new HashSet<>();
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private GrowSpace growSpace;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-     private Level level;
+    @JsonManagedReference(value = "growspace")
+    private GrowSpace growSpace;
+
+    @ManyToOne(fetch =  FetchType.EAGER)
+    @JoinColumn(name = "level_id")
+    private Level level;
 
 
 

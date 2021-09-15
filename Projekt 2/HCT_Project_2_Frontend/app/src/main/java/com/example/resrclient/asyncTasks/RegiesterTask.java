@@ -12,11 +12,15 @@ import com.example.resrclient.MainActivity;
 import com.example.resrclient.activities.activity_startseite;
 import android.widget.Toast;
 import com.example.resrclient.activities.activity_logIn;
+import com.example.resrclient.objectClasses.Level;
 import com.example.resrclient.objectClasses.User;
+import com.example.resrclient.restClasses.RestTaskLevel;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.concurrent.ExecutionException;
 
 public class RegiesterTask extends AsyncTask<String,Void, User> {
     Context ctx;
@@ -51,8 +55,8 @@ public class RegiesterTask extends AsyncTask<String,Void, User> {
         }
         catch (HttpServerErrorException e) {
             Log.v("Result", "Nicht regiestriert");
+            return null;
         }
-        return null;
     }
 
     @Override

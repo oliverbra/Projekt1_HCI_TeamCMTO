@@ -45,8 +45,8 @@ public class DatabaseFile {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<GrowSpace> growSpaces = new HashSet<>();
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-     private Level level;
+    //@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    //private Level level;
 
 
 

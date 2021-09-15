@@ -1,8 +1,7 @@
 package com.thkoeln.hct.backend.domain.model;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.HashSet;
@@ -42,10 +41,9 @@ public class GrowSpace {
     private Double averageRating;
     private boolean highlighted;
 
-
-    @JsonIgnore
-   @OneToOne(fetch =  FetchType.LAZY)
-    @JoinColumn(name = "user_id" )
+    @JsonBackReference(value = "growspace")
+    @OneToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

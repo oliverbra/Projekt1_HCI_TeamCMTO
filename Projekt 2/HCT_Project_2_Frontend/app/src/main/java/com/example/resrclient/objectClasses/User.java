@@ -1,9 +1,13 @@
 package com.example.resrclient.objectClasses;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.resrclient.asyncTasks.UpdateUserGP;
+import com.example.resrclient.restClasses.RestTaskLevel;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -36,28 +40,37 @@ public class User {
         this.password = password;
     }
     //Dieser Constructor existiert für RegiesterTask
-    public User(String userName, String email, String password){
+    public User(String userName, String email, String password) {
         this.userName = userName;
         this.email = email;
         this.password = password;
+        this.growpoints = 0;
+        this.level = new Level();
+
     }
 
-    public void increaseGP(int amount) throws ExecutionException, InterruptedException {
+    public void increaseGP(int amount, Context ctx) throws ExecutionException, InterruptedException {
         growpoints += amount;
-
+        if(this.getGrowpoints() >= this.getLevel().getLevelThreshold()) {
+            this.setGrowpoints(this.getGrowpoints() - this.getLevel().getLevelThreshold());
+            String url = "http://10.0.2.2:8080/levels/";
+            int nextLevelId = this.getLevel().getId() + 1;
+            Level nextLevel = new RestTaskLevel().execute(url + nextLevelId).get();
+            this.setLevel(nextLevel);
+            levelUp(ctx);
+            Log.v("Result", "Done 1: " + this.getLevel().getLevelName() + " " + this.getGrowpoints());
+        }
         // Update user
         String url = "http://10.0.2.2:8080/users";
-        User updatedUser =  new UpdateUserGP().execute(url, gpToString(this.getGrowpoints())).get();
-        if(updatedUser.getLevel() != this.getLevel()) {
-            this.level = updatedUser.getLevel();
-            this.growpoints = updatedUser.getGrowpoints();
-        }
+        User updatedUser =  new UpdateUserGP(ctx).execute(url, intToString(this.getGrowpoints()), intToString(this.getLevel().getId())).get();
+        Log.v("Result", "Done 3: " + updatedUser.getLevel().getLevelName() + " " + updatedUser.getGrowpoints());
+
     }
 
-    public void openReview(int i) throws ExecutionException, InterruptedException {
+    public void openReview(int i, Context ctx) throws ExecutionException, InterruptedException {
         if(!reviews.get(i).getOpen()) {
             reviews.get(i).open();
-            increaseGP(calculatePoints(reviews.get(i).getRating()));
+            increaseGP(calculatePoints(reviews.get(i).getRating()), ctx);
         }
     }
 
@@ -184,8 +197,8 @@ public class User {
         this.password = password;
     }
 
-    public String gpToString(int growpoints) {
-        return "" + growpoints;
+    public String intToString(int i) {
+        return "" + i;
     }
 
     public List<Review> getReviews() {return reviews; }

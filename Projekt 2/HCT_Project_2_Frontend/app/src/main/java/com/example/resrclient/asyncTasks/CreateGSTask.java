@@ -1,11 +1,14 @@
 package com.example.resrclient.asyncTasks;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
+import com.example.resrclient.MainActivity;
+import com.example.resrclient.activities.activity_startseite;
 import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.Review;
@@ -55,6 +58,7 @@ public class CreateGSTask extends AsyncTask<String, Void, GrowSpace> {
 
         GrowSpace newGS = new GrowSpace(currentUser, name, goal, category, size, location, problems, 0.0, false, plants, reviews);
 
+
         try{
             GrowSpace result = restTemplate.postForObject(url, newGS, GrowSpace.class);
             System.out.println("Done. " + result.toString());
@@ -69,7 +73,10 @@ public class CreateGSTask extends AsyncTask<String, Void, GrowSpace> {
     @Override
     protected void onPostExecute(GrowSpace growSpace) {
         super.onPostExecute(growSpace);
-        GrowSpace growSpaceReturned = growSpace;
+        if(growSpace != null) {
+            Intent i = new Intent(ctx, activity_startseite.class);
+            ctx.startActivity(i);
+        }
     }
 
     @Override

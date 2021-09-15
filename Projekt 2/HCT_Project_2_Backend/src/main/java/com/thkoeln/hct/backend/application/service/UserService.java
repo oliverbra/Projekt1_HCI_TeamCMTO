@@ -5,6 +5,8 @@ import com.thkoeln.hct.backend.common.exceptions.WrongCredentialsException;
 import com.thkoeln.hct.backend.domain.model.User;
 import com.thkoeln.hct.backend.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+import org.springframework.data.repository.core.support.RepositoryFactorySupport;
 import org.springframework.lang.NonNull;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,9 +20,8 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-    private LevelRepository levelRepository;
 
-    private LevelService levelService;
+    private LevelRepository levelRepository;
 
     @Autowired
    // BCryptPasswordEncoder passwordEncoder;
@@ -51,17 +52,20 @@ public class UserService {
 
     public User update(@NonNull User user){
         User userToUpdate = userRepository.findUserById(user.getId());
-        Level levelToLevelUp = (Level) user.getLevel();
-
         userToUpdate.setGrowpoints(user.getGrowpoints());
+        userToUpdate.setLevel(user.getLevel());
 
-        // Check Level Up
-        if(userToUpdate.getGrowpoints() >= levelToLevelUp.getLevelThreshold()) {
+        /*/ Check Level Up
+        if(userToUpdate.getGrowpoints() >= userToUpdate.getLevel().getLevelThreshold()) {
             // Reduce User GP after Level Up
-            userToUpdate.setGrowpoints(userToUpdate.getGrowpoints() - levelToLevelUp.getLevelThreshold());
+            userToUpdate.setGrowpoints(userToUpdate.getGrowpoints() - userToUpdate.getLevel().getLevelThreshold());
             // Perform Level Up
-            userToUpdate.setLevel(levelService.levelUp(levelToLevelUp));
-        }
+            int id = userToUpdate.getLevel().getId() + 1; // --> Level müssen nach ID sortiert sein
+            userToUpdate.setLevel(levelRepository.findLevelById(id));
+
+            //levelService = new LevelService(levelRepository);
+            //userToUpdate.setLevel(levelService.levelUp(levelToLevelUp));
+        } */
 
         return userRepository.save(user);
     }

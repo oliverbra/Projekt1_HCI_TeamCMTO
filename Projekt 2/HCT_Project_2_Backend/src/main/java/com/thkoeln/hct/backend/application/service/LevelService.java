@@ -13,6 +13,10 @@ public class LevelService {
     @Autowired
     private LevelRepository levelRepository;
 
+    public LevelService(LevelRepository levelRepository) {
+        this.levelRepository = levelRepository;
+    }
+
     public List<Level> findAll(){
         return levelRepository.findAll();
     }

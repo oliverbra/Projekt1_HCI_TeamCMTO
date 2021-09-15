@@ -1,6 +1,8 @@
 package com.example.resrclient;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.example.resrclient.activities.activity_editGS;
@@ -9,10 +11,12 @@ import com.example.resrclient.activities.activity_createGS;
 import com.example.resrclient.activities.activity_review;
 import com.example.resrclient.carousel.CarouselAdapter;
 import com.example.resrclient.carousel.CarouselItem;
+import com.example.resrclient.objectClasses.User;
 import com.example.resrclient.restClasses.RestTaskUser;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 
@@ -22,8 +26,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,7 +95,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Context ctx = this;
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        Integer userId = preferences.getInt("userId", 0);
+        User currentUser = null;
+        try {
+            currentUser = new RestTaskUser().execute("http://10.0.2.2:8080/users/" + userId).get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Log.v("Result","Current User:" + currentUser.getUserName() + " " + currentUser.getLevel().getLevelName());
+
         button = (Button) findViewById(R.id.buttonREST_GET); // PoC Server Communication
+        button.setText("Push for Points");
+        User finalCurrentUser = currentUser;
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    finalCurrentUser.increaseGP(10, ctx);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
         carousel = (ViewPager2) findViewById(R.id.carousel); // Carousel
         dotsLayout = (LinearLayout) findViewById(R.id.dotsLayout); // Carousel
