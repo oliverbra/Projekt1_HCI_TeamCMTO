@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Buttons -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="171dp"
+    android:height="52dp"
+    android:viewportWidth="171"
+    android:viewportHeight="52"
+    android:background = "@color/orange"
+    android:elevation="4px"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M16 0H155C163.837 0 171 7.16344 171 16V36C171 44.8366 163.837 52 155 52H16C7.16344 52 0 44.8366 0 36V16C0 7.16344 7.16344 0 16 0Z"
+            tools:ignore="VectorRaster" />
+
+        <path
+            android:pathData="M0 0V52H171V0"
+            android:fillColor="#FDBC46"
+            />
+
+    </group>
+
+</vector>
