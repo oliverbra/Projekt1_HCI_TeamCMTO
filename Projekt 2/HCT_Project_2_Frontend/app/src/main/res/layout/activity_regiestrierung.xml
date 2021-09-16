@@ -2,9 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/already_registered"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.activity_regiestrierung">
+
+    <!-- Buttons -->
+
+
+    <!-- drawable/buttons.xml -->
+    <!-- Input Field -->
 
 
     <RelativeLayout
@@ -65,10 +72,10 @@
         android:fontFamily="@font/comfortaa"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:paddingLeft="32dp"
-        android:paddingTop="16dp"
-        android:paddingRight="32dp"
-        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="24dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="24dp"
         android:textAppearance="@style/Input_Field"
         android:textColor="@color/green01"
         android:textColorHighlight="@color/green02"
@@ -95,10 +102,10 @@
         android:fontFamily="@font/comfortaa"
         android:hint="Passwort"
         android:inputType="textPassword"
-        android:paddingLeft="32dp"
-        android:paddingTop="16dp"
-        android:paddingRight="32dp"
-        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="24dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="24dp"
         android:textAppearance="@style/Input_Field"
         android:textColor="@color/green01"
         android:textColorHighlight="@color/green02"
@@ -125,10 +132,10 @@
         android:fontFamily="@font/comfortaa"
         android:hint="Username"
         android:inputType="textPersonName"
-        android:paddingLeft="32dp"
-        android:paddingTop="16dp"
-        android:paddingRight="32dp"
-        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="24dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="24dp"
         android:textAppearance="@style/Input_Field"
         android:textColor="@color/green01"
         android:textColorHighlight="@color/green02"
@@ -171,7 +178,5 @@
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
