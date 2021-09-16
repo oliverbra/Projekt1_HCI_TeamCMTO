@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- drawable/input_field.xml -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="379dp"
+    android:height="68dp"
+    android:viewportWidth="379"
+    android:viewportHeight="68"
+    android:background = "@color/white"
+    android:elevation="16dp"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M16 0H363C371.837 0 379 7.16344 379 16V52C379 60.8366 371.837 68 363 68H16C7.16344 68 0 60.8366 0 52V16C0 7.16344 7.16344 0 16 0Z"
+            tools:ignore="VectorRaster" />
+
+        <path
+            android:pathData="M0 0V68H379V0"
+            android:fillColor="#FFFFFF"
+            />
+
+    </group>
+
+</vector>
