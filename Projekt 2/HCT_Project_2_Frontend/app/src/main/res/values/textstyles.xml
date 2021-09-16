@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+    <style name="H1" parent="@style/TextAppearance.MaterialComponents.Headline1">
+        <item name="font">@font/comfortaa</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="H2" parent="@style/TextAppearance.MaterialComponents.Headline2">
+        <item name="font">@font/comfortaa</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="H3" parent="@style/TextAppearance.MaterialComponents.Headline3">
+        <item name="font">@font/comfortaa</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="B1" parent="@style/TextAppearance.MaterialComponents.Body1">
+        <item name="font">@font/nunito</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="B2" parent="@style/TextAppearance.MaterialComponents.Headline2">
+        <item name="font">@font/comfortaa</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="S1" parent="@style/TextAppearance.MaterialComponents.Headline2">
+        <item name="font">@font/nunito</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontWeight">300</item>
+    </style>
+
+    <style name="Button" parent="@style/TextAppearance.MaterialComponents.Headline2">
+        <item name="font">@font/comfortaa</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="GS_Goal" parent="@style/TextAppearance.MaterialComponents.Headline2">
+        <item name="font">@font/nunito</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">300</item>
+    </style>
+
+    <style name="Input_Field" parent="@style/TextAppearance.MaterialComponents.Headline2">
+        <item name="font">@font/comfortaa</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textColorHint">@color/green03</item>
+    </style>
+
+</resources>
