@@ -37,6 +37,7 @@ public class Review {
        this.comment =  comment;
        this.user = user;
        this.growSpace = growSpace;
+       this.rating = (localCriteria + shelterCriteria + naturalCriteria + dangerCriteria) / 4;
     }
 
     public void open() {open = true;}

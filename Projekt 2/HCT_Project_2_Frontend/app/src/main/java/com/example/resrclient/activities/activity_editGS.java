@@ -40,7 +40,7 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
 
         // Get current Growspace by get currentUser based on preferenced userId after LoginActivity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        Integer userId = preferences.getInt("userId", 0);
+        int userId = preferences.getInt("userId", 0);
         String url = "http://10.0.2.2:8080/users/" + userId;
         User currentUser = null;
         try {
@@ -95,7 +95,7 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
     }
 
     public void editGSAction(View view){
-        final String url = "http://10.0.2.2:8080:8080/growspaces";
+        final String url = "http://10.0.2.2:8080/growspaces";
         try {
             if ( validateInput(name.getText().toString(), category)) {
                 new EditGSTask(this, name.getText().toString(), goal.getText().toString(), category, Double.parseDouble(size.getText().toString()) , location.getText().toString(), problems.getText().toString(), selectedPlants).execute(url);

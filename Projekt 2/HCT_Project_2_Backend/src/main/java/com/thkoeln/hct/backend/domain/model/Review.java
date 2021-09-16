@@ -23,6 +23,7 @@ public class Review {
     private double shelterCriteria;
     private double naturalCriteria;
     private double dangerCriteria;
+    private double rating;
 
 
     @ManyToOne(fetch =  FetchType.EAGER)
@@ -31,6 +32,9 @@ public class Review {
 
     @ManyToOne(fetch =  FetchType.EAGER)
     @JoinColumn(name = "gs_Id")
+    @JsonIdentityInfo(
+            generator = ObjectIdGenerators.PropertyGenerator.class,
+            property = "id")
     private GrowSpace growSpace;
 
 }

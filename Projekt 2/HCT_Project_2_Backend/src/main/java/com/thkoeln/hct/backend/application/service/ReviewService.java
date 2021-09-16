@@ -5,6 +5,8 @@ import com.thkoeln.hct.backend.domain.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
+
+import java.util.Collections;
 import java.util.List;
 @Service
 
@@ -23,8 +25,11 @@ public class ReviewService {
     }
 
     public Review findById(@NonNull Integer id){
-   return reviewRepository.findReviewById(id);
+        return reviewRepository.findReviewById(id);
+    }
 
+    public List<Review> findByGsID(@NonNull Integer id) {
+        return reviewRepository.findAllById(Collections.singleton(id));
     }
 
     public Review update(@NonNull Review review){

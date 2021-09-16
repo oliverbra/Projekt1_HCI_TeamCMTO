@@ -33,7 +33,7 @@ public class ReviewController {
     @GetMapping("/growspaces/{growspaceId}/reviews")
     public ResponseEntity<List<Review>> getAllReviewsByGrowspaceId(@PathVariable Integer growspaceId) {
         logger.debug("GET: getAllReviewsByGrowspaceId");
-        return new ResponseEntity(reviewService.findById(growspaceId), HttpStatus.OK);
+        return new ResponseEntity(reviewService.findByGsID(growspaceId), HttpStatus.OK);
     }
 
     @GetMapping("/users/{userId}/reviews")

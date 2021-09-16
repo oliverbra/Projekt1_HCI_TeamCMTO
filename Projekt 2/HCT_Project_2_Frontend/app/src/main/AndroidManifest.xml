@@ -17,6 +17,7 @@
         <activity android:name=".activities.activity_createGS"></activity>
         <activity android:name=".activities.activity_editGS"></activity>
         <activity android:name=".activities.activity_regiestrierung"></activity>
+        <activity android:name=".activities.activity_sentReview"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity
             android:name=".activities.activity_logIn"

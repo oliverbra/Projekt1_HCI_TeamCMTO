@@ -1,8 +1,14 @@
 package com.example.resrclient.objectClasses;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class GrowSpace {
 
@@ -17,10 +23,10 @@ public class GrowSpace {
     private double averageRating;
     private boolean highlighted;
     private ArrayList<Plants> plants;
-    private List<Review> reviews;
+    private ArrayList<Review> reviews;
     private File file;
 
-    public GrowSpace(User user, String name, String goal, String category, double size, String location, String problems, double averageRating, boolean highlighted, ArrayList<Plants> plants, List<Review> reviews) {
+    public GrowSpace(User user, String name, String goal, String category, double size, String location, String problems, double averageRating, boolean highlighted, ArrayList<Plants> plants, ArrayList<Review> reviews) {
         this.user = user;
         this.name = name;
         this.goal = goal;
@@ -37,6 +43,7 @@ public class GrowSpace {
     }
 
 
+    // Used in CreateGS
     public GrowSpace(String pName, String pGoal, String pCategory, double pSize, String pLocation, String pProblems, Double pAverageRating) {
         name = pName;
         goal = pGoal;
@@ -45,7 +52,7 @@ public class GrowSpace {
         location = pLocation;
         problems = pProblems;
         averageRating = pAverageRating;
-
+        reviews = new ArrayList<Review>() {};
         //receivedReviews = new ArrayList<Review>();
        // adorers = new ArrayList<User>();
         //marks = new ArrayList<Mark>();
@@ -106,7 +113,7 @@ public class GrowSpace {
 
     public void setPlants(ArrayList<Plants> plants) {this.plants = plants;}
 
-    public void setReviews(List<Review> reviews) {this.reviews = reviews;}
+    public void setReviews(ArrayList<Review> reviews) {this.reviews = reviews;}
 
     public void setId(Integer id) {this.id = id;}
 
@@ -141,6 +148,14 @@ public class GrowSpace {
     public boolean isHighlighted() {return highlighted;}
 
     public void setHighlighted(boolean highlighted) {this.highlighted = highlighted;}
+
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
+    }
+
+    public void addReview(Review review) {
+        reviews.add(review);
+    }
 
 
 }
