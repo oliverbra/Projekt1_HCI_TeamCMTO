@@ -1,5 +1,6 @@
 package com.thkoeln.hct.backend.domain.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
@@ -56,10 +57,13 @@ public class GrowSpace {
     @JoinTable
     private Set<Plants> plants = new HashSet<>();
 
-    @ManyToOne(fetch =  FetchType.LAZY)
-    @JoinColumn(name = "files_id" )
-    private File file;
+//    @ManyToOne(fetch =  FetchType.LAZY)
+//    @JoinColumn(name = "files_id" )
+//    private File file;
 
+    @OneToMany(mappedBy = "growSpace", cascade = CascadeType.ALL)
+    @JsonBackReference
+    private Set<File> files = new HashSet<>();
 
 
 
