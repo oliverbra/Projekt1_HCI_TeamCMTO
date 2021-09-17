@@ -44,5 +44,8 @@ public class activity_regiestrierung extends AppCompatActivity {
         Intent intent = new Intent(this, activity_startseite.class);
         startActivity(intent); }
 
-
+    public void changeToLogin(View view) {
+        Intent intent = new Intent(this, activity_logIn.class);
+        startActivity(intent);
+    }
 }

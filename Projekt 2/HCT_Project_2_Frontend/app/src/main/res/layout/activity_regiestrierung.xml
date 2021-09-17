@@ -168,6 +168,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:linksClickable="false"
+        android:onClick="changeToLogin"
         android:text="Anmelden"
         android:textAppearance="@style/S1"
         android:textColor="@color/green01"
