@@ -5,25 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.resrclient.R;
 import com.example.resrclient.activities.ui.main.SectionsPagerAdapter;
-import com.example.resrclient.asyncTasks.ShowGrowspaceTask;
 import com.example.resrclient.databinding.ActivityGrowspaceBinding;
 
 import com.example.resrclient.objectClasses.GrowSpace;
-import com.example.resrclient.objectClasses.User;
-import com.example.resrclient.restClasses.RestTaskUser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.concurrent.ExecutionException;
 
 public class activity_growspace extends AppCompatActivity {
 
@@ -81,7 +74,7 @@ public class activity_growspace extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),activity_progress.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_to_startseite:
+                    case R.id.nav_to_favourites:
                         startActivity(new Intent(getApplicationContext(),activity_favourites.class)); // Code hübschen effiezent machen
                         overridePendingTransition(0,0);
                         return true;
