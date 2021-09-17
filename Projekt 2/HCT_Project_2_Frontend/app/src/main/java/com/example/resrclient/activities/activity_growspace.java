@@ -74,7 +74,7 @@ public class activity_growspace extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),activity_progress.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_to_startseite:
+                    case R.id.nav_to_favourites:
                         startActivity(new Intent(getApplicationContext(),activity_favourites.class)); // Code hübschen effiezent machen
                         overridePendingTransition(0,0);
                         return true;
