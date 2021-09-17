@@ -66,18 +66,18 @@ public class activity_growspace extends AppCompatActivity {
         //Navigation
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_to_growSpace);
+        bottomNavigationView.setSelectedItemId(R.id.nav_to_home);
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.nav_to_growSpace:
+                    case R.id.nav_to_home:
                         startActivity(new Intent(getApplicationContext(),activity_growspace.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_to_login:
+                    case R.id.nav_to_profile:
                         startActivity(new Intent(getApplicationContext(),activity_logIn.class));
                         overridePendingTransition(0,0);
                         return true;
