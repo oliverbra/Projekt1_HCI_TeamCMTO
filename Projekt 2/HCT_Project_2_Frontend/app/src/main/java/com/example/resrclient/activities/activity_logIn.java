@@ -34,19 +34,20 @@ public class activity_logIn extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_to_home:
-                        startActivity(new Intent(getApplicationContext(),activity_growspace.class));
+                        startActivity(new Intent(getApplicationContext(),activity_startseite.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_to_profile:
-                        startActivity(new Intent(getApplicationContext(),activity_logIn.class));
+                        startActivity(new Intent(getApplicationContext(),activity_progress.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_to_startseite:
-                        startActivity(new Intent(getApplicationContext(),activity_startseite.class));
+                        startActivity(new Intent(getApplicationContext(),activity_favourites.class)); // Code hübschen effiezent machen
                         overridePendingTransition(0,0);
                         return true;
                 }
                 return false;
+
             }
         });
     }
