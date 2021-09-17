@@ -5,25 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.resrclient.R;
 import com.example.resrclient.activities.ui.main.SectionsPagerAdapter;
-import com.example.resrclient.asyncTasks.ShowGrowspaceTask;
 import com.example.resrclient.databinding.ActivityGrowspaceBinding;
 
 import com.example.resrclient.objectClasses.GrowSpace;
-import com.example.resrclient.objectClasses.User;
-import com.example.resrclient.restClasses.RestTaskUser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.concurrent.ExecutionException;
 
 public class activity_growspace extends AppCompatActivity {
 
@@ -66,18 +59,18 @@ public class activity_growspace extends AppCompatActivity {
         //Navigation
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_to_growSpace);
+        bottomNavigationView.setSelectedItemId(R.id.nav_to_home);
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.nav_to_growSpace:
+                    case R.id.nav_to_home:
                         startActivity(new Intent(getApplicationContext(),activity_growspace.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_to_login:
+                    case R.id.nav_to_profile:
                         startActivity(new Intent(getApplicationContext(),activity_logIn.class));
                         overridePendingTransition(0,0);
                         return true;

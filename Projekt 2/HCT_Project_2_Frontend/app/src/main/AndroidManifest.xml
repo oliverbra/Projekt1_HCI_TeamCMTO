@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ResrClient"
         android:usesCleartextTraffic="true">
+        <activity android:name=".activities.activity_favourites"></activity>
         <activity android:name=".activities.activity_growspace" />
         <activity android:name=".activities.activity_progress" />
         <activity android:name=".activities.activity_startseite" />
