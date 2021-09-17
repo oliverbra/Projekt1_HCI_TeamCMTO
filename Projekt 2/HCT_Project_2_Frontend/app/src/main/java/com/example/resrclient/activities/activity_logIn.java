@@ -26,7 +26,7 @@ public class activity_logIn extends AppCompatActivity {
         //Navigation
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_to_login);
+        bottomNavigationView.setSelectedItemId(R.id.nav_to_login); // Hier ausgangs Activity
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

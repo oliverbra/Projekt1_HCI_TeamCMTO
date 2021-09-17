@@ -1,6 +1,8 @@
 package com.example.resrclient.activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -18,7 +21,6 @@ import com.example.resrclient.asyncTasks.EditGSTask;
 import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.User;
-import com.example.resrclient.restClasses.RestTaskPlant;
 import com.example.resrclient.restClasses.RestTaskUser;
 
 import java.util.ArrayList;
@@ -27,6 +29,7 @@ import java.util.concurrent.ExecutionException;
 
 public class activity_editGS extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    private static final int PICK_IMAGE = 1;
     private GrowSpace growSpace;
     private EditText name, goal, size, location, problems;
     private String category;
@@ -95,7 +98,7 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
     }
 
     public void editGSAction(View view){
-        final String url = "http://10.0.2.2:8080:8080/growspaces";
+        final String url = "http://10.0.2.2:8080/growspaces";
         try {
             if ( validateInput(name.getText().toString(), category)) {
                 new EditGSTask(this, name.getText().toString(), goal.getText().toString(), category, Double.parseDouble(size.getText().toString()) , location.getText().toString(), problems.getText().toString(), selectedPlants).execute(url);
@@ -103,6 +106,31 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
                 Toast.makeText(this, "Fill out required fields", Toast.LENGTH_SHORT).show();}
         } catch (Exception e) {
             Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void selectPicture(View view){
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        ImageView teaserBild = findViewById(R.id.editGS_previewBild_imageView);
+        if (resultCode == RESULT_OK) {
+
+            // compare the resultCode with the
+            // SELECT_PICTURE constant
+            if (requestCode == PICK_IMAGE) {
+                // Get the url of the image from data
+                Uri selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    // update the preview image in the layout
+                    teaserBild.setImageURI(selectedImageUri);
+                }
+            }
         }
     }
 

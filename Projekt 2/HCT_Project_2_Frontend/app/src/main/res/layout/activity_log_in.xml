@@ -18,7 +18,7 @@
         android:fontFamily="@font/comfortaa"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="loginAction"
+        android:onClick="chanceActivity"
         android:paddingLeft="32dp"
         android:paddingTop="16dp"
         android:paddingRight="32dp"
@@ -94,12 +94,15 @@
         android:layout_height="wrap_content"
         app:itemIconTint="@color/green01"
         app:itemTextColor="@color/green01"
+        android:onClick="loginAction"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+
     <!--todo: height to 82 dp -->
+
 
     <TextView
         android:id="@+id/textView"

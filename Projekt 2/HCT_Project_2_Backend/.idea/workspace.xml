@@ -5,13 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddcff19-83ac-4a55-84ec-45e6608a8fc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_databinding_databinding_adapters_4_2_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_databinding_databinding_common_4_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_databinding_databinding_runtime_4_2_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_4_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_jvm_1_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/PageViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/PlaceholderFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/SectionsPagerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/second_tap_fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/third_tap_fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/fragment_second_tap_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/fragment_third_tap_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/values-w820dp/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat_i" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HCT_Project_2_Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HCT_Project_2_Backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/File.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/GrowSpace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/GrowSpace.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thkoeln/hct/backend/domain/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -22,13 +59,31 @@
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/6.7.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_createGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_createGS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/modules/app/ResrClient.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/.idea/modules/app/ResrClient.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_editGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_editGS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_growspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_growspace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_logIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_logIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_regiestrierung.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_regiestrierung.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/asyncTasks/CreateGSTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/asyncTasks/CreateGSTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/asyncTasks/EditGSTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/asyncTasks/EditGSTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/objectClasses/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_edit_gs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_edit_gs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_growspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_growspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_log_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_log_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,11 +213,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/GrowSpaceService.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/GrowSpaceController.java</url>
           <line>36</line>
           <option name="timeStamp" value="9" />
@@ -171,6 +221,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/GrowSpaceController.java</url>
           <line>42</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/UserService.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/controller/UserController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
