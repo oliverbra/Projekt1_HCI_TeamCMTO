@@ -6,147 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".activities.activity_startseite">
 
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="356dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/text_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="99dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
-        android:layout_marginStart="296dp"
-        android:layout_marginLeft="296dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         android:onClick="chanceProgress"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startseite_LevelIcon_imageView" />
 
     <ImageView
         android:id="@+id/startseite_LevelIcon_imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="363dp"
-        android:layout_marginLeft="363dp"
-        android:layout_marginTop="7dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
         android:onClick="chanceProgress"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
-    <ImageButton
-        android:id="@+id/startseite_GS1_imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="80dp"
-        android:onClick="chanceGS"
-        android:scrollbarTrackHorizontal="@android:drawable/btn_dialog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <EditText
-        android:id="@+id/startseite_Rating_editTextNumber"
-        android:layout_width="37dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/startseite_Bewertunge_imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_GS1_imageButton2" />
-
-    <ImageButton
-        android:id="@+id/startseite_Bewertunge_imageButton"
-        android:layout_width="45dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_GS1_imageButton2"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
-
-    <ImageButton
-        android:id="@+id/startseite_GS2_imageButton2imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="17dp"
-        android:onClick="chanceGS"
-        android:scrollbarTrackHorizontal="@drawable/ic_launcher_foreground"
-        app:layout_constraintStart_toEndOf="@+id/startseite_GS1_imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <EditText
-        android:id="@+id/startseite_Rating_editTextNumber2"
-        android:layout_width="37dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/startseite_Bewertunge_imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_GS2_imageButton2imageButton3" />
-
-    <ImageButton
-        android:id="@+id/startseite_Bewertunge_imageButton2"
-        android:layout_width="45dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="113dp"
-        android:layout_marginLeft="113dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintStart_toEndOf="@+id/startseite_Rating_editTextNumber"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_GS2_imageButton2imageButton3"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
-
-    <ImageButton
-        android:id="@+id/startseite_GS3_imageButton2imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="22dp"
-        android:onClick="chanceGS"
-        android:scrollbarTrackHorizontal="@drawable/ic_launcher_foreground"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_Bewertunge_imageButton"
-        app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageButton
         android:id="@+id/startseite_Bewertunge_imageButton3"
-        android:layout_width="45dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_GS3_imageButton2imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <EditText
         android:id="@+id/startseite_Rating_editTextNumber3"
-        android:layout_width="37dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/startseite_Bewertunge_imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_GS3_imageButton2imageButton4" />
+        app:layout_constraintEnd_toStartOf="@+id/startseite_Bewertunge_imageButton3"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
 
     <Button
         android:id="@+id/startseite_Zufall_imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="418dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_default"
         android:onClick="chanceGS"
-        android:text="Zufall"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startseite_Bewertunge_imageButton2" />
-
+        android:paddingLeft="32dp"
+        android:paddingTop="8dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="8dp"
+        android:text="Bewerten"
+        android:textAppearance="@style/Button"
+        app:backgroundTint="@color/orange"
+        app:elevation="4dp"
+        app:iconPadding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -159,9 +100,61 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_marginTop="64dp"
+        android:onClick="chanceGS"
+        android:scaleType="centerInside"
+        android:background="@drawable/gspicture_background"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Willkommen!"
+        android:textAppearance="@style/H1"
+        android:textColor="@color/fontcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/startseite_LevelIcon_imageView" />
+
+    <TextView
+        android:id="@+id/nameGS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Name GS"
+        android:textAppearance="@style/H2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_bell"
+        tools:ignore="VectorDrawableCompat" />
+
     <!--todo: height to 82 dp -->
 
-<!-- Test
+    <!-- Test
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
