@@ -34,11 +34,7 @@
     <Button
         android:id="@+id/regiestrierung_abschließen_button"
         android:layout_width="178dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginRight="117dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="95dp"
         android:background="@drawable/button_default"
         android:elevation="4dp"
@@ -46,6 +42,10 @@
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:onClick="checkInfo"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
         android:text="Registrieren"
         android:textAppearance="@style/Button"
         android:textColor="@color/white"
@@ -54,6 +54,7 @@
         app:iconPadding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText

@@ -9,9 +9,7 @@
     <Button
         android:id="@+id/logIN_einloggen_button"
         android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="95dp"
         android:background="@drawable/button_default"
         android:elevation="4dp"
@@ -30,6 +28,8 @@
         app:cornerRadius="16dp"
         app:iconPadding="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -92,9 +92,9 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="loginAction"
         app:itemIconTint="@color/green01"
         app:itemTextColor="@color/green01"
-        android:onClick="loginAction"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
