@@ -49,5 +49,8 @@ public class User {
     @JoinColumn(name = "files_id",referencedColumnName = "id")
     private File file;
 
+//    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+//    @JsonManagedReference(value="files")
+//    private File file;
 
 }

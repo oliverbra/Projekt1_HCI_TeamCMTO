@@ -8,4 +8,8 @@ import org.springframework.stereotype.Repository;
 public interface PlantsRepository extends JpaRepository<Plants, Integer> {
 
     Plants findPlantsById(Integer id);
+
+    @Query("select p from Plants p where p.botanicalName = ?1")
+    List<Plants> findPlantsByBotanicalName(String name);
+
 }
