@@ -26,8 +26,7 @@ public class User {
     private List<Review> reviews;
     private List<GrowSpace> bookmarkedGrowspaces;
 
-
-
+    private int file_id;
     private File file;
 
 
@@ -154,14 +153,6 @@ public class User {
         this.growSpace = growSpace;
     }
 
-    public File getFile() {
-        return file;
-    }
-
-    public void setFile(File file) {
-        this.file = file;
-    }
-
     public Integer getId() {
         return id;
     }
@@ -222,4 +213,20 @@ public class User {
 
     public void setBookmarkedGrowspaces(List<GrowSpace> bookmarkedGrowspaces) {this.bookmarkedGrowspaces = bookmarkedGrowspaces;}
 
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
+    }
+
+    public int getFile_id() {
+        return file_id;
+    }
+
+    public void setFile_id(int file_id) {
+        this.file_id = file_id;
+    }
 }

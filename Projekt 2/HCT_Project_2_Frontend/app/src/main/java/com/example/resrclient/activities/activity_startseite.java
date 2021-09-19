@@ -20,7 +20,7 @@ public class activity_startseite extends AppCompatActivity{
 
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_to_home);
+        bottomNavigationView.setSelectedItemId(R.id.nav_to_favourites);
 
    //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -41,6 +41,7 @@ public class activity_startseite extends AppCompatActivity{
                      return true;
              }
              return false;
+
          }
      });
     }

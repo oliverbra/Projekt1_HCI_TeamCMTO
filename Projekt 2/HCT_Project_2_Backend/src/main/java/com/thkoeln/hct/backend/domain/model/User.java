@@ -29,25 +29,25 @@ public class User {
     private Integer growpoints;
 
 
-
-
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "reviews")
     private Set<Review> reviews = new HashSet<>();
 
-
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonManagedReference(value="growspace")
+    @JsonBackReference(value = "gsUser")
     private GrowSpace growSpace;
 
     @ManyToOne(fetch =  FetchType.EAGER)
     @JoinColumn(name = "level_id")
     private Level level;
 
+
     @OneToOne(fetch =  FetchType.LAZY)
     @JoinColumn(name = "files_id",referencedColumnName = "id")
     private File file;
 
+//    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+//    @JsonManagedReference(value="files")
+//    private File file;
 
 }

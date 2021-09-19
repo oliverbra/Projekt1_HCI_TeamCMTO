@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.HashSet;
@@ -50,7 +51,7 @@ public class GrowSpace {
     private User user;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonManagedReference(value="gsUser")
     private Set<Review> reviews = new HashSet<>();
 
     @ManyToMany(cascade = CascadeType.ALL)
@@ -62,7 +63,7 @@ public class GrowSpace {
 //    private File file;
 
     @OneToMany(mappedBy = "growSpace", cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonBackReference(value = "gsFiles")
     private Set<File> files = new HashSet<>();
 
 

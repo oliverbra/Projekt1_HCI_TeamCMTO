@@ -55,3 +55,4 @@ INSERT INTO plants(common_name,botanical_name,description_text,plant_category,gr
 INSERT INTO level(level, level_name, level_threshold) VALUES (1, 'Level 1', 20);
 INSERT INTO level(level, level_name, level_threshold) VALUES (2, 'Level 2', 50);
 INSERT INTO level(level, level_name, level_threshold) VALUES (3, 'Level 3', 100);
+INSERT INTO level(level, level_name, level_threshold) VALUES (4, 'MAX', 100000);
