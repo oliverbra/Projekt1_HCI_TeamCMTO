@@ -45,7 +45,12 @@ public class User {
     @JoinColumn(name = "level_id")
     private Level level;
 
+    @OneToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "files_id",referencedColumnName = "id")
+    private File file;
 
-
+//    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+//    @JsonManagedReference(value="files")
+//    private File file;
 
 }

@@ -21,6 +21,7 @@ public class File {
     @Column(nullable = false)
     private Integer id;
     private String fileName;
+    private String name;
 
     private String fileType;
     @Lob
@@ -35,14 +36,20 @@ public class File {
     }
 
 
-    @OneToMany(mappedBy = "file", cascade = CascadeType.ALL)
-    @JsonBackReference
-    private Set<GrowSpace> growSpaces = new HashSet<>();
+//    @OneToMany(mappedBy = "file", cascade = CascadeType.ALL)
+//    @JsonBackReference
+//    private Set<GrowSpace> growSpaces = new HashSet<>();
 
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "growSpace_id" )
+    private GrowSpace growSpace;
 
 
     @OneToOne(mappedBy = "file", cascade = CascadeType.ALL)
     private Plants plants;
+
+    @OneToOne(mappedBy = "file", cascade = CascadeType.ALL)
+    private User user;
 
 
 

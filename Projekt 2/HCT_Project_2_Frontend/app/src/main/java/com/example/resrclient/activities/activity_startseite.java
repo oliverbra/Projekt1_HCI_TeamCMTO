@@ -20,27 +20,28 @@ public class activity_startseite extends AppCompatActivity{
 
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_to_startseite);
+        bottomNavigationView.setSelectedItemId(R.id.nav_to_favourites);
 
    //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
          @Override
          public boolean onNavigationItemSelected(@NonNull MenuItem item) {
              switch (item.getItemId()){
-                 case R.id.nav_to_growSpace:
-                     startActivity(new Intent(getApplicationContext(),activity_growspace.class));
+                 case R.id.nav_to_home:
+                     startActivity(new Intent(getApplicationContext(),activity_startseite.class));
                      overridePendingTransition(0,0);
                      return true;
-                 case R.id.nav_to_login:
-                     startActivity(new Intent(getApplicationContext(),activity_logIn.class));
+                 case R.id.nav_to_profile:
+                     startActivity(new Intent(getApplicationContext(),activity_progress.class));
                      overridePendingTransition(0,0);
                      return true;
-                 case R.id.nav_to_startseite:
-                     startActivity(new Intent(getApplicationContext(),activity_startseite.class)); // Code hübschen effiezent machen
+                 case R.id.nav_to_favourites:
+                     startActivity(new Intent(getApplicationContext(),activity_favourites.class)); // Code hübschen effiezent machen
                      overridePendingTransition(0,0);
                      return true;
              }
              return false;
+
          }
      });
     }

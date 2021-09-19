@@ -9,6 +9,7 @@ import com.example.resrclient.restClasses.RestTaskLevel;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import java.io.File;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -24,6 +25,10 @@ public class User {
     private GrowSpace growSpace;
     private List<Review> reviews;
     private List<GrowSpace> bookmarkedGrowspaces;
+
+
+
+    private File file;
 
 
     public User() {
@@ -147,6 +152,14 @@ public class User {
 
     public void setGrowSpace(GrowSpace growSpace) {
         this.growSpace = growSpace;
+    }
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
     }
 
     public Integer getId() {

@@ -6,5 +6,17 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- unsere Farben -->
+    <color name="green01">#466E51</color>
+    <color name="green02">#5B8A69</color>
+    <color name="green03">#7EAB8A</color>
+    <color name="light01">#FFF7D9</color>
+    <color name="light02">#FFFBEC</color>
+    <color name="orange">#FDBC46</color>
+    <color name="yellow">#FDD153</color>
+    <color name="white">#FFFFFF</color>
+    <color name="errorcore">#EE482B</color>
+    <color name="fontcolor">#29303E</color>
+
 </resources>
