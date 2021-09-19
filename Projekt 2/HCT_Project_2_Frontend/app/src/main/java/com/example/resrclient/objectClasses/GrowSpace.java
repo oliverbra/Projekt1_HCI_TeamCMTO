@@ -3,6 +3,8 @@ package com.example.resrclient.objectClasses;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,10 +25,13 @@ public class GrowSpace {
     private double averageRating;
     private boolean highlighted;
     private ArrayList<Plants> plants;
-    private ArrayList<Review> reviews;
+    private List<Review> reviews;
     private File file;
 
-    public GrowSpace(User user, String name, String goal, String category, double size, String location, String problems, double averageRating, boolean highlighted, ArrayList<Plants> plants, ArrayList<Review> reviews) {
+    public GrowSpace() {
+    }
+
+    public GrowSpace(User user, String name, String goal, String category, double size, String location, String problems, double averageRating, boolean highlighted, ArrayList<Plants> plants, List<Review> reviews) {
         this.user = user;
         this.name = name;
         this.goal = goal;
@@ -39,32 +44,22 @@ public class GrowSpace {
         this.plants = plants;
         this.reviews = reviews;
     }
-    public GrowSpace() {
+
+    public GrowSpace(Integer id, User user, String name, String goal, String category, double size, String location, String problems, double averageRating, boolean highlighted, ArrayList<Plants> plants, List<Review> reviews, File file) {
+        this.id = id;
+        this.user = user;
+        this.name = name;
+        this.goal = goal;
+        this.category = category;
+        this.size = size;
+        this.location = location;
+        this.problems = problems;
+        this.averageRating = averageRating;
+        this.highlighted = highlighted;
+        this.plants = plants;
+        this.reviews = reviews;
+        this.file = file;
     }
-
-
-    // Used in CreateGS
-    public GrowSpace(String pName, String pGoal, String pCategory, double pSize, String pLocation, String pProblems, Double pAverageRating) {
-        name = pName;
-        goal = pGoal;
-        category = pCategory;
-        size = pSize;
-        location = pLocation;
-        problems = pProblems;
-        averageRating = pAverageRating;
-        reviews = new ArrayList<Review>() {};
-        //receivedReviews = new ArrayList<Review>();
-       // adorers = new ArrayList<User>();
-        //marks = new ArrayList<Mark>();
-    }
-
-    /*public double calculateAverageRating(){
-        //initializes attribute averageRating according to the list receivedReviews
-    }*/
-
-    /*public void sendUpdateNotice(){
-        //...
-    }*/
 
     public String toString() {
         return name + " " + goal + " " + category + " " + size + " " + location + " " + problems + ".";

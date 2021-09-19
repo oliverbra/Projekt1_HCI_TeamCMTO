@@ -6,22 +6,23 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.example.resrclient.MainActivity;
 import com.example.resrclient.activities.activity_sentReview;
 import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.Review;
+import com.example.resrclient.objectClasses.ReviewList;
 import com.example.resrclient.objectClasses.User;
-import com.example.resrclient.restClasses.RestTaskReview;
 
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
+
+import java.lang.reflect.ParameterizedType;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 
 public class ReviewTask extends AsyncTask<String, Void, GrowSpace> {
@@ -57,23 +58,35 @@ public class ReviewTask extends AsyncTask<String, Void, GrowSpace> {
         User currentUser = restTemplate.getForObject("http://10.0.2.2:8080/users/" + newUser.getId(), User.class);
         GrowSpace randomGrowspace = restTemplate.getForObject("http://10.0.2.2:8080/growspaces/random" , GrowSpace.class);
 
+        ReviewList response = restTemplate.getForObject("http://10.0.2.2:8080/reviews", ReviewList.class);
+        List<Review> allReviews = response.getReviewList();
+
         Review newReview = new Review(localCriteria, shelterCriteria, naturalCriteria, dangerCriteria, formatter.format(date) , comment, currentUser, randomGrowspace);
-        randomGrowspace.setReviews(new ArrayList<>());
-        randomGrowspace.addReview(newReview);
 
-        double sumRating = 0;
-        for (Review review : randomGrowspace.getReviews())
-        {
-            sumRating += review.getRating();
+
+        if(randomGrowspace.getAverageRating() != 0) {
+            double sumRating = newReview.getRating();
+            int counter = 0;
+            for (Review review : allReviews)
+            {
+                if(review.getGrowSpace().getId() == randomGrowspace.getId()) {
+                    sumRating += review.getRating();
+                    counter++;
+                }
+            }
+            double averageRating = sumRating / (counter + 1);
+            randomGrowspace.setAverageRating(averageRating);
+        } else {
+            randomGrowspace.setAverageRating(newReview.getRating());
         }
-        double averageRating = sumRating / randomGrowspace.getReviews().size();
-        randomGrowspace.setAverageRating(averageRating);
 
-        restTemplate.put("http://10.0.2.2:8080/growspaces/" + randomGrowspace.getId(), randomGrowspace, GrowSpace.class);
+
+
+        restTemplate.put("http://10.0.2.2:8080/growspaces/", randomGrowspace, GrowSpace.class);
         System.out.println("Updated.");
 
-        //Review result = restTemplate.postForObject("http://10.0.2.2:8080/growspaces/" + randomGrowspace.getId() + "/reviews", newReview, Review.class);
-        //Log.v("Result","Review erstellt.");
+        Review result = restTemplate.postForObject("http://10.0.2.2:8080/growspaces/" + randomGrowspace.getId() + "/reviews", newReview, Review.class);
+        Log.v("Result","Review erstellt.");
 
         return randomGrowspace;
     }

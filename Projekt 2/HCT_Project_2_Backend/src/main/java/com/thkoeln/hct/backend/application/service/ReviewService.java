@@ -1,6 +1,7 @@
 package com.thkoeln.hct.backend.application.service;
 
 import com.thkoeln.hct.backend.domain.model.Review;
+import com.thkoeln.hct.backend.domain.model.ReviewList;
 import com.thkoeln.hct.backend.domain.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
@@ -16,8 +17,10 @@ public class ReviewService {
     @Autowired
     private ReviewRepository reviewRepository;
 
-    public List<Review> findAll(){
-        return reviewRepository.findAll();
+    public ReviewList findAll(){
+        ReviewList allReviews = new ReviewList();
+        allReviews.setReviewList(reviewRepository.findAll());
+        return allReviews;
     }
 
     public Review create(@NonNull Review review){

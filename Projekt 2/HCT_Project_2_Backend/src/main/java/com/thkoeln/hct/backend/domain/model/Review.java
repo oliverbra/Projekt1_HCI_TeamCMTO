@@ -24,6 +24,7 @@ public class Review {
     private double naturalCriteria;
     private double dangerCriteria;
     private double rating;
+    private boolean open;
 
 
     @ManyToOne(fetch =  FetchType.EAGER)
