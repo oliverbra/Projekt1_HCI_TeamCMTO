@@ -29,15 +29,16 @@ public class File {
 
 
 
-    public File(String fileName, String fileType, byte[] data) {
+    public File(String fileName, String fileType, byte[] data, String name) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.data = data;
+        this.name = name;
     }
 
 
 //    @OneToMany(mappedBy = "file", cascade = CascadeType.ALL)
-//    @JsonBackReference
+//    @JsonBackReference(value = "gsFiles")
 //    private Set<GrowSpace> growSpaces = new HashSet<>();
 
     @ManyToOne(fetch =  FetchType.LAZY)
@@ -48,10 +49,7 @@ public class File {
     @OneToOne(mappedBy = "file", cascade = CascadeType.ALL)
     private Plants plants;
 
+
     @OneToOne(mappedBy = "file", cascade = CascadeType.ALL)
     private User user;
-
-
-
-
 }
