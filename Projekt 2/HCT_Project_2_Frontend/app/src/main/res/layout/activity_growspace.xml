@@ -164,12 +164,14 @@
         app:layout_constraintTop_toBottomOf="@+id/growSpace_pflanze_imageView">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="50dp"
-            app:tabGravity="fill" />
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/orange"
+        app:tabTextAppearance="@style/H2"
+        app:tabTextColor="@color/orange" />
     </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
