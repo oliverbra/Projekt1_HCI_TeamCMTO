@@ -31,14 +31,15 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
        Fragment fragment = null;
        switch (position){
            case 0:
-               fragment = new second_tap_fragment();
+
+               fragment = new first_tap_fragment();
                break;
            case 1:
                fragment = new third_tap_fragment();
                break;
-           case 3:
-               fragment = new first_tap_fragment();
-
+           case 2:
+               fragment = new second_tap_fragment();
+                break;
        }
        return fragment;
     }
@@ -51,7 +52,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
+        // Show 3 total pages.
         return 3;
     }
 }
