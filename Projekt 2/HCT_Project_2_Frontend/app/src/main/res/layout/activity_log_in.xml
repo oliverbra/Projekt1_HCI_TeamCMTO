@@ -16,7 +16,7 @@
         android:fontFamily="@font/comfortaa"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="chanceActivity"
+        android:onClick="loginAction"
         android:paddingLeft="32dp"
         android:paddingTop="16dp"
         android:paddingRight="32dp"

@@ -34,7 +34,7 @@ public class User {
     private Set<Review> reviews = new HashSet<>();
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonBackReference(value = "gsUser")
+    @JsonManagedReference(value="growspace")
     private GrowSpace growSpace;
 
     @ManyToOne(fetch =  FetchType.EAGER)

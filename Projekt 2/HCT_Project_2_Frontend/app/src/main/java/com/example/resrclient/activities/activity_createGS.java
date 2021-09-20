@@ -25,7 +25,7 @@ public class activity_createGS extends AppCompatActivity implements AdapterView.
 
     private EditText name, goal, size, location, problems;
     private String category;
-    private List<Review> reviews;
+    private ArrayList<Review> reviews;
     private List<Plants> allPlants;
     private ArrayList<Plants> selectedPlants;
 

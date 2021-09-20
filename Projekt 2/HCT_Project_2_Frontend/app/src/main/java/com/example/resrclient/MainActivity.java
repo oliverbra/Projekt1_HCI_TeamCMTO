@@ -36,8 +36,6 @@ import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String URL = "http://localhost:8080";
-
     private Button button;
     private ViewPager2 carousel;
     private LinearLayout dotsLayout;

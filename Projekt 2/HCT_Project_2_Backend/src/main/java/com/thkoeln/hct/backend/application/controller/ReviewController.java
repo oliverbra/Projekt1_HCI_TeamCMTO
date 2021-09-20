@@ -4,6 +4,7 @@ import com.thkoeln.hct.backend.application.service.GrowSpaceService;
 import com.thkoeln.hct.backend.application.service.ReviewService;
 import com.thkoeln.hct.backend.application.service.UserService;
 import com.thkoeln.hct.backend.domain.model.GrowSpace;
+import com.thkoeln.hct.backend.domain.model.Level;
 import com.thkoeln.hct.backend.domain.model.Review;
 import com.thkoeln.hct.backend.domain.repository.ReviewRepository;
 import org.slf4j.Logger;
@@ -30,10 +31,16 @@ public class ReviewController {
     private UserService userService;
 
 
+    @GetMapping("/reviews")
+    public ResponseEntity<List<Review>> getAllReviews() {
+        logger.debug("GET: getAllReviews");
+        return new ResponseEntity(reviewService.findAll(), HttpStatus.OK);
+    }
+
     @GetMapping("/growspaces/{growspaceId}/reviews")
     public ResponseEntity<List<Review>> getAllReviewsByGrowspaceId(@PathVariable Integer growspaceId) {
         logger.debug("GET: getAllReviewsByGrowspaceId");
-        return new ResponseEntity(reviewService.findById(growspaceId), HttpStatus.OK);
+        return new ResponseEntity(reviewService.findByGsID(growspaceId), HttpStatus.OK);
     }
 
     @GetMapping("/users/{userId}/reviews")
