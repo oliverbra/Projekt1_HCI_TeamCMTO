@@ -1,6 +1,8 @@
 
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+y
+IProjekt 2/HCT_Project_2_Backend/src/main/resources/application.properties,d\e\deb360e734db074904c3f544ce5767673f92566c
 ú
 lProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hci_project_2/controller/HalloWorldController.java,a\7\a737d4f0e94957a4763473855d7d1832744a8e31
 a
@@ -165,35 +167,3 @@ a
 1Projekt 2/HCT_Project_2_Frontend/app/build.gradle,1\5\1592579f9b14287fbe507a33414e77479c013c56
 y
 IProjekt 2/HCT_Project_2_Frontend/gradle/wrapper/gradle-wrapper.properties,7\2\72fa217f769c0be1ae310b3941e30b606cda937a
-¢
-rProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/common/exceptions/FileNotFoundException.java,f\b\fbc9758047e3cb37c116e38122cb6e82217424cb
-¢
-rProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/application/controller/PlantsController.java,5\e\5efc9e11cffc7247bd174f350bdaaadba8228216
-õ
-kProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/repository/FileRepository.java,2\8\28512b03b67ced7ceccce5bce54ffaeea2cc3a76
-ö
-jProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/application/service/FileService.java,6\4\64f8b5fb355f19b4571fa5e76f228ee8e36dcdd6
-•
-uProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/application/controller/GrowSpaceController.java,0\f\0fffa83a23b159496246901e3c335359f10e4861
-¶
-vProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/application/controller/FileUploadController.java,7\3\737cbbbfb2f59d7d076c3303f49b70cca928ea41
-ç
-]Projekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/model/Level.java,3\6\362e03d0386930c3f84bda182624bc9a26bbe520
-é
-^Projekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/model/Plants.java,7\0\703fd12a14a38e3f30e5d7ff84cd85ad2bf3ef86
-é
-^Projekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/model/Review.java,6\c\6cd224cab3eb43614d89b70ff86f5ed14e158d53
-ë
-aProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/model/GrowSpace.java,9\6\961f729c75562ca256e84179c93eb4898ff06797
-ü
-oProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/repository/GrowSpaceRepositry.java,8\c\8cdc3b55e1826c95e47de7631058570b6f3f7166
-ú
-lProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/application/service/ReviewService.java,5\1\515c42ab5db8955e10a390239cdde1736d76a255
-ù
-mProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/repository/ReviewRepository.java,8\f\8f95ba4d4bfdae90fc3f4dc3baa12a59d755c74e
-å
-\Projekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/model/File.java,6\2\62e9c924bf9e77c2d3e908240ec39f0762f07f51
-®
-xProjekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/application/controller/FileDownloadController.java,d\1\d1b8093861dbeee944231c7918756e59e1c7bee9
-å
-\Projekt 2/HCT_Project_2_Backend/src/main/java/com/thkoeln/hct/backend/domain/model/User.java,2\3\238117068807b456bfcab9f2010b1c2051bb2adc
