@@ -5,7 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddcff19-83ac-4a55-84ec-45e6608a8fc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/fragemnt_first_tap_fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/asyncTasks/UploadFileTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/fragment_fragemnt_first_tap_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat.values.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat_i" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ab88b907-4118-4c5b-b5c9-e0ac7259ab67/entities/entities.dat_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/GrowSpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/application/service/GrowSpaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/model/GrowSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/model/GrowSpace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/PlantsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thkoeln/hct/backend/domain/repository/PlantsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_editGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_editGS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_logIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/activity_logIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/SectionsPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/SectionsPagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/second_tap_fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/second_tap_fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/third_tap_fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/java/com/example/resrclient/activities/ui/main/third_tap_fragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/drawable/transparent_bg_element_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/drawable/transparent_bg_element_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/drawable/white_bg_rectangle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/drawable/white_bg_rectangle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_growspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_growspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_progress.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_progress.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_review.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_startseite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/layout/activity_startseite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HCT_Project_2_Frontend/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +141,7 @@
       <workItem from="1632055814907" duration="3069000" />
       <workItem from="1632058958001" duration="12336000" />
       <workItem from="1632123620982" duration="1974000" />
-      <workItem from="1632142711127" duration="1080000" />
+      <workItem from="1632142711127" duration="1408000" />
     </task>
     <servers />
   </component>

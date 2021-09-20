@@ -144,7 +144,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="82dp"
         app:itemIconTint="@color/green01"
         app:itemTextColor="@color/green01"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -153,12 +153,14 @@
         app:layout_constraintStart_toStartOf="parent"
 
         app:menu="@menu/bottom_nav_menu" />
-    <!--todo: height to 82 dp -->
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="0dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/growSpace_pflanze_imageView">
 

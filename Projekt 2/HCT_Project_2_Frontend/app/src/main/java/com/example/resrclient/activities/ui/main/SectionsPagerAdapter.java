@@ -37,7 +37,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                fragment = new third_tap_fragment();
                break;
            case 3:
-               fragment = new fragemnt_first_tap_fragment();
+               fragment = new first_tap_fragment();
 
        }
        return fragment;
