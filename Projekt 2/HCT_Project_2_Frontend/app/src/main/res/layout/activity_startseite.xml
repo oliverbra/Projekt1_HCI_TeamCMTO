@@ -164,7 +164,6 @@
         android:textAppearance="@style/H2"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
@@ -179,6 +178,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_bell"
         tools:ignore="VectorDrawableCompat" />
+
+    <!--todo: height to 82 dp -->
 
     <!-- Test
     <FrameLayout
