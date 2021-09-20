@@ -13,7 +13,7 @@ import java.util.Set;
 @Entity
 @Table(name = "grow_space")
 @Data
-@JsonIgnoreProperties("reviews")
+//@JsonIgnoreProperties("reviews")
 public class GrowSpace {
 
     public GrowSpace() {}
