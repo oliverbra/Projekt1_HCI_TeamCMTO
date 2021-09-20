@@ -18,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.EditGSTask;
+import com.example.resrclient.asyncTasks.LoginTask;
+import com.example.resrclient.asyncTasks.UploadFileTask;
 import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.User;
@@ -55,7 +57,7 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
         }
         growSpace = currentUser.getGrowSpace();
 
-        /*/ Get all plants to let users select from them
+        /* Get all plants to let users select from them
         url = "http://10.0.2.2:8080/plants";
         try {
             allPlants = new RestTaskPlant().execute(url).get();
@@ -63,8 +65,8 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } */
-
+        }
+        */
         Spinner spinner = (Spinner) findViewById(R.id.editGS_categories_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.gs_categories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -129,6 +131,9 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
                 if (null != selectedImageUri) {
                     // update the preview image in the layout
                     teaserBild.setImageURI(selectedImageUri);
+                    final String url = "http://192.168.0.242:8080/uploadFile";
+                    new UploadFileTask(this).execute(url,selectedImageUri.getPath());
+
                 }
             }
         }
