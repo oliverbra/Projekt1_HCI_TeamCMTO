@@ -13,7 +13,7 @@ import java.util.Set;
 @Entity
 @Table(name = "grow_space")
 @Data
-@JsonIgnoreProperties("reviews")
+//@JsonIgnoreProperties("reviews")
 public class GrowSpace {
 
     public GrowSpace() {}
@@ -21,37 +21,26 @@ public class GrowSpace {
 
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     @Id
-    //@Column(nullable = false)
+    @Column(nullable = false)
     private Integer id;
-    //@Column(nullable = false)
     private String name;
-    //@Column(nullable = false)
     private String problems;
-    //@Column(nullable = false)
     private String goal;
-    //@Column(nullable = false)
     private Double size;
-
-    /*
-    TODO pictures in db? datatype? hosted where?
-     */
     private String category;
     private String location;
-    /*
-       Zusammengesetzt aus den 4 ratings aus Review()
-     */
     @Column(nullable = true)
     private Double averageRating;
     private boolean highlighted;
 
 
-    @OneToOne(fetch =  FetchType.LAZY)
+    @OneToOne(fetch =  FetchType.EAGER)
     @JoinColumn(name = "user_id" )
     @JsonBackReference(value="growspace")
     private User user;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonManagedReference(value="gsUser")
+    @JsonManagedReference(value="gsReview")
     private Set<Review> reviews = new HashSet<>();
 
     @ManyToMany(cascade = CascadeType.ALL)

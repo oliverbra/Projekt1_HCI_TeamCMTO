@@ -9,8 +9,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.resrclient.R;
-import com.example.resrclient.second_tap_fragment;
-import com.example.resrclient.third_tap_fragment;
 
 
 /**
@@ -20,7 +18,7 @@ import com.example.resrclient.third_tap_fragment;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -33,12 +31,15 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
        Fragment fragment = null;
        switch (position){
            case 0:
-               fragment = new second_tap_fragment();
+
+               fragment = new first_tap_fragment();
                break;
            case 1:
                fragment = new third_tap_fragment();
                break;
-
+           case 2:
+               fragment = new second_tap_fragment();
+                break;
        }
        return fragment;
     }
@@ -51,7 +52,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
-        return 2;
+        // Show 3 total pages.
+        return 3;
     }
 }

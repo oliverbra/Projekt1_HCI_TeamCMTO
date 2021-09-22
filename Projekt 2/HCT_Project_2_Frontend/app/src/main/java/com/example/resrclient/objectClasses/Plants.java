@@ -24,6 +24,9 @@ public class Plants {
     private String url;
 
 
+    public Plants() {
+    }
+
     public Plants(String pCommonName, String pBotanicalName, String pDescriptionText, String pPlantCategory, String pGrowthCharacteristics, String pBlossomingTime, String pBlossomColour, String pPoisonousness, String pNectar, String pLocal, String pOrnamentalValue, String pUtilityValue, String pLight, String pSoil, String pSoilMoisture, String pPHValue, String pNutrientRequirements, String pCareText, String pUrl) {
         pCommonName = commonName;
         pBotanicalName = botanicalName;

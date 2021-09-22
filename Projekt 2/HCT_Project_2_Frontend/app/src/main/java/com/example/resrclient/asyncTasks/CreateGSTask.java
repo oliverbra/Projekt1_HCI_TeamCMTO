@@ -31,9 +31,9 @@ public class CreateGSTask extends AsyncTask<String, Void, GrowSpace> {
     private String location;
     private String problems;
     private ArrayList<Plants> plants;
-    private List<Review> reviews;
+    private ArrayList<Review> reviews;
 
-    public CreateGSTask(Context ctx, String name, String goal, String category, double size, String location, String problems, ArrayList<Plants> plants, List<Review> reviews) {
+    public CreateGSTask(Context ctx, String name, String goal, String category, double size, String location, String problems, ArrayList<Plants> plants, ArrayList<Review> reviews) {
         this.ctx = ctx;
         this.name = name;
         this.goal = goal;

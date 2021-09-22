@@ -53,7 +53,7 @@ public class activity_logIn extends AppCompatActivity {
     }
 
     public void chanceActivity(View view) {
-        Intent intent = new Intent(this, activity_startseite.class);
+        Intent intent = new Intent(this, activity_editGS.class);
         startActivity(intent);
     }
 

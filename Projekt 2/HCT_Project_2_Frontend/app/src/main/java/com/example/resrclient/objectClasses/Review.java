@@ -1,5 +1,7 @@
 package com.example.resrclient.objectClasses;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class Review {
 
     private Integer id;
@@ -17,17 +19,6 @@ public class Review {
     public Review(){
     }
 
-    public Review(double pRating, String pDate, String pComment, User pAuthor, GrowSpace pGs){
-        rating = pRating;
-        date = pDate;
-        comment = pComment;
-        // how to initialize author and gs automatically?
-        user = pAuthor;
-        growSpace = pGs;
-        open = false;
-        // criteria are initialized according to the level of the user; maybe multiple constructors?
-    }
-
     public Review(double localCriteria, double shelterCriteria, double naturalCriteria, double dangerCriteria, String date, String comment, User user, GrowSpace growSpace){
        this.localCriteria = localCriteria;
        this.shelterCriteria = shelterCriteria;
@@ -37,10 +28,24 @@ public class Review {
        this.comment =  comment;
        this.user = user;
        this.growSpace = growSpace;
+       this.rating = (localCriteria + shelterCriteria + naturalCriteria + dangerCriteria) / 4;
+    }
+
+    public Review(Integer id, double rating, String date, String comment, double localCriteria, double shelterCriteria, double naturalCriteria, double dangerCriteria, User user, GrowSpace growSpace, boolean open) {
+        this.id = id;
+        this.rating = rating;
+        this.date = date;
+        this.comment = comment;
+        this.localCriteria = localCriteria;
+        this.shelterCriteria = shelterCriteria;
+        this.naturalCriteria = naturalCriteria;
+        this.dangerCriteria = dangerCriteria;
+        this.user = user;
+        this.growSpace = growSpace;
+        this.open = open;
     }
 
     public void open() {open = true;}
-
 
     public Integer getId() {
         return id;
