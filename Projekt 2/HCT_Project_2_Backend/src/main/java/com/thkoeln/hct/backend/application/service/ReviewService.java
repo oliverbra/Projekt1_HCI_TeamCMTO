@@ -43,7 +43,7 @@ public class ReviewService {
         reviewToUpdate.setUser(review.getUser());
         reviewToUpdate.setDangerCriteria(review.getDangerCriteria());
         reviewToUpdate.setLocalCriteria(review.getLocalCriteria());
-       // reviewToUpdate.setText(review.getText());
+        reviewToUpdate.setOpen(review.isOpen());
         return reviewRepository.save(reviewToUpdate);
     }
 

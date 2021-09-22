@@ -34,5 +34,4 @@ public class Review {
     @ManyToOne(fetch =  FetchType.EAGER)
     @JoinColumn(name = "gs_Id")
     private GrowSpace growSpace;
-
 }

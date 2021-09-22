@@ -54,6 +54,9 @@ public class activity_startseite extends AppCompatActivity{
         Intent intent = new Intent(this, activity_growspace.class);
         startActivity(intent); }
 
+    public void changeReviews(View view) {
+        Intent intent = new Intent(this, activity_openAllReviews.class);
+        startActivity(intent); }
 
 
 /* altes Navigation
