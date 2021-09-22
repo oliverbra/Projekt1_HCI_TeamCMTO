@@ -58,7 +58,7 @@
         android:onClick="chanceProgress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/willkommen"
         app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
 
@@ -135,7 +135,7 @@
         <ImageView
             android:id="@+id/main_image_gs"
             android:layout_width="match_parent"
-            android:layout_height="225dp"
+            android:layout_height="match_parent"
             android:onClick="chanceGS"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintStart_toStartOf="@+id/view"
@@ -144,7 +144,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/willkommen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
