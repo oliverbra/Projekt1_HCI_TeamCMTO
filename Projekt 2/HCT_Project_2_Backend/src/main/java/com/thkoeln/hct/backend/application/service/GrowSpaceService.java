@@ -38,10 +38,20 @@ public class GrowSpaceService {
 
     public void delete(@NonNull Integer id) {growSpaceRepositry.delete(growSpaceRepositry.findGrowSpaceById(id));}
 
-    public GrowSpace findRandom(){
+    public GrowSpace getRandom(Integer id){
         List<GrowSpace> growSpaceList = growSpaceRepositry.findAll();
+        GrowSpace randomGrowSpace = findRandom(growSpaceList);
+        while (randomGrowSpace.getId() == id) {
+            randomGrowSpace = findRandom(growSpaceList);
+        }
+        return randomGrowSpace;
+        //return growSpaceRepositry.findGrowSpaceById(randomGrowSpace.getId());
+    }
+
+    public GrowSpace findRandom(List<GrowSpace> growSpaceList) {
         Random rand = new Random();
         GrowSpace randomGrowSpace = growSpaceList.get(rand.nextInt(growSpaceList.size()));
-        return growSpaceRepositry.findGrowSpaceById(randomGrowSpace.getId());
+        return randomGrowSpace;
+        //return growSpaceRepositry.findGrowSpaceById(randomGrowSpace.getId());
     }
 }

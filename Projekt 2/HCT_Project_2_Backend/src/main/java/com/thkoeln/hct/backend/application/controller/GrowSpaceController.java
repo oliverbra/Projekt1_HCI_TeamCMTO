@@ -32,10 +32,10 @@ public class GrowSpaceController {
         return new ResponseEntity(growSpaceService.findByid(id),HttpStatus.OK);
     }
 
-    @GetMapping("/growspaces/random")
-    public ResponseEntity<GrowSpace> getRandomGrowspace() {
+    @GetMapping("/growspaces/random/{id}")
+    public ResponseEntity<GrowSpace> getRandomGrowspace(@PathVariable Integer id) {
         logger.debug("GET: getRandomGrowSpace");
-        return new ResponseEntity(growSpaceService.findRandom(), HttpStatus.OK);
+        return new ResponseEntity(growSpaceService.getRandom(id), HttpStatus.OK);
     }
 
     @PostMapping("/growspaces")
