@@ -9,6 +9,7 @@ import com.example.resrclient.activities.activity_editGS;
 import com.example.resrclient.activities.activity_growspace;
 import com.example.resrclient.activities.activity_logIn;
 import com.example.resrclient.activities.activity_createGS;
+import com.example.resrclient.activities.activity_randomGS;
 import com.example.resrclient.activities.activity_review;
 import com.example.resrclient.carousel.CarouselAdapter;
 import com.example.resrclient.carousel.CarouselItem;
@@ -178,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reviewActivity(View view) {
-        Intent intent = new Intent(this, activity_review.class);
+        Intent intent = new Intent(this, activity_randomGS.class);
         startActivity(intent);
     }
 

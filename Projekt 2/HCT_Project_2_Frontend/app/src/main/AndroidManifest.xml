@@ -21,6 +21,9 @@
         <activity android:name=".activities.activity_editGS" />
         <activity android:name=".activities.activity_regiestrierung"/>
         <activity android:name=".activities.activity_sentReview"/>
+        <activity android:name=".activities.activity_randomGS"/>
+        <activity android:name=".activities.activity_openAllReviews"/>
+        <activity android:name=".activities.activity_openReview"/>
         <activity android:name=".MainActivity" />
         <activity
             android:name=".activities.activity_logIn"

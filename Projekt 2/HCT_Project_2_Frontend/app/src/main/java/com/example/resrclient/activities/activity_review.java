@@ -14,11 +14,17 @@ public class activity_review extends AppCompatActivity {
 
     private RatingBar localCriteria, shelterCriteria, naturalCriteria, dangerCriteria;
     private EditText comment;
+    int rndGSId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
+
+        Bundle extras = getIntent().getExtras();
+        if(extras != null) {
+            rndGSId = extras.getInt("rndGSID");
+        }
 
         localCriteria = findViewById(R.id.localRatingBar);
         shelterCriteria = findViewById(R.id.shelterRatingBar);
@@ -35,7 +41,7 @@ public class activity_review extends AppCompatActivity {
 
      public void createReviewAction(View view){
          new ReviewTask(this).execute(Float.toString(localCriteria.getRating()), Float.toString(shelterCriteria.getRating()),
-                 Float.toString(naturalCriteria.getRating()), Float.toString(dangerCriteria.getRating()), comment.getText().toString());
+                 Float.toString(naturalCriteria.getRating()), Float.toString(dangerCriteria.getRating()),Integer.toString(rndGSId) ,comment.getText().toString());
      }
 
 }
