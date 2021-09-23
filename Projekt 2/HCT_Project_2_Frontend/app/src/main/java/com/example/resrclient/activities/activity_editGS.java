@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resrclient.R;
+import com.example.resrclient.asyncTasks.AllPlantsTask;
 import com.example.resrclient.asyncTasks.EditGSTask;
 import com.example.resrclient.asyncTasks.LoginTask;
 import com.example.resrclient.asyncTasks.UploadFileTask;
@@ -35,8 +36,8 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
     private GrowSpace growSpace;
     private EditText name, goal, size, location, problems;
     private String category;
-    private List<Plants> allPlants;
     private ArrayList<Plants> selectedPlants;
+    private List<Plants> allPlants;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,16 +58,16 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
         }
         growSpace = currentUser.getGrowSpace();
 
-        /* Get all plants to let users select from them
+        // Get all plants to let users select from them
         url = "http://10.0.2.2:8080/plants";
         try {
-            allPlants = new RestTaskPlant().execute(url).get();
+            allPlants = new AllPlantsTask().execute(url).get();
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        */
+
         Spinner spinner = (Spinner) findViewById(R.id.editGS_categories_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.gs_categories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

@@ -38,7 +38,7 @@ public class activity_openAllReviews extends AppCompatActivity {
 
 
         //For testing:
-        reviewId = 14;
+        reviewId = 17;
 
     }
 

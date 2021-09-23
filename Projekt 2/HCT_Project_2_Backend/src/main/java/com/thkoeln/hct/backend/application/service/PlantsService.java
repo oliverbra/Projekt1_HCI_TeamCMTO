@@ -1,7 +1,9 @@
 package com.thkoeln.hct.backend.application.service;
 
 import com.thkoeln.hct.backend.domain.model.GrowSpace;
+import com.thkoeln.hct.backend.domain.model.PlantList;
 import com.thkoeln.hct.backend.domain.model.Plants;
+import com.thkoeln.hct.backend.domain.model.ReviewList;
 import com.thkoeln.hct.backend.domain.repository.PlantsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
@@ -23,8 +25,10 @@ public class PlantsService {
     private FileService fileService;
 ;
 
-    public List<Plants> findAll(){
-        return plantsRepository.findAll();
+    public PlantList findAll(){
+        PlantList allPlants = new PlantList();
+        allPlants.setPlantsList(plantsRepository.findAll());
+        return allPlants;
     }
 
     public Plants create(@NonNull Plants plants){

@@ -39,7 +39,7 @@ public class AllReviewsTask extends AsyncTask<String, Void, List<Review>> {
         User newUser = new User(userId);
         User currentUser = restTemplate.getForObject("http://10.0.2.2:8080/users/" + newUser.getId(), User.class);
 
-        List<Review> myReviews = new ArrayList<Review>();
+        List<Review> myReviews = new ArrayList<>();
         for (Review review : allReviews)
         {
             if(review.getGrowSpace().getId() == currentUser.getGrowSpace().getId()) {

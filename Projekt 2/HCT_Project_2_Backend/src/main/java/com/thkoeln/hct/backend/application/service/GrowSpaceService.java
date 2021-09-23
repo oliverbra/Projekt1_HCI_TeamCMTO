@@ -31,8 +31,8 @@ public class GrowSpaceService {
         growSpaceToUpdate.setCategory(growSpace.getCategory());
         growSpaceToUpdate.setLocation(growSpace.getLocation());
         growSpaceToUpdate.setAverageRating(growSpace.getAverageRating());
-        growSpaceToUpdate.setUser(growSpace.getUser());
-        growSpaceToUpdate.setReviews(growSpace.getReviews());
+        //growSpaceToUpdate.setUser(growSpace.getUser());
+        //growSpaceToUpdate.setReviews(growSpace.getReviews());
         return growSpaceRepositry.save(growSpaceToUpdate);
     }
 

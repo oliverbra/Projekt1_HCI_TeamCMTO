@@ -1,8 +1,11 @@
 package com.example.resrclient.objectClasses;
 
+import java.io.File;
+import java.util.List;
+
 public class Plants {
 
-    private Integer plantId;
+    private Integer id;
     private String commonName;
     private String botanicalName;
     private String descriptionText;
@@ -18,10 +21,12 @@ public class Plants {
     private String light;
     private String soil;
     private String soilMoisture;
-    private String pHValue;
+    private String phValue;
     private String nutrientRequirements;
     private String careText;
     private String url;
+    private List<GrowSpace> growSpace;
+    private File file;
 
 
     public Plants() {
@@ -43,14 +48,14 @@ public class Plants {
         pLight = light;
         pSoil = soil;
         pSoilMoisture = soilMoisture;
-        pPHValue = pHValue;
+        pPHValue = phValue;
         pNutrientRequirements = nutrientRequirements;
         pCareText = careText;
         pUrl = url;
     }
 
     public Plants(Integer plantId) {
-        this.plantId = plantId;
+        this.id = plantId;
     }
 
     //Getter
@@ -114,8 +119,8 @@ public class Plants {
         return soilMoisture;
     }
 
-    public String getpHValue() {
-        return pHValue;
+    public String getphValue() {
+        return phValue;
     }
 
     public String getNutrientRequirements() {
@@ -191,8 +196,8 @@ public class Plants {
         this.soilMoisture = soilMoisture;
     }
 
-    public void setpHValue(String pHValue) {
-        this.pHValue = pHValue;
+    public void setphValue(String pHValue) {
+        this.phValue = pHValue;
     }
 
     public void setNutrientRequirements(String nutrientRequirements) {
@@ -207,4 +212,27 @@ public class Plants {
         this.url = url;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer plantId) {
+        this.id = plantId;
+    }
+
+    public List<GrowSpace> getGrowSpace() {
+        return growSpace;
+    }
+
+    public void setGrowSpace(List<GrowSpace> growSpace) {
+        this.growSpace = growSpace;
+    }
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
+    }
 }

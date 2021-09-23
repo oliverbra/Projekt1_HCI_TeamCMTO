@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_default"
-        android:onClick="changeReviews"
+        android:onClick="changeRandomGS"
         android:paddingLeft="32dp"
         android:paddingTop="16dp"
         android:paddingRight="32dp"
@@ -154,6 +154,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_bell"
         tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/unopenedReviewIcon"
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_eco_filled"
+        tools:layout_editor_absoluteY="16dp" />
 
     <!--todo: height to 82 dp -->
 

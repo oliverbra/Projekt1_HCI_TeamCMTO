@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resrclient.R;
+import com.example.resrclient.asyncTasks.AllPlantsTask;
 import com.example.resrclient.asyncTasks.CreateGSTask;
 import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.Review;
@@ -34,15 +35,14 @@ public class activity_createGS extends AppCompatActivity implements AdapterView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_gs);
 
-        /*/ Get all plants to let users select from them
         String url = "http://10.0.2.2:8080/plants";
         try {
-            allPlants = new RestTaskPlant().execute(url).get();
+            allPlants = new AllPlantsTask().execute(url).get();
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
-        } */
+        }
 
         Spinner spinner = findViewById(R.id.createGS_categories_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.gs_categories, android.R.layout.simple_spinner_item);
