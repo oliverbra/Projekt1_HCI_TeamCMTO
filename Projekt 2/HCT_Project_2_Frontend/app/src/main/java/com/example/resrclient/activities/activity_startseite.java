@@ -58,6 +58,10 @@ public class activity_startseite extends AppCompatActivity{
         Intent intent = new Intent(this, activity_openAllReviews.class);
         startActivity(intent); }
 
+    public void changeRandomGS(View view) {
+        Intent intent = new Intent(this, activity_randomGS.class);
+        startActivity(intent); }
+
 
 /* altes Navigation
  private  BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod=new
