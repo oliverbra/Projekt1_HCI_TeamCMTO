@@ -13,13 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.resrclient.activities.ui.main.SectionsPagerAdapter;
-import com.example.resrclient.databinding.ActivityGrowspaceBinding;
+import com.example.resrclient.databinding.ActivityRandomgsBinding;
 
 import com.example.resrclient.MainActivity;
 import com.example.resrclient.R;
 import com.example.resrclient.activities.ui.main.SectionsPagerAdapter;
 import com.example.resrclient.asyncTasks.RandomGSTask;
-import com.example.resrclient.databinding.ActivityGrowspaceBinding;
 import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.User;
 import com.example.resrclient.restClasses.RestTaskUser;
@@ -31,7 +30,7 @@ import java.util.concurrent.ExecutionException;
 public class activity_randomGS extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;//Navigation
-    private ActivityGrowspaceBinding binding;
+    private ActivityRandomgsBinding binding;
 
     int rndGSId;
     GrowSpace rndGS;
@@ -81,7 +80,7 @@ public class activity_randomGS extends AppCompatActivity {
             }
         });
 
-        binding = ActivityGrowspaceBinding.inflate(getLayoutInflater());
+        binding = ActivityRandomgsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = binding.viewPager;

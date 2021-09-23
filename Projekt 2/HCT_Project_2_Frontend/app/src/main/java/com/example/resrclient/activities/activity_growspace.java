@@ -21,7 +21,7 @@ import com.google.android.material.tabs.TabLayout;
 public class activity_growspace extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView; //Navigation
-    private TextView name, goal, category;
+    private TextView name, goal, category, usernameGS;
     private GrowSpace growSpace;
 
     private ActivityGrowspaceBinding binding;
@@ -35,6 +35,7 @@ public class activity_growspace extends AppCompatActivity {
         name = findViewById(R.id.growSpace_name_textView);
         goal = findViewById(R.id.growSpace_Ziel_textView);
         category = findViewById(R.id.growSpace_Kategorie_textView);
+        usernameGS = findViewById(R.id.usernameGS);
 
 /*
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -97,4 +98,10 @@ public class activity_growspace extends AppCompatActivity {
     public void chanceActivity(View view) {
         Intent intent = new Intent(this, activity_startseite.class);
         startActivity(intent); }
+
+    public void changeEditGS(View view) {
+        Intent intent = new Intent(this, activity_editGS.class);
+        startActivity(intent); }
+        //todo GS übergeben
+
 }
