@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.resrclient.asyncTasks.UpdateReview;
 import com.example.resrclient.asyncTasks.UpdateUserGP;
 import com.example.resrclient.restClasses.RestTaskLevel;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -54,7 +55,7 @@ public class User {
     }
 
     public void increaseGP(int amount, Context ctx) throws ExecutionException, InterruptedException {
-        growpoints += amount;
+        growpoints = growpoints + amount;
         if(this.getGrowpoints() >= this.getLevel().getLevelThreshold()) {
             this.setGrowpoints(this.getGrowpoints() - this.getLevel().getLevelThreshold());
             String url = "http://10.0.2.2:8080/levels/";
@@ -71,20 +72,21 @@ public class User {
 
     }
 
-    public void openReview(int i, Context ctx) throws ExecutionException, InterruptedException {
-        if(!reviews.get(i).getOpen()) {
-            reviews.get(i).open();
-            increaseGP(calculatePoints(reviews.get(i).getRating()), ctx);
-        }
+    public int openReview(Review review, Context ctx) throws ExecutionException, InterruptedException {
+        increaseGP(calculatePoints(review.getRating()), ctx);
+        Review updateReview = new UpdateReview().execute(review.getId().toString()).get();
+
+        return calculatePoints(review.getRating());
     }
 
     public int calculatePoints(double rating) {
         int points;
         if(rating == 5) {
-        points = (int) rating * 15;}
+        points = (int) (rating * 15);}
         else if (rating < 5 & rating >= 2) {
-            points = (int) rating * 10; }
-        else { points = 0;}
+            points = (int) (rating * 10); }
+        else {points = 0;}
+        Log.v("GP", "Rating: " + rating + " Points: " + points);
         return points;
     }
 

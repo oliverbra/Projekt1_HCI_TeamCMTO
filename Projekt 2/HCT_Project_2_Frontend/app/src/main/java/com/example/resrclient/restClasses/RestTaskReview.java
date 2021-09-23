@@ -21,7 +21,6 @@ public class RestTaskReview extends AsyncTask<String, Void, Review> {
     @Override
     protected void onPostExecute(Review review) {
         super.onPostExecute(review);
-        Review reviewReturned = review;
     }
 
     @Override

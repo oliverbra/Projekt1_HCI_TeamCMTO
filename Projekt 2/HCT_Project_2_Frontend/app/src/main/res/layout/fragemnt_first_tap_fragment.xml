@@ -4,32 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="350dp"
+    android:layout_height="match_parent"
     android:layout_marginTop="300dp"
     tools:context=".activities.ui.main.PlaceholderFragment">
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginLeft="156dp"
-        android:layout_marginTop="304dp"
-        android:text="Button"
+    <View
+        android:id="@+id/view6"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/input_field"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/growSpace_Kategorie_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kategorie"
+        android:translationZ="90dp"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/growSpace_Ziel_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ziel"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/growSpace_Kategorie_textView"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_Kategorie_textView" />
+
+
+    <TextView
+        android:id="@+id/growSpace_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Name Grow Space"
+        android:textAppearance="@style/H2"
+        android:textColor="@color/green01"
+        android:textStyle="bold"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/growSpace_name_textView"
+        app:layout_constraintStart_toStartOf="@+id/growSpace_name_textView"
+        app:layout_constraintTop_toBottomOf="@+id/growSpace_name_textView" />
+
+    <TextView
+        android:id="@+id/usernameGS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="User Name"
+        android:textAppearance="@style/S1"
+        android:textColor="@color/fontcolor"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line"
+        app:layout_constraintEnd_toStartOf="@+id/line"
+        app:layout_constraintStart_toStartOf="@+id/growSpace_name_textView"
+        app:layout_constraintTop_toTopOf="@+id/line" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Level"
+        android:textAppearance="@style/S1"
+        android:textColor="@color/fontcolor"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line"
+        app:layout_constraintEnd_toEndOf="@+id/rating"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/line" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/fontcolor"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/rating"
+        app:layout_constraintStart_toStartOf="@+id/rating"
+        app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/text_background"
+        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

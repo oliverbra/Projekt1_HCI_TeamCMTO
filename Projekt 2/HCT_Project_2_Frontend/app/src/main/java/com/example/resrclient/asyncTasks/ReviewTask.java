@@ -42,7 +42,8 @@ public class ReviewTask extends AsyncTask<String, Void, GrowSpace> {
         final double shelterCriteria = Double.parseDouble(params[1]);
         final double naturalCriteria = Double.parseDouble(params[2]);
         final double dangerCriteria = Double.parseDouble(params[3]);
-        final String comment = params[4];
+        final int rndGSID = Integer.parseInt(params[4]);
+        final String comment = params[5];
 
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
@@ -56,7 +57,7 @@ public class ReviewTask extends AsyncTask<String, Void, GrowSpace> {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
         User currentUser = restTemplate.getForObject("http://10.0.2.2:8080/users/" + newUser.getId(), User.class);
-        GrowSpace randomGrowspace = restTemplate.getForObject("http://10.0.2.2:8080/growspaces/random" , GrowSpace.class);
+        GrowSpace randomGrowspace = restTemplate.getForObject("http://10.0.2.2:8080/growspaces/" + rndGSID , GrowSpace.class);
 
         ReviewList response = restTemplate.getForObject("http://10.0.2.2:8080/reviews", ReviewList.class);
         List<Review> allReviews = response.getReviewList();

@@ -1,10 +1,7 @@
 package com.thkoeln.hct.backend.domain.model;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.*;
 
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import javax.persistence.*;
 import java.util.HashSet;
@@ -13,7 +10,7 @@ import java.util.Set;
 @Entity
 @Table(name = "grow_space")
 @Data
-//@JsonIgnoreProperties("reviews")
+@JsonIgnoreProperties("reviews")
 public class GrowSpace {
 
     public GrowSpace() {}
@@ -40,7 +37,7 @@ public class GrowSpace {
     private User user;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonManagedReference(value="gsReview")
+    @JsonBackReference(value="review")
     private Set<Review> reviews = new HashSet<>();
 
     @ManyToMany(cascade = CascadeType.ALL)

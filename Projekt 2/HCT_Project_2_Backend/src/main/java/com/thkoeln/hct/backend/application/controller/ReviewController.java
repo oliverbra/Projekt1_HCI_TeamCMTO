@@ -37,6 +37,12 @@ public class ReviewController {
         return new ResponseEntity(reviewService.findAll(), HttpStatus.OK);
     }
 
+    @GetMapping("/reviews/{id}")
+    public ResponseEntity<Review> getReviewById(@PathVariable Integer id) {
+        logger.debug("GET: getReviewById");
+        return new ResponseEntity(reviewService.findById(id), HttpStatus.OK);
+    }
+
     @GetMapping("/growspaces/{growspaceId}/reviews")
     public ResponseEntity<List<Review>> getAllReviewsByGrowspaceId(@PathVariable Integer growspaceId) {
         logger.debug("GET: getAllReviewsByGrowspaceId");
@@ -54,12 +60,6 @@ public class ReviewController {
         logger.debug("POST: createReview");
         review.setGrowSpace(growSpaceService.findByid(growspaceId));
         return new ResponseEntity(reviewService.create(review), HttpStatus.CREATED);
-    }
-
-    @GetMapping("/reviews/{id}")
-    public ResponseEntity<Review> getReviewById(@PathVariable Integer id) {
-        logger.debug("GET: getReviewById");
-        return new ResponseEntity(reviewService.findById(id), HttpStatus.OK);
     }
 
     @PutMapping(value = "/reviews", produces = MediaType.APPLICATION_JSON_VALUE)
