@@ -96,7 +96,7 @@ public class activity_growspace extends AppCompatActivity {
     }
 
     public void chanceActivity(View view) {
-        Intent intent = new Intent(this, activity_startseite.class);
+        Intent intent = new Intent(this, activity_editGS.class);
         startActivity(intent); }
 
     public void changeEditGS(View view) {
