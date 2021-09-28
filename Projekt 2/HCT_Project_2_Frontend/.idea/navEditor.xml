@@ -8,7 +8,7 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="FirstFragment">
+                  <entry key="fragment_createGS_1">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -19,7 +19,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_FirstFragment_to_SecondFragment">
+                            <entry key="action_fragment_createGS_1_to_fragment_createGS_2">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -29,7 +29,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="SecondFragment">
+                  <entry key="fragment_createGS_2">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -40,7 +40,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_SecondFragment_to_FirstFragment">
+                            <entry key="action_fragment_createGS_2_to_fragment_createGS_1">
                               <value>
                                 <LayoutPositions />
                               </value>
