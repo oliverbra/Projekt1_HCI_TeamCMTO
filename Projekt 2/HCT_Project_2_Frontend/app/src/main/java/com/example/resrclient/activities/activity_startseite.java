@@ -66,17 +66,22 @@ public class activity_startseite extends AppCompatActivity{
             e.printStackTrace();
         }
         int reviewCounter = 0;
-        for (Review review : allReviews)
-        {
-            if(!review.getOpen()) {
-               reviewCounter++;
+        if(allReviews != null) {
+            for (Review review : allReviews)
+            {
+                if(!review.getOpen()) {
+                    reviewCounter++;
+                }
             }
-        }
-        if(reviewCounter != 0) {
-            unopenedReviewIcon.setVisibility(View.VISIBLE);
+            if(reviewCounter != 0) {
+                unopenedReviewIcon.setVisibility(View.VISIBLE);
+            } else {
+                unopenedReviewIcon.setVisibility(View.GONE);
+            }
         } else {
             unopenedReviewIcon.setVisibility(View.GONE);
         }
+
 
     }
 

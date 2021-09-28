@@ -48,6 +48,16 @@ public class fragment_createGS_2 extends Fragment {
             }
         });
 
+
+        //Hier der Button der zum Fragment mit den Pflanzen führt
+        Button toPlantbtn = view.findViewById(R.id.addplantbtn);
+        toPlantbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_fragment_createGS_2_to_fragment_createGS_plants);
+            }
+        });
+
     }
 
 }

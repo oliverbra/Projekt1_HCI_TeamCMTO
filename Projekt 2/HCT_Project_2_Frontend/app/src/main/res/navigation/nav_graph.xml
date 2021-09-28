@@ -22,5 +22,18 @@
         <action
             android:id="@+id/action_fragment_createGS_2_to_fragment_createGS_1"
             app:destination="@id/fragment_createGS_1" />
+        <argument
+            android:name="GSname"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_fragment_createGS_2_to_fragment_createGS_plants"
+            app:destination="@id/fragment_createGS_plants" />
     </fragment>
+    <fragment
+        android:id="@+id/fragment_createGS_plants"
+        android:name="com.example.resrclient.activities.fragment_createGS_plants"
+        android:label="fragment_create_g_s_plants"
+        tools:layout="@layout/fragment_create_g_s_plants"/>
+
 </navigation>
