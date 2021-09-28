@@ -51,6 +51,13 @@ public class activity_randomGS extends AppCompatActivity {
 
         // Display rndGS information here.
 
+        binding = ActivityRandomgsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        ViewPager viewPager = binding.viewPager;
+        viewPager.setAdapter(sectionsPagerAdapter);
+        TabLayout tabs = binding.tabs;
+        tabs.setupWithViewPager(viewPager);
 
         //Navigation
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -80,13 +87,7 @@ public class activity_randomGS extends AppCompatActivity {
             }
         });
 
-        binding = ActivityRandomgsBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = binding.tabs;
-        tabs.setupWithViewPager(viewPager);
+
 
     }
 
