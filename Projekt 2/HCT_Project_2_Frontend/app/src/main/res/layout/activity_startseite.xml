@@ -74,6 +74,7 @@
         android:id="@+id/startseite_Zufall_imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_default"
         android:onClick="changeRandomGS"
@@ -89,7 +90,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startseite_Rating_editTextNumber3" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -164,6 +166,18 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:srcCompat="@drawable/ic_eco_filled"
         tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/createGS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="changeCreateGS"
+        android:text="Create GS"
+        app:layout_constraintBottom_toBottomOf="@+id/startseite_Zufall_imageButton"
+        app:layout_constraintStart_toEndOf="@+id/startseite_Zufall_imageButton"
+        app:layout_constraintTop_toTopOf="@+id/startseite_Zufall_imageButton" />
 
     <!--todo: height to 82 dp -->
 

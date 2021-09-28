@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_createGS_1">
+
+    <fragment
+        android:id="@+id/fragment_createGS_1"
+        android:name="com.example.resrclient.activities.fragment_createGS_1"
+        android:label="fragment_create_g_s_1"
+        tools:layout="@layout/fragment_create_g_s_1" >
+        <action
+            android:id="@+id/action_fragment_createGS_1_to_fragment_createGS_2"
+            app:destination="@id/fragment_createGS_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_createGS_2"
+        android:name="com.example.resrclient.activities.fragment_createGS_2"
+        android:label="fragment_create_g_s_2"
+        tools:layout="@layout/fragment_create_g_s_2" >
+        <action
+            android:id="@+id/action_fragment_createGS_2_to_fragment_createGS_1"
+            app:destination="@id/fragment_createGS_1" />
+    </fragment>
+</navigation>

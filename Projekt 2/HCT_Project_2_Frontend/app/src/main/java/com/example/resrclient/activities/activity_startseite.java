@@ -96,6 +96,10 @@ public class activity_startseite extends AppCompatActivity{
         Intent intent = new Intent(this, activity_randomGS.class);
         startActivity(intent); }
 
+    public void changeCreateGS(View view) {
+        Intent intent = new Intent(this, activity_createGS.class);
+        startActivity(intent); }
+
 
 /* altes Navigation
  private  BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod=new
