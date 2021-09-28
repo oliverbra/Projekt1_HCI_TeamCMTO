@@ -43,6 +43,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/nameGSfromFrag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Name GS"
+            app:layout_constraintEnd_toEndOf="@+id/tofrag1btn"
+            app:layout_constraintStart_toStartOf="@+id/tofrag1btn"
+            app:layout_constraintTop_toBottomOf="@+id/tofrag1btn" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

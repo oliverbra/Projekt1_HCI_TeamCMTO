@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.AllPlantsTask;
 import com.example.resrclient.asyncTasks.CreateGSTask;
+import com.example.resrclient.databinding.FragmentCreateGS1Binding;
 import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.Review;
 
@@ -45,6 +46,8 @@ public class fragment_createGS_1 extends Fragment {
 
     private Button createGSbtn;
 
+    private FragmentCreateGS1Binding binding;
+
 
     public fragment_createGS_1() {
         // Required empty public constructor
@@ -54,6 +57,8 @@ public class fragment_createGS_1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //Todo: Mit Bundle geht das irgendwie dass die Dtaen übergeben werden
+       // super.onCreate(savedInstanceState);
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_create_g_s_1, container, false);
 
@@ -123,6 +128,7 @@ public class fragment_createGS_1 extends Fragment {
     }
 
     //Todo: Hier müssen wir prüfen ob das so richtig ist, habe den Code von der acitvity_createGS() übernommen und von this zu view.getContext geändert
+    //Todo: Problem beim Übertragen der Eingabe --> Können wir es nicht so machen, dass beim 1. Fragment direkt ein GS erstellt wird nur nicht mit allen Attributen? Und in den weiteren Fragments werden die Attribute dann gesetz
     public void createGSAction(View view){
         final String url = "http://10.0.2.2:8080/growspaces";
         try {
@@ -151,7 +157,10 @@ public class fragment_createGS_1 extends Fragment {
             public void onClick(View v) {
                 //Hier wird die Navigation von Frag1 und Frag2 definiert
                 //Die Action ID wird aus dem navgraph übernommen
-                navController.navigate(R.id.action_fragment_createGS_1_to_fragment_createGS_2);
+                //Übergabe von eingegebenem Text über bundle object
+                Bundle bundle = new Bundle();
+                bundle.putString("name", name.getText().toString());
+                navController.navigate(R.id.action_fragment_createGS_1_to_fragment_createGS_2, bundle);
             }
         });
 

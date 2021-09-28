@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.resrclient.R;
 
@@ -57,6 +58,10 @@ public class fragment_createGS_2 extends Fragment {
                 navController.navigate(R.id.action_fragment_createGS_2_to_fragment_createGS_plants);
             }
         });
+
+        //Übergebenes Attribut wird angenommen
+        TextView tv = view.findViewById(R.id.nameGSfromFrag1);
+        tv.setText(getArguments().getString("name"));
 
     }
 
