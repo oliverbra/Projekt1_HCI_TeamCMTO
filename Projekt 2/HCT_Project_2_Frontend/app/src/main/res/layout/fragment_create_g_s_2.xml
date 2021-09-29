@@ -34,15 +34,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_secfrag" />
 
-        <Button
-            android:id="@+id/addplantbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:text="Weiter zu: Pflanzen hinzufügen"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/nameGSfromFrag1"
@@ -53,6 +44,52 @@
             app:layout_constraintEnd_toEndOf="@+id/tofrag1btn"
             app:layout_constraintStart_toStartOf="@+id/tofrag1btn"
             app:layout_constraintTop_toBottomOf="@+id/tofrag1btn" />
+
+        <Button
+            android:id="@+id/frag2tofrag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Weiter zu Frag3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/testintfromFrag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="testint"
+            app:layout_constraintEnd_toEndOf="@+id/nameGSfromFrag1"
+            app:layout_constraintStart_toStartOf="@+id/nameGSfromFrag1"
+            app:layout_constraintTop_toBottomOf="@+id/nameGSfromFrag1" />
+
+        <EditText
+            android:id="@+id/createGS_size_editTextTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:ems="10"
+            android:hint="Größe in m^2 (optional)"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/testintfromFrag1" />
+
+        <EditText
+            android:id="@+id/createGS_location_editTextTextLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="62dp"
+            android:ems="10"
+            android:hint="Standort (optional)"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createGS_size_editTextTextSize" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

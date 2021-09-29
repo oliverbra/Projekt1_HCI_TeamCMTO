@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.resrclient.R;
@@ -20,15 +21,28 @@ import org.jetbrains.annotations.NotNull;
 
 public class fragment_createGS_2 extends Fragment {
 
+    private EditText size, location;
+
     public fragment_createGS_2() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_g_s_2, container, false);
+        View v = inflater.inflate(R.layout.fragment_create_g_s_2, container, false);
+
+        size = v.findViewById(R.id.createGS_size_editTextTextSize);
+        location = v.findViewById(R.id.createGS_location_editTextTextLocation);
+
+        return v;
     }
 
 
@@ -38,6 +52,13 @@ public class fragment_createGS_2 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         NavController navController = Navigation.findNavController(view);
+        Bundle bundle = this.getArguments();
+
+        TextView tv = view.findViewById(R.id.nameGSfromFrag1);
+        tv.setText(bundle.getString("name"));
+
+        TextView tv2 = view.findViewById(R.id.testintfromFrag1);
+        tv2.setText(bundle.getString("category"));
 
         Button button = view.findViewById(R.id.tofrag1btn);
         button.setOnClickListener(new View.OnClickListener() {
@@ -50,18 +71,23 @@ public class fragment_createGS_2 extends Fragment {
         });
 
 
-        //Hier der Button der zum Fragment mit den Pflanzen führt
-        Button toPlantbtn = view.findViewById(R.id.addplantbtn);
-        toPlantbtn.setOnClickListener(new View.OnClickListener() {
+        //Hier der Button der zum 3. Fragment führt
+        Button toFrag3btn = view.findViewById(R.id.frag2tofrag3);
+        toFrag3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_fragment_createGS_2_to_fragment_createGS_plants);
+
+                if(size.getText().toString().isEmpty()){
+                    size.setText("0");
+                }
+                bundle.putDouble("size", Double.parseDouble(size.getText().toString()));
+                bundle.putString("location", location.getText().toString());
+                bundle.putAll(bundle);
+
+                navController.navigate(R.id.action_fragment_createGS_2_to_fragment_createGS_3, bundle);
             }
         });
 
-        //Übergebenes Attribut wird angenommen
-        TextView tv = view.findViewById(R.id.nameGSfromFrag1);
-        tv.setText(getArguments().getString("name"));
 
     }
 

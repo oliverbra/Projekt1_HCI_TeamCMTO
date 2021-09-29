@@ -27,13 +27,44 @@
             app:argType="string"
             android:defaultValue="default" />
         <action
-            android:id="@+id/action_fragment_createGS_2_to_fragment_createGS_plants"
-            app:destination="@id/fragment_createGS_plants" />
+            android:id="@+id/action_fragment_createGS_2_to_fragment_createGS_3"
+            app:destination="@id/fragment_createGS_3" />
     </fragment>
+
     <fragment
-        android:id="@+id/fragment_createGS_plants"
-        android:name="com.example.resrclient.activities.fragment_createGS_plants"
+        android:id="@+id/fragment_createGS_3"
+        android:name="com.example.resrclient.activities.fragment_createGS_3"
+        android:label="fragment_create_g_s_3"
+        tools:layout="@layout/fragment_create_g_s_3">
+        <action
+            android:id="@+id/action_fragment_createGS_3_to_fragment_createGS_4"
+            app:destination="@id/fragment_createGS_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_createGS_4"
+        android:name="com.example.resrclient.activities.fragment_createGS_4"
+        android:label="fragment_create_g_s_4"
+        tools:layout="@layout/fragment_create_g_s_4">
+        <action
+            android:id="@+id/action_fragment_createGS_4_to_fragment_createGS_5plants"
+            app:destination="@id/fragment_createGS_5plants" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_createGS_5plants"
+        android:name="com.example.resrclient.activities.fragment_createGS_5plants"
         android:label="fragment_create_g_s_plants"
-        tools:layout="@layout/fragment_create_g_s_plants"/>
+        tools:layout="@layout/fragment_create_g_s_plants">
+        <action
+            android:id="@+id/action_fragment_createGS_5plants_to_fragment_createGS_6"
+            app:destination="@id/fragment_createGS_6" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_createGS_6"
+        android:name="com.example.resrclient.activities.fragment_createGS_6"
+        android:label="fragment_create_g_s_6"
+        tools:layout="@layout/fragment_create_g_s_6"/>
 
 </navigation>

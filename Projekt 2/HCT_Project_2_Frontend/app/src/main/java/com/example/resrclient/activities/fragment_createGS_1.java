@@ -1,17 +1,13 @@
 package com.example.resrclient.activities;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.databinding.adapters.AdapterViewBindingAdapter;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,59 +19,56 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.resrclient.R;
-import com.example.resrclient.asyncTasks.AllPlantsTask;
-import com.example.resrclient.asyncTasks.CreateGSTask;
-import com.example.resrclient.databinding.FragmentCreateGS1Binding;
-import com.example.resrclient.objectClasses.Plants;
-import com.example.resrclient.objectClasses.Review;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 
 public class fragment_createGS_1 extends Fragment {
 
-    private EditText name, goal, size, location, problems;
+    private EditText name;
     private String category;
-    private ArrayList<Review> reviews;
-    private List<Plants> allPlants;
-    private ArrayList<Plants> selectedPlants;
 
-    private Button createGSbtn;
-
-    private FragmentCreateGS1Binding binding;
+//    private ArrayList<Review> reviews;
+//    private List<Plants> allPlants;
+//    private ArrayList<Plants> selectedPlants;
+//
+//    private Button createGSbtn;
+//
+//    private FragmentCreateGS1Binding binding;
 
 
     public fragment_createGS_1() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //Todo: Mit Bundle geht das irgendwie dass die Dtaen übergeben werden
-       // super.onCreate(savedInstanceState);
-        // Inflate the layout for this fragment
+
         View v = inflater.inflate(R.layout.fragment_create_g_s_1, container, false);
 
-        String url = "http://10.0.2.2:8080/plants";
-        try {
-            allPlants = new AllPlantsTask().execute(url).get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        //Todo: Das kommt in Fragment 5
+//        String url = "http://10.0.2.2:8080/plants";
+//        try {
+//            allPlants = new AllPlantsTask().execute(url).get();
+//        } catch (ExecutionException e) {
+//            e.printStackTrace();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
+        //Kategorie auswahl
         Spinner spinner = v.findViewById(R.id.createGS_categories_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(v.getContext(), R.array.gs_categories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        //Todo: Hier müssen wir prüfen ob das so richtig ist, habe den Code von der acitvity_createGS() übernommen
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -99,18 +92,15 @@ public class fragment_createGS_1 extends Fragment {
 
 
         name = v.findViewById(R.id.createGS_name_editTextTextName);
-        goal = v.findViewById(R.id.createGS_goal_editTextTextGoal);
-        size = v.findViewById(R.id.createGS_size_editTextTextSize);
-        location = v.findViewById(R.id.createGS_location_editTextTextLocation);
-        problems = v.findViewById(R.id.createGS_problems_editTextTextProblems);
 
-        createGSbtn = (Button)v.findViewById(R.id.createGS_submit_button);
-        createGSbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                createGSAction(v);
-            }
-        });
+        //Todo: Das kommt in das letzte Frag
+//        createGSbtn = (Button)v.findViewById(R.id.createGS_submit_button);
+//        createGSbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                createGSAction(v);
+//            }
+//        });
 
 
         // TO DO: Add selected plants into ArrayList selectedPlants + remove deselected plants
@@ -127,20 +117,19 @@ public class fragment_createGS_1 extends Fragment {
         } else { return true;}
     }
 
-    //Todo: Hier müssen wir prüfen ob das so richtig ist, habe den Code von der acitvity_createGS() übernommen und von this zu view.getContext geändert
-    //Todo: Problem beim Übertragen der Eingabe --> Können wir es nicht so machen, dass beim 1. Fragment direkt ein GS erstellt wird nur nicht mit allen Attributen? Und in den weiteren Fragments werden die Attribute dann gesetz
-    public void createGSAction(View view){
-        final String url = "http://10.0.2.2:8080/growspaces";
-        try {
-            if ( validateInput(name.getText().toString(), category)) {
-                new CreateGSTask(view.getContext(), name.getText().toString(), goal.getText().toString(), category, Double.parseDouble(size.getText().toString()), location.getText().toString(), problems.getText().toString(), selectedPlants, reviews).execute(url);
-            } else {
-                Toast.makeText(view.getContext(), "Fill out required fields", Toast.LENGTH_SHORT).show();}
-        } catch (Exception e) {
-            Toast.makeText(view.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
-            Log.v("Create", e.toString());
-        }
-    }
+    //Todo: Das kommt in das letzte Fragment --> Im Frag1 wird ein GS Object erstellt, dem im jedem Fragments Daten zugeteilt werden
+//    public void createGSAction(View view){
+//        final String url = "http://10.0.2.2:8080/growspaces";
+//        try {
+//            if ( validateInput(name.getText().toString(), category)) {
+////                new CreateGSTask(view.getContext(), name.getText().toString(), goal.getText().toString(), category, Double.parseDouble(size.getText().toString()), location.getText().toString(), problems.getText().toString(), selectedPlants, reviews).execute(url);
+//            } else {
+//                Toast.makeText(view.getContext(), "Fill out required fields", Toast.LENGTH_SHORT).show();}
+//        } catch (Exception e) {
+//            Toast.makeText(view.getContext(), e.toString(), Toast.LENGTH_SHORT).show();
+//            Log.v("Create", e.toString());
+//        }
+//    }
 
 
 
@@ -151,16 +140,23 @@ public class fragment_createGS_1 extends Fragment {
 
         NavController navController = Navigation.findNavController(view);
 
-        Button button = view.findViewById(R.id.testbtn);
+        Button button = view.findViewById(R.id.frag1tofrag2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Hier wird die Navigation von Frag1 und Frag2 definiert
                 //Die Action ID wird aus dem navgraph übernommen
-                //Übergabe von eingegebenem Text über bundle object
+                int testint = 0;
                 Bundle bundle = new Bundle();
                 bundle.putString("name", name.getText().toString());
-                navController.navigate(R.id.action_fragment_createGS_1_to_fragment_createGS_2, bundle);
+                bundle.putString("category", category);
+                bundle.putAll(bundle);
+                //Navigation
+                if ( validateInput(name.getText().toString(), category)) {
+                    navController.navigate(R.id.action_fragment_createGS_1_to_fragment_createGS_2, bundle); }
+                else {
+                    Toast.makeText(view.getContext(), "Fill out required fields", Toast.LENGTH_SHORT).show();}
+
             }
         });
 
