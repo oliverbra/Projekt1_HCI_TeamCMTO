@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.resrclient.R;
 
@@ -46,7 +47,7 @@ public class fragment_createGS_4 extends Fragment {
         Bundle bundle = this.getArguments();
 
         //Hier der Button der zum 5. Fragment führt
-        Button toFrag3btn = view.findViewById(R.id.frag4tofrag5plant);
+        ImageButton toFrag3btn = view.findViewById(R.id.frag4tofrag5plant);
         toFrag3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

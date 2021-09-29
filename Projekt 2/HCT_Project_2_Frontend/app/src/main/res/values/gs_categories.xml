@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="gs_categories">
-        <item>Select Category</item>
-        <item>Category 1</item>
-        <item>Category 2</item>
-        <item>Category 3</item>
+        <item>Wähle eine Kategorie</item>
+        <item>Garten</item>
+        <item>Balkon</item>
+        <item>Terasse</item>
     </string-array>
 </resources>

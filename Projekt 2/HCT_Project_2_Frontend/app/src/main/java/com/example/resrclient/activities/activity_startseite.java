@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.resrclient.R;
@@ -39,7 +40,7 @@ public class activity_startseite extends AppCompatActivity{
         setContentView(R.layout.activity_startseite);
 
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.nav_to_favourites);
+        bottomNavigationView.setSelectedItemId(R.id.nav_to_home);
 
         unopenedReviewIcon = findViewById(R.id.unopenedReviewIcon);
 
@@ -105,11 +106,13 @@ public class activity_startseite extends AppCompatActivity{
         growSpace = currentUser.getGrowSpace();
 
         TextView nameGS = findViewById(R.id.startseite_nameGS);
-        TextView ratingGS = findViewById(R.id.startseite_Rating_TExtView);
         ProgressBar levelProgress = findViewById(R.id.startseite_progressBar);
         nameGS.setText(growSpace.getName());
         levelProgress.setProgress(currentUser.getLevel().getLevel());
-        ratingGS.setText(String.format("%.2f", (averageRating(allReviews))));
+
+        RatingBar raitingbarGS = findViewById(R.id.averagerating);
+        raitingbarGS.setRating((float)averageRating(allReviews));
+
 
 
     }

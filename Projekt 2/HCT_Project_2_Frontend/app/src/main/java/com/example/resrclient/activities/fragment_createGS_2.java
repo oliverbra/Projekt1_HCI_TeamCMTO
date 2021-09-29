@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.resrclient.R;
@@ -58,7 +59,7 @@ public class fragment_createGS_2 extends Fragment {
 
 
         //Hier der Button der zum 3. Fragment führt
-        Button toFrag3btn = view.findViewById(R.id.frag2tofrag3);
+        ImageButton toFrag3btn = view.findViewById(R.id.frag2tofrag3);
         toFrag3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

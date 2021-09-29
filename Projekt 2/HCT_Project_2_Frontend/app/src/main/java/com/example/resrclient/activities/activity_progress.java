@@ -70,8 +70,8 @@ public class activity_progress extends AppCompatActivity {
 
         switch (userObjekt.getLevel().getLevel()){
             case 1:
-                unlockedText.setText("kommentieren wurde freigeschaltet");
-                lockedText.setText("Coole Sachen");
+                unlockedText.setText("Du kannst nun Bewertungen schreiben!");
+                lockedText.setText("Kommentieren");
                 break;
             case 2:
                 unlockedText.setText("Zweiter Grow Space wurde freigeschaltet");

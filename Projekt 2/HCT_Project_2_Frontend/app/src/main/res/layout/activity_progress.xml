@@ -26,8 +26,10 @@
         android:background="@drawable/white_bg_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/username_Textview" />
+        app:layout_constraintTop_toTopOf="@+id/username_Textview"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ProgressBar
         android:id="@+id/progress_level_progressBar"
@@ -36,7 +38,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:progressBackgroundTint="@color/yellow"
@@ -44,33 +46,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_Textview" />
+        app:layout_constraintTop_toBottomOf="@+id/progress_Level_textView" />
 
-    <EditText
+    <TextView
         android:id="@+id/progress_unlocked_editTextTextMultiLine"
-        android:layout_width="131dp"
-        android:layout_height="150dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/text_background"
         android:ems="10"
+        android:fontFamily="@font/nunito"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        android:textAppearance="@style/B1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress_level_progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/daskannstduzurzeit_textview" />
 
-    <EditText
+    <TextView
         android:id="@+id/progress_locked_editTextTextMultiLine2"
-        android:layout_width="154dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/text_background"
         android:ems="10"
+        android:fontFamily="@font/nunito"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintStart_toEndOf="@+id/progress_unlocked_editTextTextMultiLine"
-        app:layout_constraintTop_toBottomOf="@+id/progress_level_progressBar" />
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        android:textAppearance="@style/B1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daskannstdubald_textview" />
 
     <TextView
         android:id="@+id/username_Textview"
@@ -100,22 +124,21 @@
         android:id="@+id/progress_Level_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginLeft="168dp"
-        android:layout_marginTop="13dp"
-        android:text="User Name"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Level Name"
+        app:layout_constraintEnd_toEndOf="@+id/username_Textview"
+        app:layout_constraintStart_toStartOf="@+id/username_Textview"
         app:layout_constraintTop_toBottomOf="@+id/username_Textview" />
 
     <ImageView
         android:id="@+id/progress_LevelIcon_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/textViewcreateGS_secfrag"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_Level_textView"
+        app:layout_constraintStart_toEndOf="@+id/progress_Level_textView"
+        app:layout_constraintTop_toTopOf="@+id/progress_Level_textView"
         app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
     <ImageButton
@@ -125,10 +148,11 @@
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="12dp"
+        android:background="@color/white"
         android:onClick="chanceActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abc_vector_test" />
+        app:srcCompat="@drawable/ic_left" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -165,5 +189,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_secfrag"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/daskannstduzurzeit_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Das kannst in diesem Level:"
+        android:textAppearance="@style/H3"
+        android:textColor="@color/fontcolor"
+        app:layout_constraintStart_toStartOf="@+id/progress_level_progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/progress_level_progressBar" />
+
+    <TextView
+        android:id="@+id/daskannstdubald_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Das kannst in dem nächsten Level:"
+        android:textAppearance="@style/H3"
+        android:textColor="@color/fontcolor"
+        app:layout_constraintStart_toStartOf="@+id/progress_level_progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/progress_unlocked_editTextTextMultiLine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
