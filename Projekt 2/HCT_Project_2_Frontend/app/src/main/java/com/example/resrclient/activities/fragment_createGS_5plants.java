@@ -1,6 +1,7 @@
 package com.example.resrclient.activities;
 
 import android.content.ClipData;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +71,11 @@ public class fragment_createGS_5plants extends Fragment {
         NavController navController = Navigation.findNavController(view);
         Bundle bundle = this.getArguments();
 
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(view.getContext());
+        SharedPreferences.Editor editor = pref.edit();
+        editor.remove("selectedPlants");
+        editor.apply();
+
         ListView lv = view.findViewById(R.id.plantsListView);
         PlantAdapter plantAdapter = new PlantAdapter(this.getContext(), allPlants);
         lv.setAdapter(plantAdapter);
@@ -83,11 +90,4 @@ public class fragment_createGS_5plants extends Fragment {
         });
     }
 
-    public static int addPlant(int id) {
-        return id;
-    }
-
-    public static void removePlant(int id) {
-
-    }
 }

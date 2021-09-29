@@ -1,6 +1,8 @@
 package com.thkoeln.hct.backend.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +16,6 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @Table(name = "plants")
-
 public class Plants {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,8 +48,6 @@ public class Plants {
     private String careText;
     @Column(nullable = false)
     private String url;
-
-
 
     @ManyToMany(mappedBy = "plants")
     private Set<GrowSpace> growSpace = new HashSet<>();
