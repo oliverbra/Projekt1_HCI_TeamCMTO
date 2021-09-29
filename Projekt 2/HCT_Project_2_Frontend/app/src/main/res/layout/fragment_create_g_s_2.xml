@@ -11,82 +11,97 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/text_background"
+            app:layout_constraintBottom_toTopOf="@+id/frag2tofrag3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_secfrag" />
+
         <TextView
             android:id="@+id/textViewcreateGS_secfrag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/comfortaa"
-            android:text="Zweites Fragment"
+            android:text="Dein erster Grow Space"
             android:textAppearance="@style/H1"
             android:textColor="@color/fontcolor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/tofrag1btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Zurück zu Frag1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_secfrag" />
 
 
-        <TextView
-            android:id="@+id/nameGSfromFrag1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Name GS"
-            app:layout_constraintEnd_toEndOf="@+id/tofrag1btn"
-            app:layout_constraintStart_toStartOf="@+id/tofrag1btn"
-            app:layout_constraintTop_toBottomOf="@+id/tofrag1btn" />
-
-        <Button
+        <ImageButton
             android:id="@+id/frag2tofrag3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
             android:layout_marginBottom="32dp"
-            android:text="Weiter zu Frag3"
+            android:background="@drawable/round_button"
+            android:elevation="4dp"
+            android:src="@drawable/ic_right"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/testintfromFrag1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="testint"
-            app:layout_constraintEnd_toEndOf="@+id/nameGSfromFrag1"
-            app:layout_constraintStart_toStartOf="@+id/nameGSfromFrag1"
-            app:layout_constraintTop_toBottomOf="@+id/nameGSfromFrag1" />
 
         <EditText
             android:id="@+id/createGS_size_editTextTextSize"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginLeft="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/input_field"
+            android:elevation="16dp"
             android:ems="10"
+            android:fontFamily="@font/comfortaa"
             android:hint="Größe in m^2 (optional)"
             android:inputType="numberDecimal"
+            android:paddingLeft="16dp"
+            android:paddingTop="24dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="24dp"
+            android:textAppearance="@style/Input_Field"
+            android:textColor="@color/green01"
+            android:textColorHint="@color/green03"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/testintfromFrag1" />
+            app:layout_constraintTop_toTopOf="@+id/view4" />
 
         <EditText
             android:id="@+id/createGS_location_editTextTextLocation"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="62dp"
-            android:ems="10"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:hint="Standort (optional)"
+            android:background="@drawable/input_field"
+            android:elevation="16dp"
+            android:ems="10"
+            android:fontFamily="@font/comfortaa"
             android:inputType="text"
+            android:paddingLeft="16dp"
+            android:paddingTop="24dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="24dp"
+            android:textAppearance="@style/Input_Field"
+            android:textColor="@color/green01"
+            android:textColorHint="@color/green03"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/createGS_size_editTextTextSize" />
 

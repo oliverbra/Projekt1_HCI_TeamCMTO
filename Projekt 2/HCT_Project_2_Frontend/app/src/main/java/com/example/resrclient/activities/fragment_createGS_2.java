@@ -54,21 +54,7 @@ public class fragment_createGS_2 extends Fragment {
         NavController navController = Navigation.findNavController(view);
         Bundle bundle = this.getArguments();
 
-        TextView tv = view.findViewById(R.id.nameGSfromFrag1);
-        tv.setText(bundle.getString("name"));
 
-        TextView tv2 = view.findViewById(R.id.testintfromFrag1);
-        tv2.setText(bundle.getString("category"));
-
-        Button button = view.findViewById(R.id.tofrag1btn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Hier wird die Navigation von Frag1 und Frag2 definiert
-                //Die Action ID wird aus dem navgraph übernommen
-                navController.navigate(R.id.action_fragment_createGS_2_to_fragment_createGS_1);
-            }
-        });
 
 
         //Hier der Button der zum 3. Fragment führt

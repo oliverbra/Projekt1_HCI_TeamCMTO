@@ -11,13 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/text_background"
+            app:layout_constraintBottom_toTopOf="@+id/frag1tofrag2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_firstfrag" />
+
         <TextView
             android:id="@+id/textViewcreateGS_firstfrag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/comfortaa"
-            android:text="Erstes Fragment"
+            android:text="Dein erster Grow Space"
             android:textAppearance="@style/H1"
             android:textColor="@color/fontcolor"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,83 +38,93 @@
 
         <EditText
             android:id="@+id/createGS_name_editTextTextName"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginLeft="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/input_field"
+            android:elevation="16dp"
             android:ems="10"
-            android:hint="Name"
+            android:fontFamily="@font/comfortaa"
+            android:hint="Name deines Grow Space"
             android:inputType="text"
+            android:paddingLeft="16dp"
+            android:paddingTop="24dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="24dp"
+            android:textAppearance="@style/Input_Field"
+            android:textColor="@color/green01"
+            android:textColorHint="@color/green03"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frag1tofrag2" />
+            app:layout_constraintTop_toTopOf="@+id/view4" />
 
 
-<!--        <EditText-->
-<!--            android:id="@+id/createGS_size_editTextTextSize"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="100dp"-->
-<!--            android:layout_marginLeft="100dp"-->
-<!--            android:layout_marginTop="62dp"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="numberDecimal"-->
-<!--            android:text="Size (optional)"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/createGS_goal_editTextTextGoal" />-->
+        <!--        <EditText-->
+        <!--            android:id="@+id/createGS_size_editTextTextSize"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="100dp"-->
+        <!--            android:layout_marginLeft="100dp"-->
+        <!--            android:layout_marginTop="62dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="numberDecimal"-->
+        <!--            android:text="Size (optional)"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/createGS_goal_editTextTextGoal" />-->
 
-<!--        <EditText-->
-<!--            android:id="@+id/createGS_location_editTextTextLocation"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="100dp"-->
-<!--            android:layout_marginLeft="100dp"-->
-<!--            android:layout_marginTop="62dp"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="text"-->
-<!--            android:text="Location (optional)"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/createGS_size_editTextTextSize" />-->
+        <!--        <EditText-->
+        <!--            android:id="@+id/createGS_location_editTextTextLocation"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="100dp"-->
+        <!--            android:layout_marginLeft="100dp"-->
+        <!--            android:layout_marginTop="62dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="text"-->
+        <!--            android:text="Location (optional)"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/createGS_size_editTextTextSize" />-->
 
-<!--        <EditText-->
-<!--            android:id="@+id/createGS_problems_editTextTextProblems"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="100dp"-->
-<!--            android:layout_marginLeft="100dp"-->
-<!--            android:layout_marginTop="62dp"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="text"-->
-<!--            android:text="Problems (optional)"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/createGS_location_editTextTextLocation" />-->
+        <!--        <EditText-->
+        <!--            android:id="@+id/createGS_problems_editTextTextProblems"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="100dp"-->
+        <!--            android:layout_marginLeft="100dp"-->
+        <!--            android:layout_marginTop="62dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="text"-->
+        <!--            android:text="Problems (optional)"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/createGS_location_editTextTextLocation" />-->
 
         <Spinner
             android:id="@+id/createGS_categories_spinner"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/createGS_name_editTextTextName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/createGS_name_editTextTextName"
             app:layout_constraintTop_toBottomOf="@+id/createGS_name_editTextTextName" />
 
-        <Button
-            android:id="@+id/createGS_submit_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:text="Create GS"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_firstfrag" />
-
-        <Button
+        <ImageButton
             android:id="@+id/frag1tofrag2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:text="Zum 2. Fragment"
-            app:layout_constraintEnd_toEndOf="@+id/createGS_submit_button"
-            app:layout_constraintStart_toStartOf="@+id/createGS_submit_button"
-            app:layout_constraintTop_toBottomOf="@+id/createGS_submit_button" />
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/round_button"
+            android:elevation="4dp"
+            android:src="@drawable/ic_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
