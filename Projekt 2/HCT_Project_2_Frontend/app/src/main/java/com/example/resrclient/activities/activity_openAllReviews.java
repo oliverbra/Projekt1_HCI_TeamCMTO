@@ -42,7 +42,7 @@ public class activity_openAllReviews extends AppCompatActivity {
 
         //Display all reviews and make selection possible here
 
-        Log.v("REVIEW", "REVIEWS" +  allReviews.get(0).getId());
+//        Log.v("REVIEW", "REVIEWS" +  allReviews.get(0).getId());
         CustomAdapter adapter = new CustomAdapter(getApplicationContext(),R.layout.list_item_style,allReviews);
         List<String> justRating = new ArrayList<String>();
         for (int i = 0; i<allReviews.size();i++){

@@ -72,29 +72,6 @@ public class fragment_createGS_5plants extends Fragment {
         ListView lv = view.findViewById(R.id.plantsListView);
         PlantAdapter plantAdapter = new PlantAdapter(this.getContext(), allPlants);
         lv.setAdapter(plantAdapter);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                View clickedPlant = (View) parent.getAdapter().getItem(position);
-
-
-            }
-        });
-
-
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(button.getText().equals("Add")) {
-//                    button.setText("Remove");
-//                    //fragment_createGS_5plants.addPlant(allPlants.get(button.getId()).getId());
-//                } else {
-//                    button.setText("Add");
-//                    //fragment_createGS_5plants.removePlant(allPlants.get(button.getId()).getId());
-//                }
-//            }
-//        });
-
 
         //Hier der Button der zum 6. Fragment führt
         Button toFrag3btn = view.findViewById(R.id.frag5tofrag6);

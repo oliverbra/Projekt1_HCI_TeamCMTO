@@ -1,5 +1,6 @@
 package com.example.resrclient.activities;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,10 +21,14 @@ import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.CreateGSTask;
 import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.Review;
+import com.example.resrclient.restClasses.RestTaskPlant;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
 
 public class fragment_createGS_6 extends Fragment {
 
@@ -59,15 +65,30 @@ public class fragment_createGS_6 extends Fragment {
         goal = bundle.getString("goal");
         problems = bundle.getString("problems");
 
+        Set<String> set = new HashSet<String>();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+        set = pref.getStringSet("selectedPlants", null);
+
+        if(set != null) {
+            for (String entry : set)
+            {
+                String url = "http://10.0.2.2:8080/plants/" + entry;
+                Plants selectedPlant = null;
+                try {
+                    selectedPlant = new RestTaskPlant().execute(url).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                selectedPlants.add(selectedPlant);
+            }
+        }
+
+
         return v;
     }
 
-    boolean validateInput(String name, String category) {
-
-        if (name.equals("") || category.equals("")) {
-            return false;
-        } else { return true;}
-    }
 
     public void createGSAction(View view){
         final String url = "http://10.0.2.2:8080/growspaces";
@@ -82,9 +103,7 @@ public class fragment_createGS_6 extends Fragment {
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         NavController navController = Navigation.findNavController(view);
-
 
         Button createGSbtn = view.findViewById(R.id.createGS_submit_button);
         createGSbtn.setOnClickListener(new View.OnClickListener() {

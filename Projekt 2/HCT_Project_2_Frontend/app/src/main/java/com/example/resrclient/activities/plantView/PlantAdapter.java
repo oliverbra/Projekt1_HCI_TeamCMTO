@@ -64,18 +64,18 @@ public class PlantAdapter extends ArrayAdapter<Plants> {
 
                     Set<String>  set = new HashSet<String>();
                     SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(ctx);
-                    set = pref.getStringSet("key", null);
+                    set = pref.getStringSet("selectedPlants", null);
 
                     SharedPreferences.Editor edit = pref.edit();
                     set.add(allPlants.get(position).getId().toString());
-                    edit.putStringSet("key", set);
+                    edit.putStringSet("selectedPlants", set);
                     edit.commit();
 
                 } else {
                     finalHolder.button.setText("Add");
                     Set<String>  set = new HashSet<String>();
                     SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(ctx);
-                    set = pref.getStringSet("key", null);
+                    set = pref.getStringSet("selectedPlants", null);
 
                     SharedPreferences.Editor edit = pref.edit();
 
@@ -86,7 +86,7 @@ public class PlantAdapter extends ArrayAdapter<Plants> {
                         }
                     }
 
-                    edit.putStringSet("key", set);
+                    edit.putStringSet("selectedPlants", set);
                     edit.commit();
                 }
             }
