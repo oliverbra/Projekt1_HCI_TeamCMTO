@@ -21,15 +21,15 @@ public class FileDownloadController {
     private FileService fileService;
 
     @GetMapping("/getFile/{id}")
-    public ResponseEntity <byte[]> getFile(@PathVariable Integer id) {//byte[]
+    public ResponseEntity <File> getFile(@PathVariable Integer id) {//byte[]
         File file = fileService.getFile(id);
 
-        return ResponseEntity
-                .ok()
-                .contentType(MediaType.parseMediaType(file.getFileType()))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFileName() + "\"")
-                .body(file.getData());
+//        return ResponseEntity
+//                .ok()
+//                .contentType(MediaType.parseMediaType(file.getFileType()))
+//                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFileName() + "\"")
+//                .body(file.getData());
 
-     //     return new ResponseEntity(file, HttpStatus.OK);
+          return new ResponseEntity(file, HttpStatus.OK);
     }
 }
