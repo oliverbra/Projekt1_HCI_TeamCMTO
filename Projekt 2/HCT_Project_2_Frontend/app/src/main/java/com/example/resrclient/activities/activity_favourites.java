@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import com.example.resrclient.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+//Nicht meher im Scope
 public class activity_favourites extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;

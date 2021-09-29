@@ -4,14 +4,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.AllReviewsTask;
+import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.Review;
+import com.example.resrclient.objectClasses.User;
+import com.example.resrclient.restClasses.RestTaskUser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
@@ -23,6 +30,8 @@ public class activity_startseite extends AppCompatActivity{
 
     List<Review> allReviews;
     ImageView unopenedReviewIcon;
+
+    private GrowSpace growSpace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,9 +91,36 @@ public class activity_startseite extends AppCompatActivity{
             unopenedReviewIcon.setVisibility(View.GONE);
         }
 
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        int userId = preferences.getInt("userId", 0);
+        String url = "http://10.0.2.2:8080/users/" + userId;
+        User currentUser = null;
+        try {
+            currentUser = new RestTaskUser().execute(url).get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        growSpace = currentUser.getGrowSpace();
+
+        TextView nameGS = findViewById(R.id.startseite_nameGS);
+        TextView ratingGS = findViewById(R.id.startseite_Rating_TExtView);
+        ProgressBar levelProgress = findViewById(R.id.startseite_progressBar);
+        nameGS.setText(growSpace.getName());
+        levelProgress.setProgress(currentUser.getLevel().getLevel());
+        ratingGS.setText(String.format("%.2f", (averageRating(allReviews))));
+
 
     }
-
+    //errechnen des durschnitt Ratings
+    public double averageRating(List<Review> reviewList){
+        double averageRATING = 0.0;
+        for (int i = 0; i<reviewList.size();i++){
+            averageRATING+=reviewList.get(i).getRating();
+        }
+        return  averageRATING/reviewList.size();
+    }
     public void chanceProgress(View view) {
         Intent intent = new Intent(this, activity_progress.class);
         startActivity(intent); }

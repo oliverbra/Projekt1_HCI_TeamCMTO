@@ -12,18 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ResrClient"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.activity_favourites"></activity>
+        <activity android:name=".activities.activity_favourites" />
         <activity android:name=".activities.activity_growspace" />
         <activity android:name=".activities.activity_progress" />
         <activity android:name=".activities.activity_startseite" />
         <activity android:name=".activities.activity_review" />
         <activity android:name=".activities.activity_createGS" />
         <activity android:name=".activities.activity_editGS" />
-        <activity android:name=".activities.activity_regiestrierung"/>
-        <activity android:name=".activities.activity_sentReview"/>
-        <activity android:name=".activities.activity_randomGS"/>
-        <activity android:name=".activities.activity_openAllReviews"/>
-        <activity android:name=".activities.activity_openReview"/>
+        <activity android:name=".activities.activity_regiestrierung" />
+        <activity android:name=".activities.activity_sentReview" />
+        <activity android:name=".activities.activity_randomGS" />
+        <activity android:name=".activities.activity_openAllReviews" />
+        <activity android:name=".activities.activity_openReview" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".activities.activity_logIn"

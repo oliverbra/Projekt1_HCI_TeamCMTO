@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.example.resrclient.objectClasses.Review;
 import com.example.resrclient.objectClasses.ReviewList;
@@ -27,26 +28,29 @@ public class AllReviewsTask extends AsyncTask<String, Void, List<Review>> {
     @Override
     protected List<Review> doInBackground(String... strings) {
 
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
+        Integer userId = preferences.getInt("userId", 0);
+
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
         ReviewList response = restTemplate.getForObject("http://10.0.2.2:8080/reviews", ReviewList.class);
         List<Review> allReviews = response.getReviewList();
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
-        Integer userId = preferences.getInt("userId", 0);
 
         // get currentUser based on preferenced userId after LoginActivity
-        User newUser = new User(userId);
-        User currentUser = restTemplate.getForObject("http://10.0.2.2:8080/users/" + newUser.getId(), User.class);
+       // User newUser = new User(userId);
+        //User currentUser = restTemplate.getForObject("http://10.0.2.2:8080/users/" + newUser.getId(), User.class);
 
         List<Review> myReviews = new ArrayList<>();
-        for (Review review : allReviews)
-        {
-            if(review.getGrowSpace().getId() == currentUser.getGrowSpace().getId()) {
-               myReviews.add(review);
-            }
-        }
+        Log.v("REVIEWTASK", "REVIEWS" +  allReviews.get(0).getId());
+//        for (Review review : allReviews)
+//        {
+//            if(review.getGrowSpace().getId() == currentUser.getGrowSpace().getId()) {
+//               myReviews.add(review);
+//            }
+//        }
 
-        return myReviews;
+        return allReviews;
     }
 }
