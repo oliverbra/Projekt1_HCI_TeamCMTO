@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.TextView;
+
 import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.ReviewTask;
 
@@ -31,6 +33,8 @@ public class activity_review extends AppCompatActivity {
         naturalCriteria = findViewById(R.id.naturalRatingBarr);
         dangerCriteria = findViewById(R.id.dangerRatingBar);
         comment = findViewById(R.id.commentField);
+
+        //Todo: Hier müssen noch Daten wie GSname, name des Users usw. übergeben werden: Wie spreche ich hier einen GS an?
     }
 
 

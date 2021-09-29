@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -140,7 +141,7 @@ public class fragment_createGS_1 extends Fragment {
 
         NavController navController = Navigation.findNavController(view);
 
-        Button button = view.findViewById(R.id.frag1tofrag2);
+        ImageButton button = view.findViewById(R.id.frag1tofrag2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
