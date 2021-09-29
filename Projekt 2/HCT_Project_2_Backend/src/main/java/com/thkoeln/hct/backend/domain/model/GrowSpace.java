@@ -40,7 +40,7 @@ public class GrowSpace {
     @JsonBackReference(value="review")
     private Set<Review> reviews = new HashSet<>();
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable
     private Set<Plants> plants = new HashSet<>();
 

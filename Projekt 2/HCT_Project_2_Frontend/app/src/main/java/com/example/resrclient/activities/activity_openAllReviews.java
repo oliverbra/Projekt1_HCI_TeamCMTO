@@ -30,7 +30,7 @@ public class activity_openAllReviews extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openallreviews);
-        ListView listReviews =findViewById(R.id.simpleListView);
+        ListView listReviews = findViewById(R.id.simpleListView);
         try {
             allReviews = new AllReviewsTask(this).execute().get();
 

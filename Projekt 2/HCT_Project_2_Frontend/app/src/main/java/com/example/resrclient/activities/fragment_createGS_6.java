@@ -39,7 +39,7 @@ public class fragment_createGS_6 extends Fragment {
     private String goal;
     private String problems;
     private ArrayList<Review> reviews;
-    private ArrayList<Plants> selectedPlants;
+    private ArrayList<Plants> selectedPlants = new ArrayList<>();
 
     public fragment_createGS_6() {
         // Required empty public constructor
