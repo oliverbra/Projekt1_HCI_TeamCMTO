@@ -42,13 +42,13 @@
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:numStars="5"
             android:progressBackgroundTint="@color/light01"
             android:progressTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="@+id/singleReview_TextView_Rating"
-            app:layout_constraintStart_toEndOf="@+id/singleReview_TextView_Rating"
+            app:layout_constraintEnd_toStartOf="@+id/singleReview_TextView_Date"
             app:layout_constraintTop_toTopOf="@+id/singleReview_TextView_Rating" />
 
         <TextView
