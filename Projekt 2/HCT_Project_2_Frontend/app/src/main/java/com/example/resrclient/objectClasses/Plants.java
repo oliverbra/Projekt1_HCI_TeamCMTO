@@ -25,7 +25,7 @@ public class Plants {
     private String nutrientRequirements;
     private String careText;
     private String url;
-    private List<GrowSpace> growSpace;
+    private GrowSpace growSpace;
     private File file;
 
 
@@ -220,11 +220,11 @@ public class Plants {
         this.id = plantId;
     }
 
-    public List<GrowSpace> getGrowSpace() {
+    public GrowSpace getGrowSpace() {
         return growSpace;
     }
 
-    public void setGrowSpace(List<GrowSpace> growSpace) {
+    public void setGrowSpace(GrowSpace growSpace) {
         this.growSpace = growSpace;
     }
 

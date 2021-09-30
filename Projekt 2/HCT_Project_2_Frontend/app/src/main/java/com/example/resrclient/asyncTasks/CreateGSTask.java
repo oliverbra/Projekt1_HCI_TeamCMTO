@@ -13,6 +13,7 @@ import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.Review;
 import com.example.resrclient.objectClasses.User;
+import com.example.resrclient.restClasses.RestTaskPlant;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.HttpClientErrorException;
@@ -20,6 +21,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class CreateGSTask extends AsyncTask<String, Void, GrowSpace> {
 
@@ -58,16 +60,27 @@ public class CreateGSTask extends AsyncTask<String, Void, GrowSpace> {
 
         GrowSpace newGS = new GrowSpace(currentUser, name, goal, category, size, location, problems, 0.0, false, plants, reviews);
 
-
+        GrowSpace result = null;
         try{
-            GrowSpace result = restTemplate.postForObject(url, newGS, GrowSpace.class);
+            result = restTemplate.postForObject(url, newGS, GrowSpace.class);
             System.out.println("Done. " + result.toString());
-            return result;
+
         } catch (Exception e) {
             System.out.println(e.toString());
             System.out.println("Failed. " + newGS.toString());
         }
-        return null;
+
+        if(newGS.getPlants().size() != 0) {
+            for (Plants plant : newGS.getPlants())
+            {
+                String plantUrl = "http://10.0.2.2:8080/plants/";
+                Plants updatedPlant = plant;
+                updatedPlant.setGrowSpace(result);
+                restTemplate.put(plantUrl, updatedPlant, Plants.class);
+            }
+        }
+
+        return result;
     }
 
     @Override
