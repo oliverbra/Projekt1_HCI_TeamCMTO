@@ -50,6 +50,27 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <Button
+            android:id="@+id/onBoarding_bilderWahl_hButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="158dp"
+            android:layout_marginLeft="158dp"
+            android:layout_marginTop="32dp"
+            android:text="wähle Bilder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <ImageView
+            android:id="@+id/imageView4_test_Bilder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4"
+            tools:src="@tools:sample/avatars" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
