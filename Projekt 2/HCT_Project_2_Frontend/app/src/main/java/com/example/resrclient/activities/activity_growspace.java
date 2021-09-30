@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.resrclient.R;
@@ -29,6 +30,7 @@ public class activity_growspace extends AppCompatActivity {
     BottomNavigationView bottomNavigationView; //Navigation
     private TextView name, goal, category, usernameGS;
     private GrowSpace growSpace;
+    private ImageView gsImg;
 
     private ActivityGrowspaceBinding binding;
     @Override
@@ -56,6 +58,9 @@ public class activity_growspace extends AppCompatActivity {
             e.printStackTrace();
         }
         growSpace = currentUser.getGrowSpace();
+
+        gsImg = findViewById(R.id.main_image_gs);
+        gsImg.setImageResource(R.drawable.mygs_pic1);
 
         binding = ActivityGrowspaceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

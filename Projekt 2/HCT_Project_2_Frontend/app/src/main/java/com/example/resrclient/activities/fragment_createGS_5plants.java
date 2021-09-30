@@ -51,13 +51,13 @@ public class fragment_createGS_5plants extends Fragment {
         View v = inflater.inflate(R.layout.fragment_create_g_s_plants, container, false);
 
         String url = "http://10.0.2.2:8080/plants";
-       try {
-           allPlants = new AllPlantsTask().execute(url).get();
-       } catch (ExecutionException e) {
-          e.printStackTrace();
-       } catch (InterruptedException e) {
+        try {
+            allPlants = new AllPlantsTask().execute(url).get();
+        } catch (ExecutionException e) {
             e.printStackTrace();
-       }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
        return v;
     }

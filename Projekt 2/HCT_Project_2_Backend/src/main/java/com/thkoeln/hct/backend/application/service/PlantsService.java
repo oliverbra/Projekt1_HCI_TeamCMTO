@@ -61,8 +61,9 @@ public class PlantsService {
 
     public Plants update(@NonNull Plants plants){
         Plants plantToUpdate = plantsRepository.findPlantsById(plants.getId());
+        plantToUpdate.setGrowSpace(plants.getGrowSpace());
         plantsRepository.save(plants);
-        return  plants;
+        return plants;
     }
 
     /*public Plants update(@NonNull Plants plants){

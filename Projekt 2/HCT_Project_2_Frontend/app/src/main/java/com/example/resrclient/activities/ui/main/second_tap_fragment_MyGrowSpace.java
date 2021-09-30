@@ -18,9 +18,12 @@ import android.widget.TextView;
 
 import com.example.resrclient.R;
 import com.example.resrclient.activities.plantView.PlantAdapter;
+import com.example.resrclient.activities.plantView.PlantAdapter2;
+import com.example.resrclient.asyncTasks.AllAddedPlantsTask;
 import com.example.resrclient.carousel.CarouselAdapter;
 import com.example.resrclient.carousel.CarouselItem;
 import com.example.resrclient.objectClasses.GrowSpace;
+import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.User;
 import com.example.resrclient.restClasses.RestTaskUser;
 
@@ -32,6 +35,7 @@ import java.util.concurrent.ExecutionException;
 public class second_tap_fragment_MyGrowSpace extends Fragment {
 
     private GrowSpace growSpace;
+    private List<Plants> myPlants;
 
     public second_tap_fragment_MyGrowSpace() {
         // Required empty public constructor
@@ -62,13 +66,21 @@ public class second_tap_fragment_MyGrowSpace extends Fragment {
         }
         growSpace = currentUser.getGrowSpace();
 
+        try {
+            myPlants = new AllAddedPlantsTask().execute(growSpace.getId().toString()).get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         TextView info = v.findViewById(R.id.my_gs_plantInfo);
         ListView lv = v.findViewById(R.id.my_gs_plantsListView);
 
-        if(growSpace.getSize() != 0) {
+        if(myPlants.size() != 0) {
             lv.setVisibility(View.VISIBLE);
             info.setVisibility(View.GONE);
-            PlantAdapter plantAdapter = new PlantAdapter(this.getContext(), growSpace.getPlants());
+            PlantAdapter2 plantAdapter = new PlantAdapter2(this.getContext(), myPlants);
             lv.setAdapter(plantAdapter);
         } else {
             info.setVisibility(View.VISIBLE);

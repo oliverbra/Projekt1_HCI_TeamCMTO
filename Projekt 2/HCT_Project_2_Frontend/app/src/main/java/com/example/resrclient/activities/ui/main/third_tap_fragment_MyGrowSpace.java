@@ -17,6 +17,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.example.resrclient.R;
 import com.example.resrclient.carousel.CarouselAdapter;
 import com.example.resrclient.carousel.CarouselItem;
+import com.example.resrclient.fileUplaod_Download.Bilder_save_load;
 import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.User;
 import com.example.resrclient.restClasses.RestTaskUser;
@@ -107,11 +108,9 @@ public class third_tap_fragment_MyGrowSpace extends Fragment {
 
         // Carousel --> add GS Images here
         List<CarouselItem> carouselItems = new ArrayList<>();
-        carouselItems.add(new CarouselItem(R.drawable.one));
-        carouselItems.add(new CarouselItem(R.drawable.two));
-        carouselItems.add(new CarouselItem(R.drawable.three));
-        carouselItems.add(new CarouselItem(R.drawable.four));
-        carouselItems.add(new CarouselItem(R.drawable.five));
+        carouselItems.add(new CarouselItem(R.drawable.mygs_pic1));
+        carouselItems.add(new CarouselItem(R.drawable.mygs_pic2));
+        carouselItems.add(new CarouselItem(R.drawable.mygs_pic3));
 
         if(carouselItems.isEmpty()) {
             carousel.setVisibility(View.GONE);

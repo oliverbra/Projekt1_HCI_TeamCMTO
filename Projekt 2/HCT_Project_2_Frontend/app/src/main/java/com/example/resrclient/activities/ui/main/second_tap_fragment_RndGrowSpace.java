@@ -16,14 +16,20 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.resrclient.R;
 import com.example.resrclient.activities.plantView.PlantAdapter;
+import com.example.resrclient.activities.plantView.PlantAdapter2;
+import com.example.resrclient.asyncTasks.AllAddedPlantsTask;
 import com.example.resrclient.objectClasses.GrowSpace;
+import com.example.resrclient.objectClasses.Plants;
 import com.example.resrclient.objectClasses.User;
 import com.example.resrclient.restClasses.RestTaskGrowSpace;
 import com.example.resrclient.restClasses.RestTaskUser;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class second_tap_fragment_RndGrowSpace extends Fragment {
+
+    private List<Plants> myPlants;
 
     public second_tap_fragment_RndGrowSpace() {
         // Required empty public constructor
@@ -43,10 +49,9 @@ public class second_tap_fragment_RndGrowSpace extends Fragment {
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(v.getContext());
         int gsId = preferences.getInt("rndGS", 0);
-        String url = "http://10.0.2.2:8080/growspaces/" + gsId;
-        GrowSpace growSpace = null;
+
         try {
-            growSpace = new RestTaskGrowSpace().execute(url).get();
+            myPlants = new AllAddedPlantsTask().execute(String.valueOf(gsId)).get();
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -56,10 +61,10 @@ public class second_tap_fragment_RndGrowSpace extends Fragment {
         TextView info = v.findViewById(R.id.rnd_gs_plantInfo);
         ListView lv = v.findViewById(R.id.rnd_gs_plantsListView);
 
-        if(growSpace.getSize() != 0) {
+        if(myPlants.size() != 0) {
             lv.setVisibility(View.VISIBLE);
             info.setVisibility(View.GONE);
-            PlantAdapter plantAdapter = new PlantAdapter(this.getContext(), growSpace.getPlants());
+            PlantAdapter2 plantAdapter = new PlantAdapter2(this.getContext(), myPlants);
             lv.setAdapter(plantAdapter);
         } else {
             info.setVisibility(View.VISIBLE);

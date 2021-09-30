@@ -40,8 +40,8 @@ public class GrowSpace {
     @JsonBackReference(value="review")
     private Set<Review> reviews = new HashSet<>();
 
-    @ManyToMany( cascade = CascadeType.MERGE)
-    @JoinTable
+    @OneToMany(mappedBy = "growSpace", cascade = CascadeType.MERGE)
+    @JsonBackReference(value = "plants")
     private Set<Plants> plants = new HashSet<>();
 
 //    @ManyToOne(fetch =  FetchType.LAZY)

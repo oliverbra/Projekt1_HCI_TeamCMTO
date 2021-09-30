@@ -115,6 +115,7 @@ public class activity_startseite extends AppCompatActivity{
         raitingbarGS.setRating((float)averageRating(allReviews));
 
         ImageView profile = findViewById(R.id.imageView_profilbild);
+
 //        Bilder_save_load bsl = new Bilder_save_load();
 //        profile.setImageBitmap(bsl.loadImageBitmap(this,"testBild"));
 
@@ -130,6 +131,7 @@ public class activity_startseite extends AppCompatActivity{
                 levelicon.setImageResource(R.drawable.blume3);
                 break;
         }
+
 
     }
     //errechnen des durschnitt Ratings

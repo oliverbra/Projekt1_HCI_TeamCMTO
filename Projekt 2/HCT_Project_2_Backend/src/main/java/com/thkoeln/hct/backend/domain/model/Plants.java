@@ -49,8 +49,9 @@ public class Plants {
     @Column(nullable = false)
     private String url;
 
-    @ManyToMany(mappedBy = "plants")
-    private Set<GrowSpace> growSpace = new HashSet<>();
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "gs_Id", referencedColumnName = "id")
+    private GrowSpace growSpace;
 
     @OneToOne(fetch =  FetchType.LAZY)
     @JoinColumn(name = "files_id",referencedColumnName = "id")
