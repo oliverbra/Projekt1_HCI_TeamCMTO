@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.AllReviewsTask;
-import com.example.resrclient.asyncTasks.TaskGetAllReviewsGrowSpace;
 import com.example.resrclient.objectClasses.Review;
 
 import com.example.resrclient.allReviewsView.AllReviewsAdapter;

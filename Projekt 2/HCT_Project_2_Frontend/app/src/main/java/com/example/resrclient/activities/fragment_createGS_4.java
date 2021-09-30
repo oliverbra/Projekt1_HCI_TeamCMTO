@@ -144,8 +144,12 @@ public class fragment_createGS_4 extends Fragment {
         }
 
 
-        ImageView testView = v.findViewById(R.id.imageView4_test_Bilder);
-        testView.setImageBitmap(bsl.loadImageBitmap(getActivity().getApplicationContext(),"growSpaceBild0"));
+        ImageView testView1 = v.findViewById(R.id.imageView4_test_Bilder1);
+        ImageView testView2 = v.findViewById(R.id.imageView4_test_Bilder2);
+        ImageView testView3 = v.findViewById(R.id.imageView4_test_Bilder3);
+        testView1.setImageBitmap(bsl.loadImageBitmap(getActivity().getApplicationContext(),"growSpaceBild0"));
+        testView2.setImageBitmap(bsl.loadImageBitmap(getActivity().getApplicationContext(),"growSpaceBild1"));
+        testView3.setImageBitmap(bsl.loadImageBitmap(getActivity().getApplicationContext(),"growSpaceBild2"));
 
     }
 }

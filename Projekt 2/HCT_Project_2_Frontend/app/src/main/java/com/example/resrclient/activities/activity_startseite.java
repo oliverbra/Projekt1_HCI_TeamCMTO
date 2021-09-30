@@ -116,7 +116,7 @@ public class activity_startseite extends AppCompatActivity{
 
         ImageView profile = findViewById(R.id.imageView_profilbild);
         Bilder_save_load bsl = new Bilder_save_load();
-        profile.setImageBitmap(bsl.loadImageBitmap(this,"testBild"));
+        profile.setImageBitmap(bsl.loadImageBitmap(this,"growSpaceBild"));
 
     }
     //errechnen des durschnitt Ratings
