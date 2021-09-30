@@ -105,11 +105,9 @@ public class third_tap_fragment_RndGrowSpace extends Fragment {
 
         // Carousel --> add GS Images here
         List<CarouselItem> carouselItems = new ArrayList<>();
-//        carouselItems.add(new CarouselItem(R.drawable.one));
-//        carouselItems.add(new CarouselItem(R.drawable.two));
-//        carouselItems.add(new CarouselItem(R.drawable.three));
-//        carouselItems.add(new CarouselItem(R.drawable.four));
-//        carouselItems.add(new CarouselItem(R.drawable.five));
+        carouselItems.add(new CarouselItem(R.drawable.rndgs_pic1));
+        carouselItems.add(new CarouselItem(R.drawable.rndgs_pic2));
+        carouselItems.add(new CarouselItem(R.drawable.rndgs_pic3));
 
         if(carouselItems.isEmpty()) {
             carousel.setVisibility(View.GONE);

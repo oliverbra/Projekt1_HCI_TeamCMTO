@@ -88,6 +88,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
+
+
     <ImageView
         android:id="@+id/imageView_profilbild"
         android:layout_width="wrap_content"
