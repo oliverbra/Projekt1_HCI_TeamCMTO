@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_onboarding">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_onboarding"
+    app:startDestination="@id/fragment_onboarding_1">
 
+    <fragment
+        android:id="@+id/fragment_onboarding_1"
+        android:name="com.example.resrclient.activities.fragment_onboarding_1"
+        android:label="fragment_onboarding_1"
+        tools:layout="@layout/fragment_onboarding_1" >
+        <action
+            android:id="@+id/action_fragment_onboarding_1_to_fragment_onboarding_2"
+            app:destination="@id/fragment_onboarding_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_onboarding_2"
+        android:name="com.example.resrclient.activities.fragment_onboarding_2"
+        android:label="fragment_onboarding_2"
+        tools:layout="@layout/fragment_onboarding_2" >
+        <action
+            android:id="@+id/action_fragment_onboarding_2_to_fragment_onboarding_3"
+            app:destination="@id/fragment_onboarding_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_onboarding_3"
+        android:name="com.example.resrclient.activities.fragment_onboarding_3"
+        android:label="fragment_onboarding_3"
+        tools:layout="@layout/fragment_onboarding_3" />
 </navigation>
