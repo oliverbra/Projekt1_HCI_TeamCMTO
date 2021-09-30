@@ -33,7 +33,6 @@ import java.util.concurrent.ExecutionException;
 public class fragment_createGS_5plants extends Fragment {
 
     private List<Plants> allPlants;
-    private int[] selectedPlants;
 
     public fragment_createGS_5plants() {
         // Required empty public constructor
@@ -80,7 +79,7 @@ public class fragment_createGS_5plants extends Fragment {
         PlantAdapter plantAdapter = new PlantAdapter(this.getContext(), allPlants);
         lv.setAdapter(plantAdapter);
 
-        //Hier der Button der zum 6. Fragment führt
+        //Hier der Button, der zum 6. Fragment führt
         Button toFrag3btn = view.findViewById(R.id.frag5tofrag6);
         toFrag3btn.setOnClickListener(new View.OnClickListener() {
             @Override

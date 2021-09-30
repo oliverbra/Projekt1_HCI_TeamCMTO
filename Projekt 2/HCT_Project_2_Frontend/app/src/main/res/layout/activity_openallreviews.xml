@@ -1,53 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.activity_openAllReviews">
+
+    <TextView
+        android:id="@+id/textViewAllReviewsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Erhaltene Bewertungen"
+        android:textAppearance="@style/H1"
+        android:textColor="@color/fontcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAllReviewsDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Hier kannst du alle Bewertungen sehen, die dein GrowSpace erhalten hat"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAllReviewsTitle" />
 
     <ListView
-        android:id="@+id/simpleListView"
-        android:layout_width="fill_parent"
+        android:id="@+id/reviewListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAllReviewsDescription"
+        app:layout_constraintBottom_toTopOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:divider="@color/material_blue_grey_800"
-        android:dividerHeight="1dp" />
-</LinearLayout>
+        android:onClick="backActivity"
+        android:text="Zurück"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--    xmlns:tools="http://schemas.android.com/tools"-->
-    <!--    android:layout_width="match_parent"-->
-    <!--    android:layout_height="match_parent"-->
-    <!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
-
-    <!--&lt;!&ndash;    <Button&ndash;&gt;-->
-    <!--&lt;!&ndash;        android:id="@+id/button2"&ndash;&gt;-->
-    <!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;        android:layout_marginBottom="368dp"&ndash;&gt;-->
-    <!--&lt;!&ndash;        android:onClick="changeActivity"&ndash;&gt;-->
-    <!--&lt;!&ndash;        android:text="Auswahl"&ndash;&gt;-->
-    <!--&lt;!&ndash;        app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-    <!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-    <!--&lt;!&ndash;        app:layout_constraintHorizontal_bias="0.498"&ndash;&gt;-->
-    <!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent" />&ndash;&gt;-->
-
-    <!--    &lt;!&ndash;        android:layout_width="409dp"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        android:layout_height="366dp"&ndash;&gt;-->
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:orientation="vertical">-->
-
-    <!--        <ListView-->
-    <!--            android:id="@+id/ListView_OpenAllReviews"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginStart="1dp"-->
-    <!--            android:layout_marginLeft="1dp"-->
-    <!--            android:layout_marginTop="1dp"-->
-    <!--            android:divider="#f00"-->
-    <!--            android:dividerHeight="1dp"-->
-    <!--            android:listSelector="#0f0" />-->
-
-    <!--    </LinearLayout>-->
-    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
