@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activities.fragment_onboarding_2">
+    tools:context=".activities.fragment_onboarding_start0">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,7 +15,8 @@
             android:id="@+id/view11"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="210dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/transparent_bg_element_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -23,14 +25,27 @@
 
         <View
             android:id="@+id/view8"
-            android:layout_width="384dp"
-            android:layout_height="250dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/ic__10923_onboarding_2"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="348dp"
+            android:background="@drawable/ic__10923_florfliege"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.158"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="Grow Up"
+            android:textAppearance="@style/H1"
+            android:textColor="@color/fontcolor"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/textView5"
@@ -38,11 +53,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="128dp"
             android:fontFamily="@font/comfortaa"
-            android:text="Lerne!"
+            android:text="Willkommen bei"
             android:textAppearance="@style/H1"
             android:textColor="@color/fontcolor"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,35 +64,24 @@
             android:id="@+id/textView10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:background="@drawable/input_field"
             android:fontFamily="@font/nunito"
             android:gravity="center"
             android:padding="16dp"
-            android:text="Denn Insekten, wie ich, halten den Kreislauf der Natur zusammen. Und wir können überall leben! Egal ob in dunklen, verwachsenen Gärten oder hoch oben auf den Balkonen der Stadt."
+            android:text="Hey! Ich bin eine Florfliege und werde dich heute durch das Gestrüpp einer digitalen Garten-Community führen."
             android:textAppearance="@style/B1"
             android:textColor="@color/fontcolor"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <View
-            android:id="@+id/view12"
-            android:layout_width="160dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="420dp"
-            android:background="@drawable/ic__10923_florfliege"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.931"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/view8" />
 
         <ImageButton
-            android:id="@+id/onboarding_frag2tofrag3btn"
+            android:id="@+id/onboarding_fragstarttofrag1btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
@@ -89,6 +92,7 @@
             android:src="@drawable/ic_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

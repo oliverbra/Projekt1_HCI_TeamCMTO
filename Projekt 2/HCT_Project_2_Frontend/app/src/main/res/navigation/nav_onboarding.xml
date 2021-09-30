@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_onboarding"
-    app:startDestination="@id/fragment_onboarding_1">
+    app:startDestination="@id/fragment_onboarding_start0">
 
     <fragment
         android:id="@+id/fragment_onboarding_1"
@@ -28,4 +28,13 @@
         android:name="com.example.resrclient.activities.fragment_onboarding_3"
         android:label="fragment_onboarding_3"
         tools:layout="@layout/fragment_onboarding_3" />
+    <fragment
+        android:id="@+id/fragment_onboarding_start0"
+        android:name="com.example.resrclient.activities.fragment_onboarding_start0"
+        android:label="fragment_onboarding_start0"
+        tools:layout="@layout/fragment_onboarding_start0" >
+        <action
+            android:id="@+id/action_fragment_onboarding_start0_to_fragment_onboarding_1"
+            app:destination="@id/fragment_onboarding_1" />
+    </fragment>
 </navigation>
