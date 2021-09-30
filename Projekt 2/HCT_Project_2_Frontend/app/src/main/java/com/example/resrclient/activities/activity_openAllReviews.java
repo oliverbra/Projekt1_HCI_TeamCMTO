@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.AllReviewsTask;
+import com.example.resrclient.asyncTasks.TaskGetAllReviewsGrowSpace;
 import com.example.resrclient.objectClasses.Review;
 
 import com.example.resrclient.allReviewsView.AllReviewsAdapter;
@@ -27,7 +28,7 @@ public class activity_openAllReviews extends AppCompatActivity {
         setContentView(R.layout.activity_openallreviews);
 
         try {
-            allReviews = new AllReviewsTask(this).execute().get();
+            allReviews = new TaskGetAllReviewsGrowSpace(this).execute().get();
 
         } catch (ExecutionException e) {
             e.printStackTrace();

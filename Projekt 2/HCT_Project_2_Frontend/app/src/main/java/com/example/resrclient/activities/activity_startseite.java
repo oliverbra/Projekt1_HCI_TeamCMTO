@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.resrclient.R;
 import com.example.resrclient.asyncTasks.AllReviewsTask;
+import com.example.resrclient.fileUplaod_Download.Bilder_save_load;
 import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.Review;
 import com.example.resrclient.objectClasses.User;
@@ -113,7 +114,9 @@ public class activity_startseite extends AppCompatActivity{
         RatingBar raitingbarGS = findViewById(R.id.averagerating);
         raitingbarGS.setRating((float)averageRating(allReviews));
 
-
+        ImageView profile = findViewById(R.id.imageView_profilbild);
+        Bilder_save_load bsl = new Bilder_save_load();
+        profile.setImageBitmap(bsl.loadImageBitmap(this,"testBild"));
 
     }
     //errechnen des durschnitt Ratings
