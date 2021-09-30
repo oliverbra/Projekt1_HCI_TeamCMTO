@@ -1,0 +1,30 @@
+package com.example.resrclient.activities;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+
+import com.example.resrclient.R;
+
+public class fragment_onboarding_3 extends Fragment {
+
+    public fragment_onboarding_3() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_onboarding_1, container, false);
+    }
+}
