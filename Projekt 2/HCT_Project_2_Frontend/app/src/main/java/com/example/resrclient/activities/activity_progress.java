@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -63,6 +64,19 @@ public class activity_progress extends AppCompatActivity {
         ProgressBar bar = findViewById(R.id.progress_level_progressBar);
         TextView unlockedText = findViewById(R.id.progress_unlocked_editTextTextMultiLine);
         TextView lockedText = findViewById(R.id.progress_locked_editTextTextMultiLine2);
+        ImageView levelicon = findViewById(R.id.progress_LevelIcon_imageView);
+
+        switch (userObjekt.getLevel().getId()){
+            case 1:
+                levelicon.setImageResource(R.drawable.blume1);
+                break;
+            case 2:
+                levelicon.setImageResource(R.drawable.blume2);
+                break;
+            case 3:
+                levelicon.setImageResource(R.drawable.blume3);
+                break;
+        }
 
         username.setText(userObjekt.getUserName());
         bar.setProgress(userObjekt.getGrowpoints());
@@ -70,11 +84,11 @@ public class activity_progress extends AppCompatActivity {
 
         switch (userObjekt.getLevel().getLevel()){
             case 1:
-                unlockedText.setText("Du kannst nun Bewertungen schreiben!");
-                lockedText.setText("Kommentieren");
+                unlockedText.setText("Du hast deinen ersten Grow Space erstellt und kannst nun Bewertungen schreiben!");
+                lockedText.setText("Im nächsten Level erwartet dich das Kommentieren. Dadurch kannst du den anderen Nutzer*innen noc mehr helfen.");
                 break;
             case 2:
-                unlockedText.setText("Zweiter Grow Space wurde freigeschaltet");
+                unlockedText.setText("Zweiter Grow Space wurde freigeschaltet!");
                 lockedText.setText("Coole Sachen");
                 break;
             case 3:

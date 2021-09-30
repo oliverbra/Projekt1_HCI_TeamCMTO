@@ -38,7 +38,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:progressBackgroundTint="@color/yellow"
@@ -132,15 +132,15 @@
 
     <ImageView
         android:id="@+id/progress_LevelIcon_imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/progress_level_progressBar"
         app:layout_constraintEnd_toEndOf="@+id/progress_level_progressBar"
         app:layout_constraintStart_toStartOf="@+id/progress_level_progressBar"
         app:layout_constraintTop_toTopOf="@+id/progress_level_progressBar"
-        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+        app:srcCompat="@drawable/blume1" />
 
     <ImageButton
         android:id="@+id/imageButton"
