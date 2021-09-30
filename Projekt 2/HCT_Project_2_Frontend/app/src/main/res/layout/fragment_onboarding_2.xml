@@ -70,12 +70,13 @@
             android:id="@+id/view12"
             android:layout_width="160dp"
             android:layout_height="100dp"
-            android:layout_marginBottom="420dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/ic__10923_florfliege"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.931"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/textView10"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <ImageButton
             android:id="@+id/onboarding_frag2tofrag3btn"

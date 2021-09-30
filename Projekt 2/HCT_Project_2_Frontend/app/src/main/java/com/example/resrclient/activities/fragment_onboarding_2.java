@@ -32,7 +32,7 @@ public class fragment_onboarding_2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_onboarding_1, container, false);
+        View v = inflater.inflate(R.layout.fragment_onboarding_2, container, false);
         return v;
     }
 
