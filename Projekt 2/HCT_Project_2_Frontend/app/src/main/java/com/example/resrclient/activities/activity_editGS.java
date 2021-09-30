@@ -190,7 +190,7 @@ public class activity_editGS extends AppCompatActivity implements AdapterView.On
 
 
                     // At the end remember to close the cursor or you will end with the RuntimeException!
-                    cursor.close();
+                    //cursor.close();
                     saveImage(this,bitmap,"testBild");
 
                   //  ImageView img=findViewById(R.id.editGS_previewBild_imageView2);
