@@ -109,14 +109,27 @@ public class activity_startseite extends AppCompatActivity{
         TextView nameGS = findViewById(R.id.startseite_nameGS);
         ProgressBar levelProgress = findViewById(R.id.startseite_progressBar);
         nameGS.setText(growSpace.getName());
-        levelProgress.setProgress(currentUser.getLevel().getLevel());
+        levelProgress.setProgress(currentUser.getGrowpoints());
 
         RatingBar raitingbarGS = findViewById(R.id.averagerating);
         raitingbarGS.setRating((float)averageRating(allReviews));
 
         ImageView profile = findViewById(R.id.imageView_profilbild);
-        Bilder_save_load bsl = new Bilder_save_load();
-        profile.setImageBitmap(bsl.loadImageBitmap(this,"testBild"));
+//        Bilder_save_load bsl = new Bilder_save_load();
+//        profile.setImageBitmap(bsl.loadImageBitmap(this,"testBild"));
+
+        ImageView levelicon = findViewById(R.id.startseite_LevelIcon_imageView);
+        switch (currentUser.getLevel().getId()){
+            case 1:
+                levelicon.setImageResource(R.drawable.blume1);
+                break;
+            case 2:
+                levelicon.setImageResource(R.drawable.blume2);
+                break;
+            case 3:
+                levelicon.setImageResource(R.drawable.blume3);
+                break;
+        }
 
     }
     //errechnen des durschnitt Ratings

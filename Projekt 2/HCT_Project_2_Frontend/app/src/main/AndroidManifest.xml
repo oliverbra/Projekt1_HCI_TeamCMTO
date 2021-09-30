@@ -24,6 +24,7 @@
         <activity android:name=".activities.activity_randomGS" />
         <activity android:name=".activities.activity_openAllReviews" />
         <activity android:name=".activities.activity_openReview" />
+        <activity android:name=".activities.activity_logIn"/>
         <activity android:name=".MainActivity" />
         <activity
             android:name=".activities.activity_onboarding"
