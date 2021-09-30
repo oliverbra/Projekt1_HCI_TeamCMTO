@@ -14,9 +14,12 @@ import com.example.resrclient.asyncTasks.ReviewTask;
 
 public class activity_review extends AppCompatActivity {
 
-    private RatingBar localCriteria, shelterCriteria, naturalCriteria, dangerCriteria;
+    private RatingBar localCriteria, shelterCriteria, naturalCriteria, dangerCriteria, ratingBar;
+    private TextView textView;
     private EditText comment;
     int rndGSId;
+    double rating;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,8 @@ public class activity_review extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
             rndGSId = extras.getInt("rndGSID");
+            rating = extras.getDouble("rndGsRating");
+            name = extras.getString("rndGsName");
         }
 
         localCriteria = findViewById(R.id.localRatingBar);
@@ -34,12 +39,18 @@ public class activity_review extends AppCompatActivity {
         dangerCriteria = findViewById(R.id.dangerRatingBar);
         comment = findViewById(R.id.commentField);
 
-        //Todo: Hier müssen noch Daten wie GSname, name des Users usw. übergeben werden: Wie spreche ich hier einen GS an?
+        textView = findViewById(R.id.rnd_gs_growSpace_name_textView);
+        textView.setText(name);
+
+        ratingBar = findViewById(R.id.rnd_gs_rating);
+        ratingBar.setRating((float) rating);
+
     }
 
 
     public void chanceActivity(View view) {
-        Intent intent = new Intent(this, activity_startseite.class);
+        Intent intent = new Intent(this, activity_randomGS.class);
+        intent.putExtra("rndGSID", rndGSId);
         startActivity(intent);
     }
 

@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.Patterns;
 import com.example.resrclient.MainActivity;
+import com.example.resrclient.activities.activity_startseite;
 import com.example.resrclient.objectClasses.User;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -80,7 +81,7 @@ public class LoginTask extends AsyncTask<String, Void, User> {
     protected void onPostExecute(User user) {
         super.onPostExecute(user);
         if(user != null) {
-            Intent i = new Intent(ctx,MainActivity.class);
+            Intent i = new Intent(ctx, activity_startseite.class);
             ctx.startActivity(i);
         }
     }

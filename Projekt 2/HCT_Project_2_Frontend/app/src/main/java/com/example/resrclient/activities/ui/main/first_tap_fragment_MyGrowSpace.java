@@ -9,7 +9,6 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -18,15 +17,13 @@ import com.example.resrclient.objectClasses.GrowSpace;
 import com.example.resrclient.objectClasses.User;
 import com.example.resrclient.restClasses.RestTaskUser;
 
-import org.w3c.dom.Text;
-
 import java.util.concurrent.ExecutionException;
 
-public class first_tap_fragment extends Fragment {
+public class first_tap_fragment_MyGrowSpace extends Fragment {
 
     private GrowSpace growSpace;
 
-    public first_tap_fragment() {
+    public first_tap_fragment_MyGrowSpace() {
         // Required empty public constructor
     }
 
@@ -39,7 +36,7 @@ public class first_tap_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragemnt_first_tap_fragment, container, false);
+        View v = inflater.inflate(R.layout.my_gs_first_tap_fragment, container, false);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(v.getContext());
         int userId = preferences.getInt("userId", 0);

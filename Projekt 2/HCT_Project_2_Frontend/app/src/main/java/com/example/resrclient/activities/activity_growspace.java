@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.resrclient.R;
-import com.example.resrclient.activities.ui.main.SectionsPagerAdapter;
+import com.example.resrclient.activities.ui.main.SectionsPagerAdapter_MyGrowSpace;
 import com.example.resrclient.databinding.ActivityGrowspaceBinding;
 
 import com.example.resrclient.objectClasses.GrowSpace;
@@ -38,9 +38,9 @@ public class activity_growspace extends AppCompatActivity {
 
 
 
-        name = findViewById(R.id.growSpace_name_textView);
-        goal = findViewById(R.id.growSpace_Ziel_textView);
-        category = findViewById(R.id.growSpace_Kategorie_textView);
+        name = findViewById(R.id.rnd_gs_growSpace_name_textView);
+        goal = findViewById(R.id.rnd_gs_growSpace_Ziel_textView);
+        category = findViewById(R.id.rnd_gs_growSpace_Kategorie_textView);
         usernameGS = findViewById(R.id.usernameGS);
 
 
@@ -59,9 +59,9 @@ public class activity_growspace extends AppCompatActivity {
 
         binding = ActivityGrowspaceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        SectionsPagerAdapter_MyGrowSpace sectionsPagerAdapterMyGrowSpace = new SectionsPagerAdapter_MyGrowSpace(this, getSupportFragmentManager());
         ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
+        viewPager.setAdapter(sectionsPagerAdapterMyGrowSpace);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
 

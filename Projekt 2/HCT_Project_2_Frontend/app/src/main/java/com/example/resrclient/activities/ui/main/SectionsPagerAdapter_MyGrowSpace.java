@@ -15,13 +15,13 @@ import com.example.resrclient.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class SectionsPagerAdapter_MyGrowSpace extends FragmentPagerAdapter {
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapter_MyGrowSpace(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -32,13 +32,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
        switch (position){
            case 0:
 
-               fragment = new first_tap_fragment();
+               fragment = new first_tap_fragment_MyGrowSpace();
                break;
            case 1:
-               fragment = new third_tap_fragment();
+               fragment = new third_tap_fragment_MyGrowSpace();
                break;
            case 2:
-               fragment = new second_tap_fragment();
+               fragment = new second_tap_fragment_MyGrowSpace();
                 break;
        }
        return fragment;

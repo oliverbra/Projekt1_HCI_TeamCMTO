@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view6" />
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_view6" />
 
     <TextView
         android:id="@+id/willkommen"
@@ -43,7 +43,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <View
-        android:id="@+id/view6"
+        android:id="@+id/rnd_gs_view6"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/gsimage" />
 
     <TextView
-        android:id="@+id/growSpace_name_textView"
+        android:id="@+id/rnd_gs_growSpace_name_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -69,12 +69,12 @@
         android:textColor="@color/green01"
         android:textStyle="bold"
         android:translationZ="90dp"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/view6" />
+        app:layout_constraintEnd_toEndOf="@+id/rnd_gs_view6"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_view6"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_view6" />
 
     <RatingBar
-        android:id="@+id/rating"
+        android:id="@+id/rnd_gs_rating"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
@@ -83,51 +83,9 @@
         android:translationZ="90dp"
         android:progressBackgroundTint="@color/green01"
         android:progressTint="@color/green03"
-        app:layout_constraintEnd_toEndOf="@+id/growSpace_name_textView"
-        app:layout_constraintStart_toStartOf="@+id/growSpace_name_textView"
-        app:layout_constraintTop_toBottomOf="@+id/growSpace_name_textView" />
-
-    <TextView
-        android:id="@+id/usernameGS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:fontFamily="@font/nunito"
-        android:text="User Name"
-        android:textAppearance="@style/S1"
-        android:textColor="@color/fontcolor"
-        android:translationZ="90dp"
-        app:layout_constraintBottom_toBottomOf="@+id/line"
-        app:layout_constraintEnd_toStartOf="@+id/line"
-        app:layout_constraintStart_toStartOf="@+id/growSpace_name_textView"
-        app:layout_constraintTop_toTopOf="@+id/line" />
-
-    <TextView
-        android:id="@+id/level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:fontFamily="@font/nunito"
-        android:text="Level"
-        android:textAppearance="@style/S1"
-        android:textColor="@color/fontcolor"
-        android:translationZ="90dp"
-        app:layout_constraintBottom_toBottomOf="@+id/line"
-        app:layout_constraintStart_toEndOf="@+id/line"
-        app:layout_constraintTop_toTopOf="@+id/line" />
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="1dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/fontcolor"
-        android:translationZ="90dp"
-        app:layout_constraintEnd_toEndOf="@+id/rating"
-        app:layout_constraintStart_toStartOf="@+id/rating"
-        app:layout_constraintTop_toBottomOf="@+id/rating" />
+        app:layout_constraintEnd_toEndOf="@+id/rnd_gs_growSpace_name_textView"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_growSpace_name_textView"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_growSpace_name_textView" />
 
     <RatingBar
         android:id="@+id/localRatingBar"
@@ -193,8 +151,8 @@
         android:text="Lokale Pflanzenarten"
         android:textAppearance="@style/H2"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toBottomOf="@+id/view6" />
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_view6"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_view6" />
 
     <TextView
         android:id="@+id/review_Kategorie_textView2"

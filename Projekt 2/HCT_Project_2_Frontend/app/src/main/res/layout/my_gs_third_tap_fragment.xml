@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="300dp"
+    android:background="@color/white"
+    tools:context=".activities.ui.main.PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/myGS_nopictures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/nunito"
+        android:text="Du hast bisher noch keine Fotos hochgeladen."
+        android:gravity="center"
+        android:textAppearance="@style/B1"
+        android:textColor="@color/fontcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/myGS_addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_button"
+        android:elevation="4dp"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintEnd_toEndOf="@+id/myGS_nopictures"
+        app:layout_constraintStart_toStartOf="@+id/myGS_nopictures"
+        app:layout_constraintTop_toBottomOf="@+id/myGS_nopictures" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/carousel"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Viewpager2: paddingStart + paddingEnd notwendig für Ansicht der Nachbarn
+        android:paddingStart="100dp"
+        android:paddingEnd="100dp"-->
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/carousel"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

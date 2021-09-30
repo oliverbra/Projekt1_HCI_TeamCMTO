@@ -6,22 +6,19 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.resrclient.activities.ui.main.SectionsPagerAdapter;
-import com.example.resrclient.databinding.ActivityRandomgsBinding;
+import com.example.resrclient.activities.ui.main.SectionsPagerAdapter_MyGrowSpace;
+import com.example.resrclient.activities.ui.main.SectionsPagerAdapter_RndGrowSpace;
+import com.example.resrclient.databinding.ActivityRandomGsBinding;
 
-import com.example.resrclient.MainActivity;
 import com.example.resrclient.R;
-import com.example.resrclient.activities.ui.main.SectionsPagerAdapter;
 import com.example.resrclient.asyncTasks.RandomGSTask;
 import com.example.resrclient.objectClasses.GrowSpace;
-import com.example.resrclient.objectClasses.User;
-import com.example.resrclient.restClasses.RestTaskUser;
+import com.example.resrclient.restClasses.RestTaskGrowSpace;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -30,73 +27,76 @@ import java.util.concurrent.ExecutionException;
 public class activity_randomGS extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;//Navigation
-    private ActivityRandomgsBinding binding;
+    private ActivityRandomGsBinding binding;
 
     int rndGSId;
     GrowSpace rndGS;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_randomgs);
+        setContentView(R.layout.activity_random_gs);
 
-        try {
-            rndGS = new RandomGSTask(this).execute().get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.remove("rndGS");
+        editor.apply();
+
+        Bundle extras = getIntent().getExtras();
+        if(extras != null) {
+            rndGSId = extras.getInt("rndGSID");
+            String url = "http://10.0.2.2:8080/growspaces/" + rndGSId;
+            try {
+                rndGS = new RestTaskGrowSpace().execute(url).get();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            editor.putInt("rndGS", rndGSId);
+            editor.commit();
+
+        } else {
+            try {
+                rndGS = new RandomGSTask(this).execute().get();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            rndGSId = rndGS.getId();
+            editor.putInt("rndGS", rndGSId);
+            editor.commit();
         }
 
-        rndGSId = rndGS.getId();
-
         // Display rndGS information here.
-
-        binding = ActivityRandomgsBinding.inflate(getLayoutInflater());
+        binding = ActivityRandomGsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        SectionsPagerAdapter_RndGrowSpace sectionsPagerAdapterRndGrowSpace = new SectionsPagerAdapter_RndGrowSpace(this, getSupportFragmentManager());
         ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
+        viewPager.setAdapter(sectionsPagerAdapterRndGrowSpace);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
-
-        //Navigation
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
-        bottomNavigationView.setSelectedItemId(R.id.nav_to_home);
-
-        //Perform ItemSelectedListener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.nav_to_home:
-                        startActivity(new Intent(getApplicationContext(), activity_startseite.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.nav_to_profile:
-                        startActivity(new Intent(getApplicationContext(), activity_progress.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.nav_to_favourites:
-                        startActivity(new Intent(getApplicationContext(), activity_favourites.class)); // Code hübschen effiezent machen
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-
-            }
-        });
-
-
 
     }
 
     public void changeActivity(View view) {
         Intent intent = new Intent(this, activity_review.class);
         intent.putExtra("rndGSID", rndGSId);
+        intent.putExtra("rndGsName", rndGS.getName());
+        intent.putExtra("rndGsRating", rndGS.getAverageRating());
         startActivity(intent);
     }
 
+    public void back(View view) {
+        Intent intent = new Intent(this, activity_startseite.class);
+        startActivity(intent);
+    }
+
+    public GrowSpace getRndGS() {
+        return rndGS;
+    }
 
 }
 

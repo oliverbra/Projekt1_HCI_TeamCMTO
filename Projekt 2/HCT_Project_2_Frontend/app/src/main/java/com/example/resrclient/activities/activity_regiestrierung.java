@@ -34,17 +34,18 @@ public class activity_regiestrierung extends AppCompatActivity {
         } else {
                 Toast lose = Toast.makeText(this, "Fehlende Infos",Toast.LENGTH_SHORT);
                 lose.show();}
-                }
+    }
 
-        public void createUser(){
+    public void createUser(){
         final String url = "http://10.0.2.2:8080/users";
         new RegiesterTask(this).execute(url,emailAdress.getText().toString(),passwort.getText().toString(), username.getText().toString());
         }
+
     public void chanceActivity() {
         Intent intent = new Intent(this, activity_startseite.class);
         startActivity(intent); }
 
-    public void changeToLogin(View view) {
+    public void changeToLogIn(View view) {
         Intent intent = new Intent(this, activity_logIn.class);
         startActivity(intent);
     }

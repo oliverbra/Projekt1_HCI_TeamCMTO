@@ -29,11 +29,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         />
 
-    <!--Viewpager2: paddingStart + paddingEnd
-    notwendig für Ansicht der Nachbarn
-        android:paddingStart="100dp"
-        android:paddingEnd="100dp"-->
-
     <Button
         android:id="@+id/growspaceButton"
         android:layout_width="wrap_content"

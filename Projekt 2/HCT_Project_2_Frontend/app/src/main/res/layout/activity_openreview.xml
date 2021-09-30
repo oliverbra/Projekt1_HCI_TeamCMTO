@@ -40,10 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:isIndicator="false"
         android:numStars="5"
-        android:progressTint="@color/orange"
         android:progressBackgroundTint="@color/light01"
+        android:progressTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="@+id/review_KategorieLocal_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/review_KategorieLocal_textView" />
@@ -70,10 +69,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:isIndicator="false"
         android:numStars="5"
-        android:progressTint="@color/orange"
         android:progressBackgroundTint="@color/light01"
+        android:progressTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="@+id/review_KategorieShelter_textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/review_KategorieShelter_textView2" />
@@ -99,10 +97,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:isIndicator="false"
         android:numStars="5"
-        android:progressTint="@color/orange"
         android:progressBackgroundTint="@color/light01"
+        android:progressTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="@+id/review_KategorieNatural_textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/review_KategorieNatural_textView3" />
@@ -128,10 +125,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:isIndicator="false"
         android:numStars="5"
-        android:progressTint="@color/orange"
         android:progressBackgroundTint="@color/light01"
+        android:progressTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="@+id/review_KategorieDanger_textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/review_KategorieDanger_textView4" />
@@ -142,10 +138,9 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:isIndicator="false"
         android:numStars="5"
-        android:progressTint="@color/orange"
         android:progressBackgroundTint="@color/light01"
+        android:progressTint="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/review_KategorieDanger_textView4" />
@@ -208,17 +203,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_left" />
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        app:itemIconTint="@color/green01"
-        app:itemTextColor="@color/green01"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

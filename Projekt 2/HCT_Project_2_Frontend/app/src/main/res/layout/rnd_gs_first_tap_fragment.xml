@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="300dp"
+    android:background="@color/white"
+    tools:context=".activities.ui.main.PlaceholderFragment">
+
+    <View
+        android:id="@+id/rnd_gs_view6"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/input_field"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rnd_gs_growSpace_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Name Grow Space"
+        android:textAppearance="@style/H2"
+        android:textColor="@color/green01"
+        android:textStyle="bold"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/rnd_gs_view6"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_view6"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_view6" />
+
+    <RatingBar
+        android:id="@+id/rnd_gs_rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:translationZ="90dp"
+        android:progressBackgroundTint="@color/yellow"
+        android:progressTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="@+id/rnd_gs_growSpace_name_textView"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_growSpace_name_textView"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_growSpace_name_textView" />
+
+    <TextView
+        android:id="@+id/rnd_gs_growSpace_Kategorie_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Kategorie"
+        android:textAppearance="@style/B2"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rnd_gs_textView6"
+        app:layout_constraintStart_toEndOf="@+id/rnd_gs_textView6"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_textView6" />
+
+    <TextView
+        android:id="@+id/rnd_gs_growSpace_Ziel_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/nunito"
+        android:text="Das Ziel was ich mit meinem Grow Space erreichen möchte."
+        android:textAppearance="@style/GS_Goal"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/rnd_gs_view7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_about"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_about" />
+
+
+    <TextView
+        android:id="@+id/rnd_gs_textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Mein Grow Space ist ein"
+        android:textAppearance="@style/B2"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_growSpace_Ziel_textView"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_growSpace_Ziel_textView" />
+
+    <TextView
+        android:id="@+id/rnd_gs_textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="und ist"
+        android:textAppearance="@style/B2"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_textView6"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_textView6" />
+
+    <TextView
+        android:id="@+id/rnd_gs_gssize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Größe"
+        android:textAppearance="@style/B2"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rnd_gs_textView7"
+        app:layout_constraintStart_toEndOf="@+id/rnd_gs_textView7"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_textView7" />
+
+    <TextView
+        android:id="@+id/rnd_gs_textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="groß..."
+        android:textAppearance="@style/B2"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rnd_gs_gssize"
+        app:layout_constraintStart_toEndOf="@+id/rnd_gs_gssize"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_gssize" />
+
+    <TextView
+        android:id="@+id/rnd_gs_textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="und befindet sich in"
+        android:textAppearance="@style/B2"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_textView7"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_textView7" />
+
+    <TextView
+        android:id="@+id/rnd_gs_gslocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito"
+        android:text="Location"
+        android:textAppearance="@style/B2"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rnd_gs_textView9"
+        app:layout_constraintStart_toEndOf="@+id/rnd_gs_textView9"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_textView9" />
+
+
+    <TextView
+        android:id="@+id/rnd_gs_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="About"
+        android:textAppearance="@style/H3"
+        android:textColor="@color/white"
+        android:translationZ="90dp"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_view7"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_view7" />
+
+    <View
+        android:id="@+id/rnd_gs_view7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/text_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_view6"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
