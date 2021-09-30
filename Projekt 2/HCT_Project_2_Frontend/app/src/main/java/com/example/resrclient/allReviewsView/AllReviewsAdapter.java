@@ -46,6 +46,14 @@ public class AllReviewsAdapter extends ArrayAdapter<Review> {
 
         //Enter data to display here
         holder.rating.setText(String.valueOf(myReviews.get(position).getRating()));
+        holder.ratingBar.setRating((float)myReviews.get(position).getRating());
+        holder.date.setText(myReviews.get(position).getDate());
+
+        if(!myReviews.get(position).getOpen()) {
+            holder.img.setVisibility(View.VISIBLE);
+        } else {
+            holder.img.setVisibility(View.INVISIBLE);
+        }
 
 
 

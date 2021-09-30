@@ -9,8 +9,6 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_default"
         android:fontFamily="@font/comfortaa"
@@ -24,8 +22,9 @@
         android:textColor="@color/white"
         app:backgroundTint="@color/orange"
         app:elevation="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/view5"
@@ -33,7 +32,6 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/transparent_bg_element_2"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/view_pager"
         app:layout_constraintTop_toBottomOf="@+id/andererGS" />
@@ -83,7 +81,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:background="@color/white"
-        android:onClick="chanceActivity"
+        android:onClick="back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_left" />
@@ -100,18 +98,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_heart" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        app:itemIconTint="@color/green01"
-        app:itemTextColor="@color/green01"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:menu="@menu/bottom_nav_menu" />
     <!--todo: height to 82 dp -->
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
@@ -119,12 +105,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"

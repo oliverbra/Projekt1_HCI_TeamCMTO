@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.resrclient.MainActivity;
+import com.example.resrclient.activities.activity_createGS;
 import com.example.resrclient.activities.activity_startseite;
 import android.widget.Toast;
 import com.example.resrclient.activities.activity_logIn;
@@ -63,14 +64,13 @@ public class RegiesterTask extends AsyncTask<String,Void, User> {
     protected void onPostExecute(User user) {
         super.onPostExecute(user);
         if (user != null) {
-            Intent i = new Intent(ctx, activity_logIn.class);
+            Intent i = new Intent(ctx, activity_createGS.class);
             ctx.startActivity(i);
         } else {
             Toast lose = Toast.makeText(ctx, "Der angegebene Nutzername oder Email existiert bereits", Toast.LENGTH_SHORT);
             lose.show();
         }
     }
-
 
 }
 

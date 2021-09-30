@@ -12,18 +12,32 @@
         app:srcCompat="@drawable/dot_active"
         android:layout_margin="10dp"/>
 
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:id="@+id/singleReview_TextView_Rating"
+        android:text="Rating"
+        android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/singleReview_TextView_Rating"
-            android:text="Rating"
-            android:textSize="20sp" />
+    <RatingBar
+        android:id="@+id/singleReview_ratingbar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/light01"
+        android:progressTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/singleReview_TextView_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datum"
+        android:textSize="20sp" />
+
 
 </LinearLayout>

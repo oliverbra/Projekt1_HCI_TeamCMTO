@@ -20,8 +20,6 @@ public class activity_sentReview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sent_review);
 
-        //TO DO: Display Sent Review
-
         // Get current Growspace by get currentUser based on preferenced userId after LoginActivity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         int userId = preferences.getInt("userId", 0);
@@ -48,7 +46,12 @@ public class activity_sentReview extends AppCompatActivity {
     }
 
     public void chanceActivity(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, activity_startseite.class);
+        startActivity(intent);
+    }
+
+    public void continueReview(View view) {
+        Intent intent = new Intent(this, activity_randomGS.class);
         startActivity(intent);
     }
 
