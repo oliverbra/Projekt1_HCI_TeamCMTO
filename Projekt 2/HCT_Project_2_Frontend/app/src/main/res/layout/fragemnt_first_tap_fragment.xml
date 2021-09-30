@@ -47,6 +47,8 @@
         android:layout_marginTop="8dp"
         android:numStars="5"
         android:translationZ="90dp"
+        android:progressBackgroundTint="@color/yellow"
+        android:progressTint="@color/orange"
         app:layout_constraintEnd_toEndOf="@+id/growSpace_name_textView"
         app:layout_constraintStart_toStartOf="@+id/growSpace_name_textView"
         app:layout_constraintTop_toBottomOf="@+id/growSpace_name_textView" />
@@ -240,7 +242,9 @@
         android:background="@drawable/text_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view6" />
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
