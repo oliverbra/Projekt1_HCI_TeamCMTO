@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.resrclient.R;
@@ -105,7 +106,7 @@ public class fragment_createGS_6 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         NavController navController = Navigation.findNavController(view);
 
-        Button createGSbtn = view.findViewById(R.id.createGS_submit_button);
+        ImageButton createGSbtn = view.findViewById(R.id.createGS_submit_button);
         createGSbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
