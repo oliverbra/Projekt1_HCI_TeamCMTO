@@ -79,6 +79,10 @@ public class User {
         return calculatePoints(review.getRating());
     }
 
+    public int getReviewPoints(Review review) {
+        return calculatePoints(review.getRating());
+    }
+
     public int calculatePoints(double rating) {
         int points;
         if(rating == 5) {

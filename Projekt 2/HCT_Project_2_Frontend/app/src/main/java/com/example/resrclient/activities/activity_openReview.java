@@ -4,24 +4,19 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.resrclient.R;
-import com.example.resrclient.asyncTasks.RandomGSTask;
 import com.example.resrclient.objectClasses.Review;
 import com.example.resrclient.objectClasses.User;
 import com.example.resrclient.restClasses.RestTaskReview;
 import com.example.resrclient.restClasses.RestTaskUser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import org.w3c.dom.Text;
 
 import java.util.concurrent.ExecutionException;
 
@@ -63,6 +58,7 @@ public class activity_openReview extends AppCompatActivity {
         }
 
         if(!thisReview.getOpen()) {
+            Toast.makeText(this, "Du hast eine neue Review erhalten! Basierend auf dem Rating wurden dir " + currentUser.getReviewPoints(thisReview) + " gutgeschrieben!", Toast.LENGTH_SHORT).show();
             try {
                 receivedGP = currentUser.openReview(thisReview, this);
             } catch (ExecutionException e) {
@@ -70,10 +66,12 @@ public class activity_openReview extends AppCompatActivity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            Toast.makeText(this, "Du hast eine neue Review erhalten! Basierend auf dem Rating wurden dir " + receivedGP + " gutgeschrieben!", Toast.LENGTH_SHORT).show();
         }
 
         //Display review here
+        TextView gsName = findViewById(R.id.rnd_gs_growSpace_name_textView);
+        gsName.setText(currentUser.getGrowSpace().getName());
+
         RatingBar localrating = findViewById(R.id.review_localRatingBar);
         localrating.setRating((float)thisReview.getLocalCriteria());
 

@@ -5,6 +5,64 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:clipChildren="false"
+        android:shape="ring"
+        app:cardBackgroundColor="@color/light01"
+        app:cardCornerRadius="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/rnd_gs_view6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bewertung">
+
+        <ImageView
+            android:id="@+id/gsimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gspicture_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:srcCompat="@drawable/mygs_pic1" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/rnd_gs_view6"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/input_field"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/rnd_gs_growSpace_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Name Grow Space"
+        android:textAppearance="@style/H2"
+        android:textColor="@color/green01"
+        android:textStyle="bold"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/rnd_gs_view6"
+        app:layout_constraintStart_toStartOf="@+id/rnd_gs_view6"
+        app:layout_constraintTop_toTopOf="@+id/rnd_gs_view6" />
 
     <View
         android:id="@+id/view3"
@@ -17,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bewertung"
+        app:layout_constraintTop_toBottomOf="@+id/rnd_gs_growSpace_name_textView"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
