@@ -1,43 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/singleReview_ImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/dot_active"
-        android:layout_margin="10dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/singleReview_TextView_Rating"
-        android:text="Rating"
-        android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/singleReview_ImageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/round_button" />
 
-    <RatingBar
-        android:id="@+id/singleReview_ratingbar"
-        style="?android:attr/ratingBarStyleSmall"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:numStars="5"
-        android:progressBackgroundTint="@color/light01"
-        android:progressTint="@color/orange"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        <TextView
+            android:id="@+id/singleReview_TextView_Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/comfortaa"
+            android:text="Rating"
+            android:textAppearance="@style/H3"
+            android:textColor="@color/fontcolor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/singleReview_ImageView"
+            app:layout_constraintStart_toEndOf="@+id/singleReview_ImageView"
+            app:layout_constraintTop_toTopOf="@+id/singleReview_ImageView" />
 
-    <TextView
-        android:id="@+id/singleReview_TextView_Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Datum"
-        android:textSize="20sp" />
+        <RatingBar
+            android:id="@+id/singleReview_ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/light01"
+            android:progressTint="@color/orange"
+            app:layout_constraintBottom_toBottomOf="@+id/singleReview_TextView_Rating"
+            app:layout_constraintEnd_toStartOf="@+id/singleReview_TextView_Date"
+            app:layout_constraintTop_toTopOf="@+id/singleReview_TextView_Rating" />
+
+        <TextView
+            android:id="@+id/singleReview_TextView_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/nunito"
+            android:text="Datum"
+            android:textAppearance="@style/B2"
+            app:layout_constraintBottom_toBottomOf="@+id/singleReview_ratingbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/singleReview_ratingbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>
