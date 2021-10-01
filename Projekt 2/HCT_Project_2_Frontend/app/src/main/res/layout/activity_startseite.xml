@@ -88,20 +88,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-
-
-    <ImageView
-        android:id="@+id/imageView_profilbild"
-        android:layout_width="wrap_content"
-        android:layout_height="128dp"
-        android:layout_marginTop="64dp"
-        android:background="@drawable/gspicture_background"
-        android:onClick="chanceGS"
-        android:scaleType="centerInside"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="187dp"
+        android:layout_height="187dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:clipChildren="false"
+        android:shape="ring"
+        app:cardBackgroundColor="@color/light01"
+        app:cardCornerRadius="200dp"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <ImageView
+            android:id="@+id/imageView_profilbild"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView"
+            android:onClick="chanceGS"
+            app:srcCompat="@drawable/mygs_pic1" />
+    </androidx.cardview.widget.CardView>
+
+
 
     <TextView
         android:id="@+id/textView3"
@@ -127,7 +140,7 @@
         app:layout_constraintEnd_toStartOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_profilbild" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <ImageButton
         android:id="@+id/imageView2"

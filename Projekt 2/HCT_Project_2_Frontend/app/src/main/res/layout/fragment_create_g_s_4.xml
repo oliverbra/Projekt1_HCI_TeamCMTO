@@ -20,10 +20,10 @@
             android:background="@drawable/text_background"
             app:layout_constraintBottom_toTopOf="@+id/frag4tofrag5plant"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_4frag"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textViewcreateGS_4frag"
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="wähle Bilder"
+            android:text="Bilder hochladen"
             app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="@+id/view4"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,35 +65,35 @@
 
         <ImageView
             android:id="@+id/imageView4_test_Bilder1"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="16dp"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view4"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/imageView4_test_Bilder2"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/onBoarding_bilderWahl_hButton"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4_test_Bilder1"
             tools:src="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/imageView4_test_Bilder3"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="4dp"
-
-            android:layout_marginLeft="4dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/imageView4_test_Bilder1"
             app:layout_constraintTop_toTopOf="@+id/view4"
             tools:src="@tools:sample/avatars" />
