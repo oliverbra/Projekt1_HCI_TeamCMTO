@@ -30,17 +30,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/gsimage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/gspicture_background"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:clipChildren="false"
+        android:shape="ring"
+        app:cardBackgroundColor="@color/light01"
+        app:cardCornerRadius="200dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/willkommen"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="@+id/willkommen">
+
+        <ImageView
+            android:id="@+id/gsimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gspicture_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/willkommen"
+            app:srcCompat="@drawable/rndgs_pic1" />
+    </androidx.cardview.widget.CardView>
+
+
 
     <View
         android:id="@+id/rnd_gs_view6"
@@ -56,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gsimage" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/rnd_gs_growSpace_name_textView"
