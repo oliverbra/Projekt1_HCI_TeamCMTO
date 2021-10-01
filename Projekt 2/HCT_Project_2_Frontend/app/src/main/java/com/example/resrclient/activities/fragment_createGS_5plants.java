@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -79,7 +80,7 @@ public class fragment_createGS_5plants extends Fragment {
         lv.setAdapter(plantAdapter);
 
         //Hier der Button, der zum 6. Fragment führt
-        Button toFrag3btn = view.findViewById(R.id.frag5tofrag6);
+        ImageButton toFrag3btn = view.findViewById(R.id.frag5tofrag6);
         toFrag3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

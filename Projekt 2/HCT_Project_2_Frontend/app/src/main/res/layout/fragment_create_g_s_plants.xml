@@ -41,25 +41,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_secfrag" />
 
-        <Button
+        <ImageButton
             android:id="@+id/frag5tofrag6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
             android:layout_marginBottom="32dp"
-            android:background="@drawable/button_default"
-            android:fontFamily="@font/comfortaa"
-            android:paddingLeft="32dp"
-            android:paddingTop="16dp"
-            android:paddingRight="32dp"
-            android:paddingBottom="16dp"
-            android:text="Weiter zu: Übersicht"
-            android:textAppearance="@style/Button"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/orange"
+            android:background="@drawable/round_button"
             android:elevation="4dp"
+            android:src="@drawable/ic_right"
+            app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <ListView
             android:id="@+id/plantsListView"

@@ -16,19 +16,50 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/comfortaa"
-            android:text="Überblick"
+            android:text="Wunderbar!"
             android:textAppearance="@style/H1"
             android:textColor="@color/fontcolor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <View
+            android:id="@+id/view12"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic__10923_florfliege"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintStart_toStartOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/input_field"
+            android:fontFamily="@font/nunito"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Du hast erfolgreich  deinen ersten Grow Space erstellt. Nun kannst du den anderen zeigen was du so drauf hast und dir Inspiration einholen."
+            android:textAppearance="@style/B1"
+            android:textColor="@color/fontcolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewcreateGS_firstfrag" />
+
+        <ImageButton
             android:id="@+id/createGS_submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Senden"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/ic_mark_24px"
+            android:elevation="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
